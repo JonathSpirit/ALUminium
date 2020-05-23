@@ -1,22 +1,22 @@
 MDF Database:  version 1.0
 MDF_INFO | main | XC2C256-7-VQ100
-MACROCELL | 6 | 4 | OP_RESULT<0>_MC
+MACROCELL | 0 | 2 | OP_RESULT<0>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 32 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationChoose<3>.COMB  | OP_RESULT<0>124  | s_operationLeft<2>.COMB  | OP_RESULT<0>155  | s_operationLeft<0>.COMB  | s_operationLeft<1>.COMB  | OP_RESULT<0>72  | s_operationRight<2>  | OP_RESULT<0>125  | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<0>  | s_operationLeft<7>  | s_operationRight<1>  | s_operationLeft<1>  | s_operationLeft<3>  | s_operationLeft<2>  | s_operationLeft<4>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<5>  | s_operationLeft<6>
-INPUTMC | 32 | 1 | 0 | 1 | 2 | 1 | 4 | 0 | 12 | 1 | 10 | 1 | 14 | 1 | 9 | 1 | 11 | 1 | 13 | 0 | 14 | 3 | 4 | 0 | 15 | 0 | 2 | 3 | 1 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 1 | 11 | 3 | 0 | 3 | 2 | 1 | 13 | 2 | 4 | 1 | 14 | 2 | 11 | 3 | 12 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13 | 2 | 13 | 2 | 15
+INPUTS | 32 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationLeft<0>.COMB  | s_operationLeft<7>.COMB  | OP_RESULT<0>154  | OP_RESULT<0>155  | OP_RESULT<0>2  | OP_RESULT<0>3  | OP_RESULT<0>72  | s_operationRight<2>  | OP_RESULT<0>125  | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<0>  | s_operationLeft<7>  | s_operationRight<1>  | s_operationLeft<1>  | s_operationLeft<3>  | s_operationLeft<2>  | s_operationLeft<4>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<5>  | s_operationLeft<6>
+INPUTMC | 32 | 7 | 12 | 7 | 13 | 7 | 14 | 1 | 13 | 3 | 12 | 4 | 10 | 4 | 7 | 4 | 12 | 4 | 11 | 4 | 6 | 8 | 5 | 1 | 12 | 5 | 13 | 8 | 1 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 1 | 13 | 3 | 12 | 8 | 3 | 1 | 14 | 3 | 1 | 3 | 0 | 3 | 2 | 10 | 10 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13 | 3 | 4 | 3 | 5
 EQ | 102 | 
    OP_RESULT<0> = !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & s_operationChoose<3>.COMB
+	!s_operationChoose<7> & s_operationLeft<0>.COMB
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & OP_RESULT<0>124
+	!s_operationChoose<7> & s_operationLeft<7>.COMB
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & s_operationLeft<2>.COMB
+	!s_operationChoose<7> & OP_RESULT<0>154
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & OP_RESULT<0>155
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & s_operationLeft<0>.COMB
+	!s_operationChoose<7> & OP_RESULT<0>2
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & s_operationLeft<1>.COMB
+	!s_operationChoose<7> & OP_RESULT<0>3
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & OP_RESULT<0>72
 	# !s_operationChoose<5> & !s_operationChoose<6> & 
@@ -108,65 +108,250 @@ EQ | 102 |
 	s_operationLeft<4> & !s_operationRight<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (28 pt, 32 inp)
 
-MACROCELL | 0 | 2 | s_operationChoose<0>_MC
+MACROCELL | 5 | 13 | s_operationChoose<0>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 30 | 1 | 10 | 0 | 15 | 0 | 14 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 2 | 9 | 1 | 15 | 7 | 5 | 4 | 15 | 10 | 10 | 1 | 12 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 1 | 4 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 1 | 0 | 1 | 2 | 4 | 6
-INPUTS | 2 | s_operationLeft<4>  | s_operationRight<4>
-INPUTMC | 2 | 2 | 11 | 3 | 12
-EQ | 4 | 
-   s_operationChoose<0>.COMB =  !s_operationLeft<4> & s_operationRight<4>;	// (1 pt, 2 inp)
+OUTPUTMC | 29 | 4 | 10 | 6 | 3 | 4 | 13 | 4 | 12 | 4 | 11 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 0 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 2 | 12 | 1 | 15 | 2 | 4 | 4 | 8 | 5 | 1 | 4 | 9 | 6 | 4 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 10 | 1 | 10 | 0
+INPUTS | 15 | s_operationRight<2>  | s_operationLeft<4>  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<6>  | s_operationLeft<5>  | Mshift_s_resultRotateRight_Sh<3>  | s_operationChoose<5>.COMB  | N_PZ_134  | N_PZ_203  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationLeft<2>  | s_operationLeft<3>  | N_PZ_106  | N_PZ_114
+INPUTMC | 15 | 8 | 5 | 3 | 2 | 8 | 1 | 8 | 3 | 3 | 5 | 3 | 4 | 10 | 8 | 7 | 12 | 6 | 7 | 6 | 8 | 10 | 15 | 3 | 0 | 3 | 1 | 8 | 12 | 8 | 14
+EQ | 20 | 
+   s_operationChoose<0>.COMB =  s_operationRight<2> & s_operationLeft<4>
+	# s_operationRight<0> & !s_operationRight<1> & 
+	s_operationLeft<6>
+	# !s_operationLeft<5> & 
+	Mshift_s_resultRotateRight_Sh<3> & !s_operationChoose<5>.COMB
+	# !Mshift_s_resultRotateRight_Sh<3> & 
+	!s_operationChoose<5>.COMB & !N_PZ_134
+	# s_operationRight<1> & !s_operationLeft<6> & 
+	s_operationLeft<5> & !N_PZ_203
+	# s_operationRight<1> & s_operationLeft<5> & 
+	!s_operationChoose<5>.COMB & !Mshift_s_resultRotateLeft_Sh<5>
+	# s_operationLeft<2> & s_operationLeft<3> & 
+	Mshift_s_resultRotateRight_Sh<3> & !s_operationChoose<5>.COMB
+	# s_operationRight<1> & !s_operationLeft<6> & 
+	!s_operationLeft<5> & !Mshift_s_resultRotateLeft_Sh<5> & N_PZ_134
+	# s_operationLeft<3> & N_PZ_106 & N_PZ_114 & 
+	Mshift_s_resultRotateRight_Sh<3> & !s_operationChoose<5>.COMB;	// (9 pt, 15 inp)
 // Direct Input Register
 s_operationChoose<0> := OP_CHOOSE<0>;	// (0 pt, 0 inp)
    s_operationChoose<0>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK_CHOOSE
 
-MACROCELL | 3 | 1 | s_operationRight<0>_MC
+MACROCELL | 8 | 1 | s_operationRight<0>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 44 | 1 | 10 | 0 | 15 | 0 | 14 | 6 | 4 | 4 | 10 | 3 | 14 | 4 | 4 | 6 | 9 | 9 | 14 | 6 | 8 | 6 | 6 | 9 | 0 | 5 | 15 | 4 | 9 | 6 | 14 | 6 | 7 | 2 | 10 | 9 | 1 | 6 | 5 | 7 | 7 | 8 | 15 | 4 | 8 | 4 | 7 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 10 | 10 | 1 | 12 | 7 | 8 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 4 | 6 | 3 | 5 | 3 | 12 | 5 | 1 | 5 | 11 | 4 | 15 | 4 | 14 | 1 | 13 | 1 | 14 | 3 | 2
-INPUTS | 2 | s_operationRight<6>  | s_operationLeft<6>
-INPUTMC | 2 | 5 | 11 | 2 | 15
-EQ | 4 | 
-   s_operationRight<0>.COMB =  s_operationRight<6> & !s_operationLeft<6>;	// (1 pt, 2 inp)
+OUTPUTMC | 41 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 14 | 7 | 6 | 7 | 4 | 10 | 8 | 8 | 15 | 8 | 0 | 6 | 15 | 0 | 5 | 6 | 14 | 10 | 15 | 2 | 14 | 9 | 0 | 1 | 0 | 10 | 9 | 7 | 7 | 10 | 14 | 5 | 12 | 1 | 15 | 2 | 4 | 5 | 1 | 4 | 9 | 6 | 4 | 5 | 13 | 5 | 15 | 7 | 11 | 7 | 12 | 7 | 14 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 8 | 1 | 8 | 3 | 5 | 14 | 4 | 13 | 4 | 11
+INPUTS | 11 | s_operationLeft<2>.COMB  | s_operationLeft<3>  | s_operationRight<3>  | s_operationLeft<3>.COMB  | s_operationLeft<2>  | N_PZ_187  | N_PZ_296  | s_operationRight<0>  | N_PZ_106  | s_operationLeft<1>  | s_operationLeft<0>
+INPUTMC | 11 | 3 | 0 | 3 | 1 | 8 | 11 | 3 | 1 | 3 | 0 | 3 | 15 | 8 | 10 | 8 | 1 | 8 | 12 | 1 | 14 | 1 | 13
+EQ | 14 | 
+   s_operationRight<0>.COMB =  s_operationLeft<2>.COMB
+	# !s_operationLeft<3> & s_operationRight<3> & 
+	!s_operationLeft<3>.COMB
+	# !s_operationLeft<2> & !s_operationLeft<3>.COMB & 
+	!N_PZ_187 & N_PZ_296
+	# s_operationRight<0> & !s_operationLeft<3>.COMB & 
+	!N_PZ_187 & N_PZ_106 & !N_PZ_296
+	# !s_operationLeft<1> & !s_operationLeft<3>.COMB & 
+	!N_PZ_187 & !N_PZ_106 & !N_PZ_296
+	# !s_operationLeft<0> & !s_operationLeft<3>.COMB & 
+	!N_PZ_187 & N_PZ_106 & !N_PZ_296;	// (6 pt, 11 inp)
 // Direct Input Register
 s_operationRight<0> := OP_RIGHT<0>;	// (0 pt, 0 inp)
    s_operationRight<0>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK_RIGHT
 
-MACROCELL | 0 | 11 | s_operationChoose<2>_MC
+MACROCELL | 7 | 5 | s_operationChoose<2>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 28 | 1 | 10 | 1 | 9 | 0 | 15 | 0 | 14 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 2 | 9 | 1 | 15 | 7 | 5 | 10 | 10 | 1 | 12 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 5 | 1
-INPUTS | 25 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | s_operationLeft<4>  | s_operationChoose<5>.COMB  | Madd_s_resultAdd__or0003  | s_operationLeft<5>.COMB  | s_operationLeft<0>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__and0043  | Mmult_s_resultMul_mult0001__or0012  | s_operationRight<6>.COMB  | s_operationLeft<3>  | s_operationRight<3>  | s_operationRight<7>.COMB  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<7>  | s_operationLeft<1>  | s_operationLeft<5>  | s_operationLeft<2>  | s_operationLeft<6>  | Mmult_s_resultMul_mult0001_Mxor__index0009
-INPUTMC | 25 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 13 | 2 | 11 | 1 | 0 | 9 | 15 | 2 | 13 | 1 | 11 | 3 | 12 | 10 | 14 | 10 | 15 | 5 | 11 | 2 | 4 | 3 | 5 | 5 | 13 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 0 | 1 | 13 | 2 | 13 | 1 | 14 | 2 | 15 | 4 | 9
-EQ | 86 | 
-   s_operationChoose<2>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
+OUTPUTMC | 30 | 4 | 10 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 0 | 6 | 15 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 2 | 12 | 1 | 15 | 2 | 4 | 4 | 8 | 5 | 1 | 4 | 9 | 6 | 4 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 4 | 13 | 11 | 9
+INPUTS | 2 | s_operationRight<6>  | s_operationLeft<6>
+INPUTMC | 2 | 10 | 12 | 3 | 5
+EQ | 4 | 
+   s_operationChoose<2>.COMB =  !s_operationRight<6> & s_operationLeft<6>;	// (1 pt, 2 inp)
+// Direct Input Register
+s_operationChoose<2> := OP_CHOOSE<2>;	// (0 pt, 0 inp)
+   s_operationChoose<2>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 5 | 15 | s_operationChoose<1>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 27 | 4 | 10 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 0 | 6 | 15 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 1 | 15 | 2 | 4 | 5 | 1 | 4 | 9 | 6 | 4 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 10 | 1 | 10 | 0
+INPUTS | 9 | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<4>  | s_operationLeft<6>  | N_PZ_134  | s_operationLeft<5>  | s_operationChoose<5>.COMB  | Mshift_s_resultRotateLeft_Sh<5>
+INPUTMC | 9 | 8 | 1 | 8 | 3 | 8 | 5 | 3 | 2 | 3 | 5 | 6 | 7 | 3 | 4 | 7 | 12 | 10 | 15
+EQ | 12 | 
+   s_operationChoose<1>.COMB =  s_operationRight<0> & !s_operationRight<1> & 
+	s_operationRight<2> & s_operationLeft<4> & s_operationLeft<6>
+	# s_operationRight<0> & s_operationRight<2> & 
+	s_operationLeft<4> & s_operationLeft<6> & !N_PZ_134
+	# s_operationRight<1> & s_operationRight<2> & 
+	s_operationLeft<4> & s_operationLeft<5> & !s_operationChoose<5>.COMB
+	# s_operationRight<1> & s_operationRight<2> & 
+	!s_operationLeft<6> & !s_operationLeft<5> & 
+	!Mshift_s_resultRotateLeft_Sh<5> & N_PZ_134;	// (4 pt, 9 inp)
+// Direct Input Register
+s_operationChoose<1> := OP_CHOOSE<1>;	// (0 pt, 0 inp)
+   s_operationChoose<1>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 7 | 10 | s_operationChoose<3>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 24 | 4 | 10 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 0 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 1 | 15 | 2 | 4 | 5 | 1 | 4 | 9 | 6 | 4 | 1 | 13 | 1 | 14 | 3 | 12 | 6 | 3 | 4 | 8 | 11 | 9
+INPUTS | 2 | s_operationRight<6>  | s_operationLeft<6>
+INPUTMC | 2 | 10 | 12 | 3 | 5
+EQ | 4 | 
+   s_operationChoose<3>.COMB =  s_operationRight<6> & !s_operationLeft<6>;	// (1 pt, 2 inp)
+// Direct Input Register
+s_operationChoose<3> := OP_CHOOSE<3>;	// (0 pt, 0 inp)
+   s_operationChoose<3>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 7 | 12 | s_operationChoose<5>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 13 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 2 | 4 | 5 | 1 | 6 | 4 | 2 | 14 | 1 | 15 | 5 | 13 | 5 | 15 | 3 | 5
+INPUTS | 3 | s_operationRight<0>  | s_operationLeft<6>  | s_operationLeft<5>
+INPUTMC | 3 | 8 | 1 | 3 | 5 | 3 | 4
+EQ | 5 | 
+   s_operationChoose<5>.COMB =  s_operationRight<0> & !s_operationLeft<6>
+	# !s_operationRight<0> & !s_operationLeft<5>;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationChoose<5> := OP_CHOOSE<5>;	// (0 pt, 0 inp)
+   s_operationChoose<5>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 7 | 13 | s_operationChoose<6>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 8 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 2 | 4 | 5 | 1 | 6 | 4
+INPUTS | 10 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<7>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationLeft<0>  | s_operationLeft<6>  | s_operationLeft<5>  | N_PZ_231  | OP_RESULT<5>90
+INPUTMC | 10 | 5 | 13 | 7 | 5 | 10 | 13 | 7 | 11 | 3 | 12 | 1 | 13 | 3 | 5 | 3 | 4 | 6 | 9 | 2 | 12
+EQ | 26 | 
+   s_operationChoose<6>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationRight<7>
+	# s_operationChoose<0> & !s_operationChoose<4> & 
+	s_operationLeft<7>
+	# s_operationChoose<0> & !s_operationChoose<4> & 
+	s_operationRight<7>
+	# !s_operationChoose<4> & s_operationLeft<7> & 
+	s_operationRight<7>
+	# s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & s_operationLeft<0>
+	# !s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<4> & s_operationLeft<7>
+	# !s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<6>
+	# !s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<5>
+	# !s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & !s_operationLeft<7> & !N_PZ_231
+	# !s_operationChoose<2> & !s_operationLeft<7> & 
+	!s_operationLeft<6> & !s_operationLeft<5> & OP_RESULT<5>90
+	# !s_operationChoose<0> & s_operationChoose<4> & 
+	s_operationLeft<7> & !s_operationLeft<6> & !s_operationLeft<5> & 
+	N_PZ_231 & !OP_RESULT<5>90;	// (11 pt, 10 inp)
+// Direct Input Register
+s_operationChoose<6> := OP_CHOOSE<6>;	// (0 pt, 0 inp)
+   s_operationChoose<6>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 7 | 14 | s_operationChoose<7>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 9 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 2 | 4 | 5 | 1 | 6 | 4 | 2 | 14
+INPUTS | 3 | s_operationRight<0>  | s_operationLeft<0>  | s_operationLeft<7>
+INPUTMC | 3 | 8 | 1 | 1 | 13 | 3 | 12
+EQ | 5 | 
+   s_operationChoose<7>.COMB =  s_operationRight<0> & !s_operationLeft<0>
+	# !s_operationRight<0> & !s_operationLeft<7>;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationChoose<7> := OP_CHOOSE<7>;	// (0 pt, 0 inp)
+   s_operationChoose<7>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 8 | 3 | s_operationRight<1>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 28 | 1 | 12 | 0 | 2 | 8 | 12 | 8 | 0 | 0 | 5 | 6 | 14 | 2 | 14 | 9 | 0 | 1 | 0 | 10 | 9 | 7 | 7 | 10 | 14 | 5 | 12 | 1 | 15 | 2 | 4 | 5 | 1 | 4 | 9 | 6 | 4 | 5 | 13 | 5 | 15 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 5 | 14 | 11 | 15 | 11 | 11
+INPUTS | 12 | s_operationRight<0>  | s_operationRight<2>  | s_operationLeft<3>  | N_PZ_437  | N_PZ_296  | Mmult_s_resultMul_mult0001_Mxor__index0010  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<1>  | N_PZ_106  | s_operationLeft<0>  | Madd_s_resultAdd__or0000  | Mshift_s_resultRotateRight_Sh<1>
+INPUTMC | 12 | 8 | 1 | 8 | 5 | 3 | 1 | 8 | 13 | 8 | 10 | 7 | 7 | 10 | 9 | 1 | 14 | 8 | 12 | 1 | 13 | 7 | 6 | 8 | 15
+EQ | 20 | 
+   s_operationRight<1>.COMB =  s_operationRight<0> & s_operationRight<2> & 
+	s_operationLeft<3> & !N_PZ_437
+	# s_operationRight<2> & s_operationLeft<3> & 
+	!N_PZ_296 & !Mmult_s_resultMul_mult0001_Mxor__index0010
+	# s_operationRight<2> & s_operationLeft<3> & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0010 & Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<2> & s_operationLeft<1> & 
+	s_operationLeft<3> & N_PZ_106 & !N_PZ_296
+	# s_operationRight<0> & s_operationRight<2> & 
+	s_operationLeft<3> & !s_operationLeft<0> & Madd_s_resultAdd__or0000 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationRight<0> & s_operationRight<2> & 
+	s_operationLeft<3> & s_operationLeft<0> & Madd_s_resultAdd__or0000 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationLeft<1> & s_operationLeft<3> & 
+	!N_PZ_106 & Mshift_s_resultRotateRight_Sh<1> & N_PZ_437 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003;	// (7 pt, 12 inp)
+// Direct Input Register
+s_operationRight<1> := OP_RIGHT<1>;	// (0 pt, 0 inp)
+   s_operationRight<1>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 8 | 5 | s_operationRight<2>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 27 | 0 | 2 | 8 | 0 | 8 | 10 | 6 | 15 | 0 | 5 | 6 | 14 | 2 | 14 | 9 | 0 | 1 | 0 | 7 | 7 | 5 | 12 | 1 | 15 | 2 | 4 | 5 | 1 | 4 | 9 | 6 | 4 | 5 | 13 | 5 | 15 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 8 | 3 | 5 | 14 | 4 | 14 | 4 | 12
+INPUTS | 4 | s_operationLeft<3>  | s_operationRight<3>  | N_PZ_187  | N_PZ_437
+INPUTMC | 4 | 3 | 1 | 8 | 11 | 3 | 15 | 8 | 13
+EQ | 5 | 
+   s_operationRight<2>.COMB =  !s_operationLeft<3> & s_operationRight<3>
+	# !N_PZ_187 & N_PZ_437;	// (2 pt, 4 inp)
+// Direct Input Register
+s_operationRight<2> := OP_RIGHT<2>;	// (0 pt, 0 inp)
+   s_operationRight<2>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 7 | 11 | s_operationChoose<4>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 29 | 4 | 10 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 1 | 12 | 4 | 6 | 0 | 2 | 8 | 0 | 6 | 15 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 2 | 12 | 1 | 15 | 2 | 4 | 4 | 8 | 5 | 1 | 4 | 9 | 6 | 4 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 5 | 14
+INPUTS | 3 | s_operationRight<0>  | s_operationLeft<6>  | s_operationLeft<7>
+INPUTMC | 3 | 8 | 1 | 3 | 5 | 3 | 12
+EQ | 5 | 
+   s_operationChoose<4>.COMB =  s_operationRight<0> & !s_operationLeft<6>
+	# !s_operationRight<0> & !s_operationLeft<7>;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationChoose<4> := OP_CHOOSE<4>;	// (0 pt, 0 inp)
+   s_operationChoose<4>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_CHOOSE
+
+MACROCELL | 3 | 2 | s_operationLeft<4>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 20 | 1 | 12 | 0 | 2 | 10 | 8 | 0 | 5 | 10 | 15 | 2 | 14 | 1 | 0 | 2 | 12 | 6 | 8 | 10 | 9 | 10 | 14 | 5 | 1 | 5 | 13 | 5 | 15 | 3 | 0 | 3 | 1 | 3 | 2 | 3 | 4 | 5 | 14 | 10 | 6
+INPUTS | 25 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | s_operationLeft<4>  | Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000  | Madd_s_resultAdd__or0003  | s_operationRight<2>.COMB  | s_operationLeft<0>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__and0043  | Mmult_s_resultMul_mult0001__or0012  | Mmult_s_resultMul_mult0001_Mxor__index0010  | s_operationLeft<3>  | s_operationRight<3>  | Madd_s_resultAdd__or0001  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<7>  | s_operationLeft<1>  | s_operationLeft<5>  | s_operationLeft<2>  | s_operationLeft<6>  | Mmult_s_resultMul_mult0001_Mxor__index0009
+INPUTMC | 25 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 11 | 3 | 2 | 4 | 15 | 9 | 12 | 8 | 5 | 1 | 13 | 10 | 10 | 9 | 9 | 9 | 8 | 7 | 7 | 3 | 1 | 8 | 11 | 6 | 6 | 8 | 1 | 8 | 3 | 8 | 5 | 3 | 12 | 1 | 14 | 3 | 4 | 3 | 0 | 3 | 5 | 6 | 14
+EQ | 87 | 
+   s_operationLeft<4>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationLeft<4>
 	# !s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationChoose<5>.COMB
+	!s_operationChoose<1> & !s_operationChoose<4> & 
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationChoose<0> & !s_operationChoose<1> & 
-	!s_operationChoose<4> & !s_operationChoose<5>.COMB & 
+	!s_operationChoose<4> & !Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000 & 
 	Madd_s_resultAdd__or0003
 	# s_operationChoose<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & !s_operationChoose<4> & s_operationChoose<5>.COMB & 
-	s_operationLeft<5>.COMB
+	!s_operationChoose<1> & !s_operationChoose<4> & s_operationRight<2>.COMB & 
+	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# s_operationChoose<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationChoose<5>.COMB & 
-	!s_operationLeft<5>.COMB
+	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationRight<2>.COMB & 
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<0> & 
 	s_operationRight<4> & !Mmult_s_resultMul_mult0001__and0043
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<4> & 
-	!Mmult_s_resultMul_mult0001__or0012 & s_operationRight<6>.COMB & 
+	!Mmult_s_resultMul_mult0001__or0012 & Mmult_s_resultMul_mult0001_Mxor__index0010 & 
 	!Mmult_s_resultMul_mult0001__and0043
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & s_operationLeft<3> & 
-	s_operationRight<3> & s_operationChoose<5>.COMB
+	s_operationRight<3> & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & s_operationLeft<3> & 
-	s_operationChoose<5>.COMB & !s_operationRight<7>.COMB
+	!Madd_s_resultAdd__or0001 & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & s_operationRight<3> & 
-	s_operationChoose<5>.COMB & !s_operationRight<7>.COMB
+	!Madd_s_resultAdd__or0001 & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationRight<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationRight<1> & s_operationRight<2> & 
 	s_operationChoose<4> & s_operationLeft<0>
@@ -216,35 +401,139 @@ EQ | 86 |
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<1> & 
 	s_operationLeft<0> & Mmult_s_resultMul_mult0001_Mxor__index0009 & 
-	s_operationRight<6>.COMB & !Mmult_s_resultMul_mult0001__and0043
+	Mmult_s_resultMul_mult0001_Mxor__index0010 & !Mmult_s_resultMul_mult0001__and0043
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<0> & 
 	s_operationRight<3> & Mmult_s_resultMul_mult0001_Mxor__index0009 & 
 	!Mmult_s_resultMul_mult0001__or0012 & !Mmult_s_resultMul_mult0001__and0043;	// (27 pt, 25 inp)
 // Direct Input Register
-s_operationChoose<2> := OP_CHOOSE<2>;	// (0 pt, 0 inp)
-   s_operationChoose<2>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
+s_operationLeft<4> := OP_LEFT<4>;	// (0 pt, 0 inp)
+   s_operationLeft<4>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
 
-MACROCELL | 0 | 5 | s_operationChoose<1>_MC
+MACROCELL | 1 | 14 | s_operationLeft<1>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 29 | 1 | 10 | 1 | 9 | 0 | 15 | 0 | 14 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 1 | 15 | 7 | 5 | 10 | 10 | 1 | 12 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 5 | 3 | 12 | 5 | 1 | 1 | 0 | 1 | 2 | 4 | 6 | 1 | 4
-INPUTS | 2 | s_operationLeft<4>  | s_operationRight<4>
-INPUTMC | 2 | 2 | 11 | 3 | 12
-EQ | 4 | 
-   s_operationChoose<1>.COMB =  s_operationLeft<4> & !s_operationRight<4>;	// (1 pt, 2 inp)
+OUTPUTMC | 32 | 0 | 2 | 8 | 12 | 8 | 14 | 7 | 6 | 7 | 4 | 8 | 15 | 8 | 0 | 0 | 5 | 6 | 14 | 6 | 9 | 2 | 14 | 6 | 7 | 1 | 0 | 2 | 12 | 6 | 8 | 7 | 7 | 9 | 8 | 5 | 12 | 9 | 9 | 10 | 5 | 10 | 4 | 7 | 8 | 4 | 8 | 5 | 1 | 7 | 9 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 8 | 1 | 8 | 3
+INPUTS | 23 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<6>  | N_PZ_501  | s_operationChoose<2>.COMB  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationChoose<0>  | s_operationRight<6>  | N_PZ_187  | s_operationLeft<3>.COMB  | s_operationLeft<7>  | s_operationLeft<1>  | s_operationLeft<5>  | s_operationLeft<0>  | s_operationLeft<2>
+INPUTMC | 23 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 5 | 6 | 3 | 7 | 5 | 8 | 1 | 8 | 3 | 8 | 5 | 10 | 10 | 8 | 11 | 10 | 11 | 10 | 13 | 5 | 13 | 10 | 12 | 3 | 15 | 3 | 1 | 3 | 12 | 1 | 14 | 3 | 4 | 1 | 13 | 3 | 0
+EQ | 49 | 
+   s_operationLeft<1>.COMB =  !s_operationChoose<2> & !s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & !s_operationLeft<6> & 
+	!N_PZ_501
+	# !s_operationChoose<2> & !s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & s_operationChoose<2>.COMB & 
+	N_PZ_501
+	# !s_operationRight<0> & !s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
+	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
+	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7> & 
+	s_operationChoose<2>.COMB
+	# !s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
+	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
+	!s_operationRight<7> & N_PZ_187
+	# !s_operationChoose<0> & !s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
+	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
+	!s_operationRight<7> & s_operationLeft<3>.COMB
+	# s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
+	s_operationLeft<7> & !s_operationRight<4> & !s_operationRight<6> & 
+	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
+	# !s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	!s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
+	s_operationLeft<1> & !s_operationRight<4> & !s_operationRight<6> & 
+	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
+	# !s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
+	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<3> & 
+	!s_operationRight<5> & !s_operationRight<7> & s_operationLeft<5>
+	# !s_operationChoose<0> & !s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
+	s_operationLeft<0> & !s_operationRight<4> & !s_operationRight<6> & 
+	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
+	# !s_operationChoose<0> & !s_operationRight<0> & 
+	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
+	!s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
+	s_operationLeft<2> & !s_operationRight<4> & !s_operationRight<6> & 
+	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (10 pt, 23 inp)
 // Direct Input Register
-s_operationChoose<1> := OP_CHOOSE<1>;	// (0 pt, 0 inp)
-   s_operationChoose<1>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
+s_operationLeft<1> := OP_LEFT<1>;	// (0 pt, 0 inp)
+   s_operationLeft<1>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
 
-MACROCELL | 0 | 12 | s_operationChoose<3>_MC
+MACROCELL | 3 | 0 | s_operationLeft<2>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 21 | 1 | 10 | 1 | 9 | 0 | 15 | 0 | 14 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 1 | 15 | 7 | 5 | 10 | 10 | 1 | 12 | 8 | 0 | 0 | 12 | 0 | 13 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14
-INPUTS | 21 | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<1>  | s_operationRight<2>  | s_operationChoose<4>  | s_operationLeft<0>  | s_operationChoose<0>  | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<7>  | s_operationLeft<6>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>.COMB  | s_operationRight<3>
-INPUTMC | 21 | 3 | 1 | 0 | 11 | 0 | 5 | 0 | 12 | 3 | 2 | 3 | 4 | 0 | 13 | 1 | 11 | 0 | 2 | 2 | 4 | 1 | 13 | 1 | 14 | 2 | 13 | 3 | 0 | 2 | 15 | 3 | 12 | 5 | 11 | 5 | 1 | 5 | 13 | 2 | 4 | 3 | 5
+OUTPUTMC | 38 | 0 | 2 | 8 | 15 | 8 | 10 | 6 | 15 | 0 | 5 | 6 | 14 | 6 | 9 | 2 | 14 | 6 | 6 | 8 | 13 | 9 | 0 | 6 | 7 | 1 | 0 | 2 | 12 | 6 | 8 | 10 | 9 | 7 | 7 | 5 | 12 | 9 | 10 | 1 | 15 | 2 | 4 | 9 | 13 | 9 | 14 | 9 | 15 | 5 | 1 | 6 | 4 | 5 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 8 | 1 | 10 | 11 | 4 | 14 | 4 | 13 | 4 | 12 | 4 | 15
+INPUTS | 2 | s_operationLeft<4>  | s_operationRight<4>
+INPUTMC | 2 | 3 | 2 | 10 | 10
+EQ | 4 | 
+   s_operationLeft<2>.COMB =  !s_operationLeft<4> & s_operationRight<4>;	// (1 pt, 2 inp)
+// Direct Input Register
+s_operationLeft<2> := OP_LEFT<2>;	// (0 pt, 0 inp)
+   s_operationLeft<2>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
+
+MACROCELL | 3 | 1 | s_operationLeft<3>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 38 | 3 | 15 | 0 | 2 | 10 | 8 | 0 | 5 | 6 | 14 | 6 | 9 | 2 | 14 | 9 | 0 | 6 | 7 | 1 | 0 | 2 | 12 | 6 | 8 | 10 | 9 | 7 | 7 | 5 | 12 | 9 | 12 | 2 | 4 | 9 | 13 | 9 | 14 | 9 | 15 | 5 | 1 | 6 | 4 | 5 | 13 | 1 | 13 | 3 | 2 | 3 | 4 | 3 | 5 | 8 | 1 | 8 | 3 | 8 | 5 | 8 | 11 | 10 | 7 | 4 | 14 | 4 | 13 | 4 | 12 | 8 | 0 | 4 | 15 | 1 | 14
+INPUTS | 2 | s_operationLeft<4>  | s_operationRight<4>
+INPUTMC | 2 | 3 | 2 | 10 | 10
+EQ | 4 | 
+   s_operationLeft<3>.COMB =  s_operationLeft<4> & !s_operationRight<4>;	// (1 pt, 2 inp)
+// Direct Input Register
+s_operationLeft<3> := OP_LEFT<3>;	// (0 pt, 0 inp)
+   s_operationLeft<3>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
+
+MACROCELL | 3 | 12 | s_operationLeft<7>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 25 | 4 | 10 | 4 | 13 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 1 | 12 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 1 | 15 | 5 | 1 | 4 | 9 | 6 | 4 | 7 | 11 | 7 | 13 | 7 | 14 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 12 | 5 | 14
+INPUTS | 16 | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationLeft<0>  | s_operationRight<7>  | s_operationChoose<3>.COMB  | s_operationChoose<2>.COMB  | s_operationRight<4>.COMB  | N_PZ_106  | N_PZ_296  | s_operationRight<3>.COMB  | Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+INPUTMC | 16 | 5 | 13 | 8 | 1 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 1 | 13 | 10 | 13 | 7 | 10 | 7 | 5 | 10 | 10 | 8 | 12 | 8 | 10 | 8 | 11 | 4 | 15
+EQ | 27 | 
+   s_operationLeft<7>.COMB =  !s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
+	s_operationChoose<4> & s_operationLeft<7> & s_operationLeft<0> & 
+	s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB & s_operationRight<4>.COMB & N_PZ_106 & !N_PZ_296 & 
+	!s_operationRight<3>.COMB & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+	# !s_operationChoose<0> & s_operationRight<0> & 
+	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
+	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<0> & 
+	!s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB & s_operationRight<4>.COMB & N_PZ_106 & !N_PZ_296 & 
+	!s_operationRight<3>.COMB & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+	# !s_operationChoose<0> & !s_operationRight<0> & 
+	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
+	s_operationChoose<4> & s_operationLeft<7> & !s_operationLeft<0> & 
+	s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB & s_operationRight<4>.COMB & N_PZ_106 & !N_PZ_296 & 
+	!s_operationRight<3>.COMB & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+	# !s_operationChoose<0> & !s_operationRight<0> & 
+	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
+	s_operationChoose<4> & !s_operationLeft<7> & !s_operationLeft<0> & 
+	!s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB & s_operationRight<4>.COMB & N_PZ_106 & !N_PZ_296 & 
+	!s_operationRight<3>.COMB & Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000;	// (4 pt, 16 inp)
+// Direct Input Register
+s_operationLeft<7> := OP_LEFT<7>;	// (0 pt, 0 inp)
+   s_operationLeft<7>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
+
+MACROCELL | 1 | 13 | s_operationLeft<0>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 30 | 4 | 6 | 0 | 2 | 8 | 14 | 8 | 0 | 6 | 15 | 0 | 5 | 6 | 14 | 6 | 9 | 2 | 14 | 1 | 0 | 2 | 12 | 6 | 8 | 7 | 7 | 9 | 8 | 5 | 12 | 9 | 9 | 2 | 4 | 7 | 8 | 5 | 1 | 7 | 15 | 7 | 9 | 7 | 13 | 7 | 14 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 12 | 8 | 1 | 8 | 3
+INPUTS | 21 | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<1>  | s_operationRight<2>  | s_operationChoose<4>  | s_operationLeft<0>  | s_operationChoose<0>  | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<7>  | s_operationLeft<6>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | s_operationRight<7>  | N_PZ_187  | s_operationRight<3>
+INPUTMC | 21 | 8 | 1 | 7 | 5 | 5 | 15 | 7 | 10 | 8 | 3 | 8 | 5 | 7 | 11 | 1 | 13 | 5 | 13 | 3 | 1 | 1 | 14 | 3 | 0 | 3 | 4 | 3 | 12 | 3 | 5 | 10 | 10 | 10 | 12 | 10 | 11 | 10 | 13 | 3 | 15 | 8 | 11
 EQ | 50 | 
-   s_operationChoose<3>.COMB =  !s_operationRight<0> & s_operationChoose<2> & 
+   s_operationLeft<0>.COMB =  !s_operationRight<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & s_operationChoose<4> & s_operationLeft<0>
 	# s_operationChoose<0> & s_operationRight<0> & 
@@ -275,7 +564,7 @@ EQ | 50 |
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationLeft<3>.COMB
+	!s_operationRight<7> & N_PZ_187
 	# !s_operationRight<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & s_operationLeft<0> & 
@@ -292,347 +581,95 @@ EQ | 50 |
 	s_operationLeft<2> & !s_operationRight<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (11 pt, 21 inp)
 // Direct Input Register
-s_operationChoose<3> := OP_CHOOSE<3>;	// (0 pt, 0 inp)
-   s_operationChoose<3>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
-
-MACROCELL | 1 | 0 | s_operationChoose<5>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 11 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 7 | 5 | 10 | 10 | 8 | 0 | 1 | 10 | 9 | 15 | 0 | 11
-INPUTS | 2 | s_operationChoose<1>.COMB  | s_operationChoose<0>.COMB
-INPUTMC | 2 | 0 | 5 | 0 | 2
-EQ | 5 | 
-   s_operationChoose<5>.COMB =  !s_operationChoose<1>.COMB & 
-	!s_operationChoose<0>.COMB;	// (1 pt, 2 inp)
-// Direct Input Register
-s_operationChoose<5> := OP_CHOOSE<5>;	// (0 pt, 0 inp)
-   s_operationChoose<5>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
-
-MACROCELL | 1 | 2 | s_operationChoose<6>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 10 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 7 | 5 | 10 | 10 | 8 | 0 | 11 | 4 | 1 | 14
-INPUTS | 5 | s_operationChoose<0>.COMB  | s_operationRight<5>  | s_operationLeft<5>  | s_operationChoose<1>.COMB  | s_operationLeft<5>.COMB
-INPUTMC | 5 | 0 | 2 | 5 | 1 | 2 | 13 | 0 | 5 | 2 | 13
-EQ | 7 | 
-   s_operationChoose<6>.COMB =  s_operationChoose<0>.COMB
-	# s_operationRight<5> & !s_operationLeft<5>
-	# !s_operationChoose<1>.COMB & 
-	s_operationLeft<5>.COMB;	// (3 pt, 5 inp)
-// Direct Input Register
-s_operationChoose<6> := OP_CHOOSE<6>;	// (0 pt, 0 inp)
-   s_operationChoose<6>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
-
-MACROCELL | 1 | 4 | s_operationChoose<7>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 9 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 7 | 5 | 10 | 10 | 8 | 0 | 1 | 9
-INPUTS | 11 | s_operationLeft<7>.COMB  | N_PZ_501  | s_operationChoose<0>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<5>  | Msub_s_resultSub_Mxor_Result<5>__xor0000  | s_operationChoose<1>.COMB  | N_PZ_314  | s_operationLeft<3>.COMB  | s_operationChoose<0>.COMB
-INPUTMC | 11 | 3 | 0 | 4 | 15 | 0 | 2 | 3 | 0 | 5 | 13 | 5 | 1 | 7 | 4 | 0 | 5 | 4 | 6 | 2 | 4 | 0 | 2
-EQ | 14 | 
-   s_operationChoose<7>.COMB =  s_operationLeft<7>.COMB & N_PZ_501
-	# !s_operationChoose<0> & s_operationLeft<7> & 
-	!s_operationRight<7>
-	# !s_operationRight<5> & 
-	!Msub_s_resultSub_Mxor_Result<5>__xor0000 & N_PZ_501
-	# Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	s_operationChoose<1>.COMB & N_PZ_501
-	# Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_501 & !N_PZ_314
-	# Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	s_operationLeft<3>.COMB & !s_operationChoose<0>.COMB & N_PZ_501;	// (6 pt, 11 inp)
-// Direct Input Register
-s_operationChoose<7> := OP_CHOOSE<7>;	// (0 pt, 0 inp)
-   s_operationChoose<7>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
-
-MACROCELL | 3 | 2 | s_operationRight<1>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 26 | 9 | 12 | 0 | 15 | 6 | 4 | 9 | 0 | 5 | 15 | 4 | 9 | 2 | 10 | 9 | 1 | 6 | 5 | 7 | 7 | 8 | 15 | 4 | 8 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 10 | 10 | 1 | 12 | 7 | 8 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 3 | 5 | 3 | 12 | 5 | 11
-INPUTS | 11 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<6>  | s_operationChoose<4>  | s_operationRight<0>.COMB  | s_operationLeft<7>.COMB  | s_operationLeft<6>  | s_operationLeft<5>  | OP_RESULT<5>90  | s_operationLeft<1>  | N_PZ_231
-INPUTMC | 11 | 0 | 2 | 0 | 11 | 5 | 11 | 0 | 13 | 3 | 1 | 3 | 0 | 2 | 15 | 2 | 13 | 2 | 9 | 1 | 13 | 2 | 8
-EQ | 23 | 
-   s_operationRight<1>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationRight<6>
-	# s_operationChoose<0> & !s_operationChoose<4> & 
-	s_operationRight<0>.COMB
-	# s_operationChoose<0> & !s_operationChoose<4> & 
-	s_operationLeft<7>.COMB
-	# !s_operationLeft<6> & !s_operationLeft<5> & 
-	OP_RESULT<5>90
-	# s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & s_operationLeft<1>
-	# !s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<4> & s_operationLeft<6>
-	# !s_operationChoose<4> & s_operationRight<6> & 
-	!s_operationRight<0>.COMB & !s_operationLeft<7>.COMB
-	# !s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & !s_operationLeft<6> & s_operationLeft<5>
-	# !s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & !s_operationLeft<6> & !N_PZ_231
-	# !s_operationChoose<0> & s_operationChoose<4> & 
-	s_operationLeft<6> & !s_operationLeft<5> & !OP_RESULT<5>90;	// (10 pt, 11 inp)
-// Direct Input Register
-s_operationRight<1> := OP_RIGHT<1>;	// (0 pt, 0 inp)
-   s_operationRight<1>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 3 | 4 | s_operationRight<2>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 25 | 8 | 13 | 6 | 4 | 9 | 0 | 5 | 15 | 4 | 9 | 2 | 10 | 9 | 1 | 6 | 5 | 4 | 8 | 4 | 7 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 10 | 10 | 1 | 12 | 7 | 8 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 3 | 5 | 3 | 12 | 5 | 1 | 5 | 11
-INPUTS | 10 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<7>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationLeft<0>  | s_operationLeft<6>  | s_operationLeft<5>  | N_PZ_231  | OP_RESULT<5>90
-INPUTMC | 10 | 0 | 2 | 0 | 11 | 5 | 13 | 0 | 13 | 3 | 0 | 1 | 11 | 2 | 15 | 2 | 13 | 2 | 8 | 2 | 9
-EQ | 26 | 
-   s_operationRight<2>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationRight<7>
-	# s_operationChoose<0> & !s_operationChoose<4> & 
-	s_operationLeft<7>
-	# s_operationChoose<0> & !s_operationChoose<4> & 
-	s_operationRight<7>
-	# !s_operationChoose<4> & s_operationLeft<7> & 
-	s_operationRight<7>
-	# s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & s_operationLeft<0>
-	# !s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<4> & s_operationLeft<7>
-	# !s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<6>
-	# !s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<5>
-	# !s_operationChoose<0> & !s_operationChoose<2> & 
-	s_operationChoose<4> & !s_operationLeft<7> & !N_PZ_231
-	# !s_operationChoose<2> & !s_operationLeft<7> & 
-	!s_operationLeft<6> & !s_operationLeft<5> & OP_RESULT<5>90
-	# !s_operationChoose<0> & s_operationChoose<4> & 
-	s_operationLeft<7> & !s_operationLeft<6> & !s_operationLeft<5> & 
-	N_PZ_231 & !OP_RESULT<5>90;	// (11 pt, 10 inp)
-// Direct Input Register
-s_operationRight<2> := OP_RIGHT<2>;	// (0 pt, 0 inp)
-   s_operationRight<2>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 0 | 13 | s_operationChoose<4>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 28 | 1 | 10 | 1 | 9 | 0 | 15 | 0 | 14 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 2 | 9 | 1 | 15 | 7 | 5 | 10 | 10 | 1 | 12 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 3 | 12 | 5 | 1
-INPUTS | 23 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<6>  | N_PZ_501  | s_operationLeft<7>.COMB  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationChoose<0>  | s_operationRight<6>  | s_operationLeft<3>.COMB  | s_operationChoose<1>.COMB  | s_operationLeft<7>  | s_operationLeft<1>  | s_operationLeft<5>  | s_operationLeft<0>  | s_operationLeft<2>
-INPUTMC | 23 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 2 | 15 | 4 | 15 | 3 | 0 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 12 | 3 | 5 | 5 | 1 | 5 | 13 | 0 | 2 | 5 | 11 | 2 | 4 | 0 | 5 | 3 | 0 | 1 | 13 | 2 | 13 | 1 | 11 | 1 | 14
-EQ | 49 | 
-   s_operationChoose<4>.COMB =  !s_operationChoose<2> & !s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & !s_operationLeft<6> & 
-	!N_PZ_501
-	# !s_operationChoose<2> & !s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7>.COMB & 
-	N_PZ_501
-	# !s_operationRight<0> & !s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
-	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
-	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationLeft<7>.COMB
-	# !s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
-	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationLeft<3>.COMB
-	# !s_operationChoose<0> & !s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
-	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationChoose<1>.COMB
-	# s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
-	s_operationLeft<7> & !s_operationRight<4> & !s_operationRight<6> & 
-	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
-	# !s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	!s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
-	s_operationLeft<1> & !s_operationRight<4> & !s_operationRight<6> & 
-	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
-	# !s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
-	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<3> & 
-	!s_operationRight<5> & !s_operationRight<7> & s_operationLeft<5>
-	# !s_operationChoose<0> & !s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
-	s_operationLeft<0> & !s_operationRight<4> & !s_operationRight<6> & 
-	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>
-	# !s_operationChoose<0> & !s_operationRight<0> & 
-	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
-	!s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
-	s_operationLeft<2> & !s_operationRight<4> & !s_operationRight<6> & 
-	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (10 pt, 23 inp)
-// Direct Input Register
-s_operationChoose<4> := OP_CHOOSE<4>;	// (0 pt, 0 inp)
-   s_operationChoose<4>.CLK  =  CLK_CHOOSE;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_CHOOSE
-
-MACROCELL | 2 | 11 | s_operationLeft<4>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 22 | 0 | 15 | 6 | 4 | 6 | 9 | 5 | 15 | 6 | 14 | 2 | 10 | 6 | 5 | 2 | 9 | 6 | 15 | 7 | 7 | 8 | 15 | 3 | 15 | 7 | 9 | 10 | 10 | 7 | 8 | 10 | 7 | 0 | 2 | 0 | 5 | 0 | 11 | 3 | 5 | 1 | 10 | 9 | 1
-INPUTS | 3 | s_operationLeft<3>.COMB  | s_operationLeft<3>  | s_operationRight<3>
-INPUTMC | 3 | 2 | 4 | 2 | 4 | 3 | 5
-EQ | 5 | 
-   s_operationLeft<4>.COMB =  s_operationLeft<3>.COMB
-	# !s_operationLeft<3> & s_operationRight<3>;	// (2 pt, 3 inp)
-// Direct Input Register
-s_operationLeft<4> := OP_LEFT<4>;	// (0 pt, 0 inp)
-   s_operationLeft<4>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 1 | 13 | s_operationLeft<1>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 32 | 9 | 12 | 6 | 4 | 4 | 10 | 3 | 14 | 4 | 4 | 9 | 14 | 9 | 0 | 5 | 15 | 4 | 9 | 2 | 8 | 2 | 10 | 9 | 13 | 6 | 5 | 2 | 9 | 10 | 15 | 6 | 15 | 4 | 8 | 4 | 7 | 10 | 14 | 11 | 11 | 11 | 15 | 4 | 11 | 10 | 10 | 4 | 12 | 0 | 11 | 0 | 12 | 0 | 13 | 4 | 6 | 3 | 2 | 3 | 5 | 3 | 12 | 5 | 11
-INPUTS | 12 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<0>.COMB  | s_operationRight<5>  | s_operationLeft<5>  | s_operationLeft<7>.COMB  | N_PZ_314
-INPUTMC | 12 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 5 | 13 | 3 | 1 | 5 | 1 | 2 | 13 | 3 | 0 | 4 | 6
-EQ | 36 | 
-   s_operationLeft<1>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<7>
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<0>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<7> & s_operationRight<0>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<5> & !s_operationLeft<5> & 
-	!s_operationLeft<7>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<5> & !s_operationLeft<7>.COMB & 
-	N_PZ_314
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & !s_operationLeft<5> & !s_operationLeft<7>.COMB & 
-	N_PZ_314
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<5> & s_operationRight<7> & !s_operationLeft<5> & 
-	!s_operationLeft<7>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<5> & s_operationRight<7> & !s_operationLeft<7>.COMB & 
-	N_PZ_314
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<7> & !s_operationLeft<5> & !s_operationLeft<7>.COMB & 
-	N_PZ_314;	// (9 pt, 12 inp)
-// Direct Input Register
-s_operationLeft<1> := OP_LEFT<1>;	// (0 pt, 0 inp)
-   s_operationLeft<1>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 1 | 14 | s_operationLeft<2>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 34 | 8 | 13 | 6 | 4 | 9 | 14 | 5 | 15 | 4 | 9 | 2 | 8 | 2 | 10 | 8 | 14 | 9 | 1 | 9 | 13 | 6 | 5 | 2 | 9 | 6 | 15 | 8 | 15 | 4 | 8 | 10 | 8 | 1 | 15 | 7 | 5 | 3 | 15 | 2 | 12 | 2 | 14 | 10 | 10 | 11 | 5 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 4 | 6 | 2 | 15 | 3 | 5 | 3 | 12 | 5 | 1 | 5 | 11 | 5 | 13
-INPUTS | 12 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<0>.COMB  | s_operationLeft<7>.COMB  | s_operationRight<5>  | s_operationChoose<6>.COMB  | s_operationLeft<5>
-INPUTMC | 12 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 5 | 13 | 3 | 1 | 3 | 0 | 5 | 1 | 1 | 2 | 2 | 13
-EQ | 30 | 
-   s_operationLeft<2>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<7>
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<0>.COMB & 
-	!s_operationLeft<7>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<7> & s_operationRight<0>.COMB & 
-	!s_operationLeft<7>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & s_operationRight<5> & !s_operationLeft<7>.COMB & 
-	s_operationChoose<6>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationLeft<7> & !s_operationLeft<5> & !s_operationLeft<7>.COMB & 
-	s_operationChoose<6>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<5> & s_operationRight<7> & !s_operationLeft<7>.COMB & 
-	s_operationChoose<6>.COMB
-	# s_operationChoose<0> & s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationRight<7> & !s_operationLeft<5> & !s_operationLeft<7>.COMB & 
-	s_operationChoose<6>.COMB;	// (7 pt, 12 inp)
-// Direct Input Register
-s_operationLeft<2> := OP_LEFT<2>;	// (0 pt, 0 inp)
-   s_operationLeft<2>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 2 | 4 | s_operationLeft<3>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 38 | 6 | 4 | 6 | 9 | 5 | 15 | 4 | 9 | 2 | 8 | 2 | 10 | 9 | 1 | 9 | 13 | 6 | 5 | 2 | 9 | 6 | 15 | 8 | 15 | 4 | 8 | 4 | 7 | 9 | 15 | 7 | 5 | 3 | 15 | 2 | 12 | 2 | 14 | 10 | 10 | 10 | 9 | 8 | 0 | 0 | 11 | 0 | 12 | 4 | 6 | 2 | 4 | 2 | 11 | 2 | 13 | 2 | 15 | 3 | 5 | 3 | 12 | 5 | 11 | 9 | 0 | 1 | 15 | 1 | 12 | 0 | 13 | 1 | 4 | 1 | 11
-INPUTS | 2 | s_operationLeft<3>  | s_operationRight<3>
-INPUTMC | 2 | 2 | 4 | 3 | 5
-EQ | 4 | 
-   s_operationLeft<3>.COMB =  s_operationLeft<3> & !s_operationRight<3>;	// (1 pt, 2 inp)
-// Direct Input Register
-s_operationLeft<3> := OP_LEFT<3>;	// (0 pt, 0 inp)
-   s_operationLeft<3>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 3 | 0 | s_operationLeft<7>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 27 | 1 | 10 | 1 | 9 | 0 | 15 | 6 | 4 | 6 | 6 | 9 | 0 | 5 | 15 | 6 | 7 | 9 | 1 | 6 | 5 | 1 | 15 | 10 | 10 | 1 | 12 | 7 | 8 | 8 | 0 | 0 | 11 | 0 | 12 | 0 | 13 | 1 | 4 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 4 | 3 | 5 | 4 | 14 | 3 | 2
-INPUTS | 2 | s_operationRight<6>  | s_operationLeft<6>
-INPUTMC | 2 | 5 | 11 | 2 | 15
-EQ | 4 | 
-   s_operationLeft<7>.COMB =  !s_operationRight<6> & s_operationLeft<6>;	// (1 pt, 2 inp)
-// Direct Input Register
-s_operationLeft<7> := OP_LEFT<7>;	// (0 pt, 0 inp)
-   s_operationLeft<7>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 1 | 11 | s_operationLeft<0>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 30 | 1 | 10 | 0 | 14 | 6 | 4 | 4 | 10 | 6 | 6 | 9 | 0 | 5 | 15 | 4 | 9 | 2 | 8 | 2 | 10 | 6 | 5 | 2 | 9 | 10 | 15 | 6 | 15 | 4 | 8 | 4 | 7 | 10 | 14 | 7 | 5 | 4 | 11 | 10 | 10 | 4 | 13 | 4 | 12 | 0 | 11 | 0 | 12 | 0 | 13 | 4 | 6 | 3 | 4 | 3 | 5 | 5 | 1 | 5 | 11
-INPUTS | 14 | Msub_s_resultSub_Mxor_Result<5>__xor0000  | N_PZ_226  | s_operationChoose<1>.COMB  | s_operationLeft<3>.COMB  | s_operationChoose<0>.COMB  | s_operationLeft<5>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationLeft<7>.COMB
-INPUTMC | 14 | 7 | 4 | 7 | 15 | 0 | 5 | 2 | 4 | 0 | 2 | 2 | 13 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 5 | 13 | 3 | 0
-EQ | 19 | 
-   s_operationLeft<0>.COMB =  !Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_226
-	# s_operationChoose<1>.COMB & N_PZ_226
-	# s_operationLeft<3>.COMB & 
-	!s_operationChoose<0>.COMB & N_PZ_226
-	# !s_operationChoose<0>.COMB & 
-	!s_operationLeft<5>.COMB & N_PZ_226
-	# !s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationLeft<7> & !s_operationRight<7>
-	# !s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationLeft<7> & s_operationLeft<7>.COMB
-	# !s_operationChoose<0> & s_operationChoose<2> & 
-	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!s_operationRight<7> & s_operationLeft<7>.COMB;	// (7 pt, 14 inp)
-// Direct Input Register
 s_operationLeft<0> := OP_LEFT<0>;	// (0 pt, 0 inp)
    s_operationLeft<0>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK_LEFT
 
-MACROCELL | 3 | 12 | s_operationRight<4>_MC
+MACROCELL | 10 | 10 | s_operationRight<4>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 19 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 10 | 14 | 11 | 11 | 11 | 15 | 9 | 15 | 1 | 15 | 2 | 14 | 1 | 12 | 10 | 9 | 0 | 2 | 0 | 5 | 0 | 11 | 0 | 12 | 0 | 13 | 2 | 15
-INPUTS | 17 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | s_operationLeft<1>  | N_PZ_106  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<5>  | Mshift_s_resultRotateRight_Sh<1>  | Mshift_s_resultRotateLeft_Sh<7>  | Mshift_s_resultRotateLeft_Sh<5>  | N_PZ_114  | s_operationRight<0>  | s_operationLeft<2>  | N_PZ_296  | s_operationLeft<3>
-INPUTMC | 17 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 13 | 1 | 13 | 9 | 12 | 3 | 2 | 3 | 4 | 6 | 8 | 9 | 14 | 6 | 7 | 6 | 14 | 4 | 10 | 3 | 1 | 1 | 14 | 8 | 13 | 2 | 4
+OUTPUTMC | 25 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 9 | 9 | 10 | 5 | 10 | 4 | 9 | 12 | 1 | 15 | 9 | 14 | 9 | 15 | 4 | 9 | 1 | 13 | 1 | 14 | 3 | 0 | 3 | 1 | 3 | 2 | 10 | 7 | 4 | 13 | 4 | 12 | 2 | 4 | 3 | 12 | 10 | 12 | 10 | 13
+INPUTS | 2 | s_operationRight<5>  | s_operationLeft<5>
+INPUTMC | 2 | 10 | 11 | 3 | 4
+EQ | 5 | 
+   s_operationRight<4>.COMB =  s_operationRight<5> & s_operationLeft<5>
+	# !s_operationRight<5> & !s_operationLeft<5>;	// (2 pt, 2 inp)
+// Direct Input Register
+s_operationRight<4> := OP_RIGHT<4>;	// (0 pt, 0 inp)
+   s_operationRight<4>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 10 | 12 | s_operationRight<6>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 16 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 1 | 15 | 4 | 8 | 5 | 1 | 4 | 9 | 7 | 15 | 7 | 9 | 11 | 9 | 7 | 5 | 7 | 10 | 1 | 13 | 1 | 14
+INPUTS | 3 | s_operationRight<5>  | s_operationRight<4>.COMB  | Madd_s_resultAdd__or0003
+INPUTMC | 3 | 10 | 11 | 10 | 10 | 9 | 12
+EQ | 6 | 
+   s_operationRight<6>.COMB =  !s_operationRight<5> & s_operationRight<4>.COMB
+	# !s_operationRight<4>.COMB & 
+	Madd_s_resultAdd__or0003;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationRight<6> := OP_RIGHT<6>;	// (0 pt, 0 inp)
+   s_operationRight<6>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 8 | 11 | s_operationRight<3>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 24 | 3 | 15 | 0 | 2 | 8 | 0 | 0 | 5 | 2 | 14 | 9 | 0 | 1 | 0 | 9 | 8 | 9 | 10 | 9 | 9 | 9 | 12 | 1 | 15 | 9 | 13 | 9 | 14 | 9 | 15 | 4 | 9 | 1 | 13 | 1 | 14 | 3 | 2 | 8 | 1 | 8 | 5 | 8 | 11 | 10 | 6 | 3 | 12
+INPUTS | 3 | N_PZ_187  | s_operationLeft<3>  | s_operationRight<3>
+INPUTMC | 3 | 3 | 15 | 3 | 1 | 8 | 11
+EQ | 5 | 
+   s_operationRight<3>.COMB =  N_PZ_187
+	# !s_operationLeft<3> & s_operationRight<3>;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationRight<3> := OP_RIGHT<3>;	// (0 pt, 0 inp)
+   s_operationRight<3>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 10 | 11 | s_operationRight<5>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 22 | 4 | 14 | 4 | 10 | 4 | 13 | 1 | 10 | 4 | 11 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 1 | 15 | 2 | 4 | 7 | 8 | 4 | 9 | 7 | 9 | 1 | 13 | 1 | 14 | 10 | 10 | 10 | 11 | 10 | 12 | 10 | 13 | 10 | 2
+INPUTS | 3 | Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000  | s_operationLeft<2>  | s_operationRight<5>
+INPUTMC | 3 | 10 | 7 | 3 | 0 | 10 | 11
+EQ | 5 | 
+   s_operationRight<5>.COMB =  Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000
+	$ s_operationLeft<2> & s_operationRight<5>;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationRight<5> := OP_RIGHT<5>;	// (0 pt, 0 inp)
+   s_operationRight<5>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 10 | 13 | s_operationRight<7>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 20 | 4 | 10 | 4 | 13 | 4 | 7 | 1 | 10 | 4 | 12 | 4 | 11 | 0 | 2 | 8 | 0 | 0 | 5 | 9 | 0 | 1 | 0 | 1 | 15 | 4 | 9 | 7 | 15 | 6 | 4 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 12 | 5 | 1
+INPUTS | 3 | s_operationRight<5>  | N_PZ_378  | s_operationRight<4>.COMB
+INPUTMC | 3 | 10 | 11 | 4 | 14 | 10 | 10
+EQ | 5 | 
+   s_operationRight<7>.COMB =  s_operationRight<5> & N_PZ_378
+	# N_PZ_378 & s_operationRight<4>.COMB;	// (2 pt, 3 inp)
+// Direct Input Register
+s_operationRight<7> := OP_RIGHT<7>;	// (0 pt, 0 inp)
+   s_operationRight<7>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_RIGHT
+
+MACROCELL | 3 | 5 | s_operationLeft<6>_MC
+ATTRIBUTES | 545293056 | 5
+OUTPUTMC | 19 | 1 | 12 | 0 | 2 | 8 | 0 | 0 | 5 | 1 | 0 | 4 | 8 | 5 | 1 | 5 | 13 | 5 | 15 | 7 | 5 | 7 | 10 | 7 | 11 | 7 | 12 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 5 | 14
+INPUTS | 17 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | s_operationLeft<1>  | N_PZ_106  | s_operationRight<1>  | s_operationRight<2>  | s_operationChoose<5>.COMB  | Mshift_s_resultRotateRight_Sh<1>  | s_operationChoose<4>.COMB  | Mshift_s_resultRotateLeft_Sh<5>  | N_PZ_114  | s_operationRight<0>  | s_operationLeft<2>  | N_PZ_296  | s_operationLeft<3>
+INPUTMC | 17 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 11 | 1 | 14 | 8 | 12 | 8 | 3 | 8 | 5 | 7 | 12 | 8 | 15 | 7 | 11 | 10 | 15 | 8 | 14 | 8 | 1 | 3 | 0 | 8 | 10 | 3 | 1
 EQ | 28 | 
-   s_operationRight<4>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
+   s_operationLeft<6>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationLeft<1>
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & !N_PZ_106
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationRight<1> & s_operationRight<2> & 
-	s_operationChoose<4> & !Mshift_s_resultRotateRight_Sh<5>
+	s_operationChoose<4> & !s_operationChoose<5>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationRight<1> & !s_operationRight<2> & 
 	s_operationChoose<4> & !Mshift_s_resultRotateRight_Sh<1>
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationRight<1> & !s_operationRight<2> & 
-	s_operationChoose<4> & !Mshift_s_resultRotateLeft_Sh<7>
+	s_operationChoose<4> & !s_operationChoose<4>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationRight<1> & s_operationRight<2> & 
 	s_operationChoose<4> & !Mshift_s_resultRotateLeft_Sh<5>
@@ -646,72 +683,17 @@ EQ | 28 |
 	s_operationChoose<2> & !s_operationChoose<1> & s_operationRight<1> & 
 	s_operationRight<2> & s_operationChoose<4> & s_operationLeft<3>;	// (9 pt, 17 inp)
 // Direct Input Register
-s_operationRight<4> := OP_RIGHT<4>;	// (0 pt, 0 inp)
-   s_operationRight<4>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
+s_operationLeft<6> := OP_LEFT<6>;	// (0 pt, 0 inp)
+   s_operationLeft<6>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
+GLOBALS | 1 | 2 | CLK_LEFT
 
-MACROCELL | 5 | 11 | s_operationRight<6>_MC
+MACROCELL | 3 | 4 | s_operationLeft<5>_MC
 ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 21 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 1 | 15 | 10 | 10 | 1 | 12 | 4 | 13 | 4 | 12 | 4 | 14 | 0 | 12 | 0 | 13 | 3 | 0 | 3 | 1 | 3 | 2 | 10 | 15 | 4 | 8 | 4 | 7 | 10 | 14 | 0 | 11
-INPUTS | 16 | s_operationRight<2>  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<1>  | N_PZ_296  | s_operationRight<0>  | Madd_s_resultAdd__or0000  | s_operationRight<1>  | Msub_s_resultSub__or0001  | s_operationLeft<0>  | N_PZ_114  | N_PZ_106  | N_PZ_231  | N_PZ_134  | s_operationLeft<2>  | s_operationLeft<3>  | Mshift_s_resultRotateRight_Sh<1>
-INPUTMC | 16 | 3 | 4 | 8 | 15 | 1 | 13 | 8 | 13 | 3 | 1 | 3 | 14 | 3 | 2 | 4 | 4 | 1 | 11 | 4 | 10 | 9 | 12 | 2 | 8 | 9 | 13 | 1 | 14 | 2 | 4 | 9 | 14
-EQ | 47 | 
-   s_operationRight<6>.COMB =  !s_operationRight<2> & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationLeft<1> & N_PZ_296 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationRight<0> & N_PZ_296 & 
-	!Madd_s_resultAdd__or0000 & Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<1> & !N_PZ_296 & 
-	!Msub_s_resultSub__or0001 & Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationLeft<0> & N_PZ_296 & N_PZ_114 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !N_PZ_106 & Madd_s_resultAdd__or0000 & !N_PZ_231 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# N_PZ_296 & !N_PZ_114 & !N_PZ_134 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<0> & s_operationLeft<1> & 
-	!N_PZ_296 & N_PZ_231 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<0> & N_PZ_106 & N_PZ_114 & 
-	N_PZ_231 & Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationRight<0> & s_operationLeft<2> & 
-	!N_PZ_106 & !N_PZ_296 & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationLeft<1> & s_operationLeft<2> & 
-	!N_PZ_296 & !N_PZ_114 & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationLeft<2> & N_PZ_106 & !N_PZ_296 & 
-	!N_PZ_134 & !Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationLeft<2> & !N_PZ_296 & !N_PZ_114 & 
-	!N_PZ_231 & !Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<2> & s_operationLeft<1> & 
-	N_PZ_296 & !N_PZ_114 & N_PZ_231 & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationLeft<1> & s_operationLeft<3> & 
-	!N_PZ_106 & N_PZ_296 & Mshift_s_resultRotateRight_Sh<1> & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationLeft<1> & s_operationLeft<0> & 
-	N_PZ_106 & N_PZ_296 & !N_PZ_134 & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationLeft<1> & s_operationLeft<2> & 
-	s_operationLeft<3> & !N_PZ_106 & !N_PZ_296 & 
-	!Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationLeft<2> & s_operationLeft<0> & 
-	N_PZ_296 & Madd_s_resultAdd__or0000 & 
-	!Mshift_s_resultRotateRight_Sh<1> & !Mmult_s_resultMul_mult0001_Mxor__index0003;	// (18 pt, 16 inp)
-// Direct Input Register
-s_operationRight<6> := OP_RIGHT<6>;	// (0 pt, 0 inp)
-   s_operationRight<6>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 3 | 5 | s_operationRight<3>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 23 | 6 | 4 | 9 | 0 | 5 | 15 | 2 | 10 | 9 | 1 | 6 | 5 | 10 | 15 | 10 | 8 | 10 | 14 | 9 | 15 | 1 | 15 | 2 | 12 | 2 | 14 | 1 | 12 | 10 | 7 | 0 | 11 | 0 | 12 | 0 | 13 | 4 | 6 | 2 | 4 | 2 | 11 | 2 | 13 | 2 | 15
+OUTPUTMC | 25 | 4 | 14 | 4 | 10 | 1 | 10 | 4 | 11 | 1 | 12 | 0 | 2 | 0 | 5 | 10 | 15 | 1 | 0 | 2 | 12 | 10 | 14 | 1 | 15 | 2 | 4 | 4 | 8 | 5 | 1 | 5 | 13 | 5 | 15 | 7 | 12 | 7 | 13 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 10 | 10 | 5 | 14
 INPUTS | 16 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | s_operationLeft<2>  | N_PZ_296  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<5>  | s_operationLeft<3>  | s_operationLeft<4>  | s_operationLeft<7>  | s_operationLeft<1>  | s_operationLeft<0>  | s_operationLeft<6>
-INPUTMC | 16 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 13 | 1 | 14 | 8 | 13 | 3 | 1 | 3 | 2 | 3 | 4 | 2 | 13 | 2 | 4 | 2 | 11 | 3 | 0 | 1 | 13 | 1 | 11 | 2 | 15
+INPUTMC | 16 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 11 | 3 | 0 | 8 | 10 | 8 | 1 | 8 | 3 | 8 | 5 | 3 | 4 | 3 | 1 | 3 | 2 | 3 | 12 | 1 | 14 | 1 | 13 | 3 | 5
 EQ | 40 | 
-   s_operationRight<3>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
+   s_operationLeft<5>.COMB =  s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & !s_operationLeft<2>
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<4> & N_PZ_296
@@ -749,177 +731,187 @@ EQ | 40 |
 	s_operationChoose<2> & !s_operationChoose<1> & !s_operationRight<1> & 
 	s_operationRight<2> & s_operationChoose<4> & s_operationLeft<6>;	// (13 pt, 16 inp)
 // Direct Input Register
-s_operationRight<3> := OP_RIGHT<3>;	// (0 pt, 0 inp)
-   s_operationRight<3>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 5 | 1 | s_operationRight<5>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 21 | 7 | 4 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 1 | 15 | 7 | 5 | 4 | 11 | 7 | 6 | 11 | 4 | 1 | 12 | 11 | 5 | 4 | 12 | 0 | 12 | 0 | 13 | 1 | 2 | 1 | 4 | 7 | 15 | 1 | 13 | 1 | 14
-INPUTS | 10 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | N_PZ_296  | Msub_s_resultSub__or0001  | s_operationRight<0>  | s_operationLeft<0>  | s_operationRight<2>  | Madd_s_resultAdd__or0000  | s_operationLeft<2>
-INPUTMC | 10 | 0 | 11 | 0 | 5 | 0 | 13 | 8 | 13 | 4 | 4 | 3 | 1 | 1 | 11 | 3 | 4 | 3 | 14 | 1 | 14
-EQ | 25 | 
-   s_operationRight<5>.COMB =  !s_operationChoose<2> & !s_operationChoose<1> & 
-	!s_operationChoose<4> & N_PZ_296 & !Msub_s_resultSub__or0001
-	# !s_operationChoose<2> & !s_operationChoose<1> & 
-	!s_operationChoose<4> & !N_PZ_296 & Msub_s_resultSub__or0001
-	# s_operationRight<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<0> & 
-	N_PZ_296
-	# !s_operationRight<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & !s_operationRight<2> & s_operationChoose<4> & 
-	Madd_s_resultAdd__or0000
-	# !s_operationRight<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<4> & !s_operationLeft<0> & 
-	Madd_s_resultAdd__or0000
-	# !s_operationChoose<2> & !s_operationChoose<1> & 
-	s_operationChoose<4> & !s_operationLeft<2> & !s_operationLeft<0> & 
-	Madd_s_resultAdd__or0000
-	# s_operationRight<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<2> & 
-	!s_operationLeft<0> & !Madd_s_resultAdd__or0000
-	# !s_operationRight<0> & !s_operationChoose<2> & 
-	!s_operationChoose<1> & s_operationRight<2> & s_operationChoose<4> & 
-	s_operationLeft<0> & !Madd_s_resultAdd__or0000;	// (8 pt, 10 inp)
-// Direct Input Register
-s_operationRight<5> := OP_RIGHT<5>;	// (0 pt, 0 inp)
-   s_operationRight<5>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 5 | 13 | s_operationRight<7>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 21 | 1 | 10 | 1 | 9 | 6 | 4 | 9 | 0 | 5 | 15 | 9 | 1 | 6 | 5 | 1 | 15 | 1 | 12 | 4 | 13 | 8 | 0 | 0 | 12 | 0 | 13 | 1 | 4 | 7 | 15 | 1 | 11 | 1 | 13 | 1 | 14 | 3 | 4 | 9 | 15 | 0 | 11
-INPUTS | 3 | s_operationLeft<2>  | N_PZ_296  | Madd_s_resultAdd__or0000
-INPUTMC | 3 | 1 | 14 | 8 | 13 | 3 | 14
-EQ | 5 | 
-   s_operationRight<7>.COMB =  !s_operationLeft<2> & !N_PZ_296
-	# N_PZ_296 & !Madd_s_resultAdd__or0000;	// (2 pt, 3 inp)
-// Direct Input Register
-s_operationRight<7> := OP_RIGHT<7>;	// (0 pt, 0 inp)
-   s_operationRight<7>.CLK  =  CLK_RIGHT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_RIGHT
-
-MACROCELL | 2 | 15 | s_operationLeft<6>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 21 | 0 | 15 | 6 | 4 | 6 | 8 | 9 | 0 | 5 | 15 | 6 | 7 | 6 | 5 | 3 | 15 | 7 | 9 | 10 | 10 | 7 | 8 | 0 | 11 | 0 | 12 | 0 | 13 | 3 | 0 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 5 | 11 | 9 | 11 | 8
-INPUTS | 10 | s_operationLeft<2>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__or0014  | Mmult_s_resultMul_mult0001_Mxor__index0012  | Mmult_s_resultMul_mult0001__or0012  | s_operationLeft<3>  | s_operationLeft<3>.COMB  | s_operationRight<3>  | N_PZ_442  | N_PZ_117
-INPUTMC | 10 | 1 | 14 | 3 | 12 | 2 | 12 | 11 | 7 | 10 | 15 | 2 | 4 | 2 | 4 | 3 | 5 | 10 | 8 | 11 | 2
-EQ | 20 | 
-   s_operationLeft<6>.COMB =  s_operationLeft<2> & s_operationRight<4>
-	# !Mmult_s_resultMul_mult0001__or0014 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0012
-	# s_operationLeft<2> & 
-	Mmult_s_resultMul_mult0001__or0012 & !Mmult_s_resultMul_mult0001__or0014
-	# s_operationLeft<3> & !s_operationLeft<3>.COMB & 
-	!Mmult_s_resultMul_mult0001__or0014
-	# !s_operationRight<3> & !N_PZ_442 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0012
-	# !N_PZ_442 & N_PZ_117 & 
-	!Mmult_s_resultMul_mult0001__or0014
-	# !N_PZ_117 & Mmult_s_resultMul_mult0001__or0012 & 
-	!Mmult_s_resultMul_mult0001__or0014
-	# s_operationLeft<2> & s_operationLeft<3> & 
-	N_PZ_117 & Mmult_s_resultMul_mult0001_Mxor__index0012
-	# s_operationLeft<3> & !N_PZ_117 & 
-	Mmult_s_resultMul_mult0001__or0012 & Mmult_s_resultMul_mult0001_Mxor__index0012;	// (9 pt, 10 inp)
-// Direct Input Register
-s_operationLeft<6> := OP_LEFT<6>;	// (0 pt, 0 inp)
-   s_operationLeft<6>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
-GLOBALS | 1 | 2 | CLK_LEFT
-
-MACROCELL | 2 | 13 | s_operationLeft<5>_MC
-ATTRIBUTES | 545293056 | 5
-OUTPUTMC | 26 | 7 | 4 | 0 | 15 | 6 | 4 | 6 | 8 | 5 | 15 | 6 | 14 | 6 | 5 | 2 | 9 | 7 | 7 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 10 | 10 | 7 | 8 | 0 | 11 | 0 | 12 | 0 | 13 | 1 | 2 | 7 | 15 | 1 | 13 | 1 | 14 | 3 | 2 | 3 | 4 | 3 | 5 | 1 | 11
-INPUTS | 4 | s_operationLeft<3>  | s_operationRight<3>  | s_operationLeft<3>.COMB  | N_PZ_437
-INPUTMC | 4 | 2 | 4 | 3 | 5 | 2 | 4 | 8 | 14
-EQ | 5 | 
-   s_operationLeft<5>.COMB =  !s_operationLeft<3> & s_operationRight<3>
-	# !s_operationLeft<3>.COMB & N_PZ_437;	// (2 pt, 4 inp)
-// Direct Input Register
 s_operationLeft<5> := OP_LEFT<5>;	// (0 pt, 0 inp)
    s_operationLeft<5>.CLK  =  CLK_LEFT;	// GCK	(0 pt, 0 inp)
 GLOBALS | 1 | 2 | CLK_LEFT
 
-MACROCELL | 1 | 10 | OP_RESULT<0>124_MC
+MACROCELL | 4 | 10 | OP_RESULT<0>154_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 6 | 4
-INPUTS | 16 | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationLeft<0>  | s_operationRight<7>  | s_operationChoose<5>.COMB  | s_operationRight<0>.COMB  | Msub_s_resultSub_Mxor_Result<5>__xor0000  | N_PZ_106  | s_operationLeft<7>.COMB  | N_PZ_296  | s_operationLeft<4>.COMB
-INPUTMC | 16 | 0 | 2 | 3 | 1 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 1 | 11 | 5 | 13 | 1 | 0 | 3 | 1 | 7 | 4 | 9 | 12 | 3 | 0 | 8 | 13 | 2 | 11
-EQ | 28 | 
-   OP_RESULT<0>124 = !s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
-	s_operationChoose<4> & s_operationLeft<7> & s_operationLeft<0> & 
-	s_operationRight<7> & s_operationChoose<5>.COMB & 
-	!s_operationRight<0>.COMB & Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_106 & !s_operationLeft<7>.COMB & !N_PZ_296 & 
-	!s_operationLeft<4>.COMB
-	# !s_operationChoose<0> & s_operationRight<0> & 
-	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
-	s_operationChoose<4> & !s_operationLeft<7> & s_operationLeft<0> & 
-	!s_operationRight<7> & s_operationChoose<5>.COMB & 
-	!s_operationRight<0>.COMB & Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_106 & !s_operationLeft<7>.COMB & !N_PZ_296 & 
-	!s_operationLeft<4>.COMB
-	# !s_operationChoose<0> & !s_operationRight<0> & 
-	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
-	s_operationChoose<4> & s_operationLeft<7> & !s_operationLeft<0> & 
-	s_operationRight<7> & s_operationChoose<5>.COMB & 
-	!s_operationRight<0>.COMB & Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_106 & !s_operationLeft<7>.COMB & !N_PZ_296 & 
-	!s_operationLeft<4>.COMB
-	# !s_operationChoose<0> & !s_operationRight<0> & 
-	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
-	s_operationChoose<4> & !s_operationLeft<7> & !s_operationLeft<0> & 
-	!s_operationRight<7> & s_operationChoose<5>.COMB & 
-	!s_operationRight<0>.COMB & Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	N_PZ_106 & !s_operationLeft<7>.COMB & !N_PZ_296 & 
-	!s_operationLeft<4>.COMB;	// (4 pt, 16 inp)
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 12 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationChoose<3>.COMB  | s_operationChoose<2>.COMB  | s_operationRight<5>  | N_PZ_378  | s_operationLeft<5>
+INPUTMC | 12 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 10 | 13 | 7 | 10 | 7 | 5 | 10 | 11 | 4 | 14 | 3 | 4
+EQ | 27 | 
+   OP_RESULT<0>154 = s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationRight<7>
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<7> & s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationRight<5> & !s_operationChoose<2>.COMB & 
+	N_PZ_378
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & !s_operationLeft<5> & !s_operationChoose<2>.COMB & 
+	N_PZ_378
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<5> & s_operationRight<7> & !s_operationChoose<2>.COMB & 
+	N_PZ_378
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<7> & !s_operationLeft<5> & !s_operationChoose<2>.COMB & 
+	N_PZ_378;	// (7 pt, 12 inp)
 
-MACROCELL | 7 | 4 | Msub_s_resultSub_Mxor_Result<5>__xor0000_MC
+MACROCELL | 4 | 14 | N_PZ_378_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 1 | 10 | 1 | 15 | 7 | 5 | 7 | 6 | 11 | 4 | 1 | 4 | 1 | 11
-INPUTS | 2 | s_operationRight<5>  | s_operationLeft<5>
-INPUTMC | 2 | 5 | 1 | 2 | 13
-EQ | 2 | 
-   Msub_s_resultSub_Mxor_Result<5>__xor0000 = s_operationRight<5> & s_operationLeft<5>
-	# !s_operationRight<5> & !s_operationLeft<5>;	// (2 pt, 2 inp)
+OUTPUTMC | 2 | 4 | 10 | 10 | 13
+INPUTS | 5 | s_operationLeft<2>.COMB  | s_operationRight<5>  | s_operationLeft<5>  | s_operationLeft<3>.COMB  | s_operationRight<2>.COMB
+INPUTMC | 5 | 3 | 0 | 10 | 11 | 3 | 4 | 3 | 1 | 8 | 5
+EQ | 4 | 
+   N_PZ_378 = s_operationLeft<2>.COMB
+	# s_operationRight<5> & !s_operationLeft<5>
+	# !s_operationLeft<3>.COMB & 
+	s_operationRight<2>.COMB;	// (3 pt, 5 inp)
 
-MACROCELL | 9 | 12 | N_PZ_106_MC
+MACROCELL | 4 | 7 | OP_RESULT<0>155_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 10 | 1 | 10 | 3 | 14 | 4 | 4 | 9 | 0 | 8 | 15 | 4 | 7 | 3 | 15 | 4 | 6 | 3 | 12 | 5 | 11
-INPUTS | 2 | s_operationRight<1>  | s_operationLeft<1>
-INPUTMC | 2 | 3 | 2 | 1 | 13
-EQ | 2 | 
-   N_PZ_106 = s_operationRight<1> & s_operationLeft<1>
-	# !s_operationRight<1> & !s_operationLeft<1>;	// (2 pt, 2 inp)
-
-MACROCELL | 8 | 13 | N_PZ_296_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 13 | 1 | 10 | 5 | 15 | 8 | 14 | 4 | 7 | 1 | 15 | 1 | 12 | 8 | 0 | 4 | 6 | 3 | 5 | 3 | 12 | 5 | 1 | 5 | 11 | 5 | 13
-INPUTS | 2 | s_operationRight<2>  | s_operationLeft<2>
-INPUTMC | 2 | 3 | 4 | 1 | 14
-EQ | 2 | 
-   N_PZ_296 = s_operationRight<2> & !s_operationLeft<2>
-	# !s_operationRight<2> & s_operationLeft<2>;	// (2 pt, 2 inp)
-
-MACROCELL | 1 | 9 | OP_RESULT<0>155_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 6 | 4
-INPUTS | 7 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationChoose<7>.COMB  | s_operationRight<7>
-INPUTMC | 7 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 1 | 4 | 5 | 13
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 7 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | N_PZ_377  | s_operationRight<7>
+INPUTMC | 7 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 4 | 13 | 10 | 13
 EQ | 6 | 
    OP_RESULT<0>155 = s_operationChoose<2> & !s_operationChoose<1> & 
 	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7> & 
-	s_operationChoose<7>.COMB
+	N_PZ_377
 	# s_operationChoose<2> & !s_operationChoose<1> & 
 	s_operationChoose<3> & !s_operationChoose<4> & !s_operationRight<7> & 
-	s_operationChoose<7>.COMB;	// (2 pt, 7 inp)
+	N_PZ_377;	// (2 pt, 7 inp)
 
-MACROCELL | 0 | 15 | OP_RESULT<0>125_MC
+MACROCELL | 4 | 13 | N_PZ_377_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 6 | 4
+OUTPUTMC | 1 | 4 | 7
+INPUTS | 11 | s_operationChoose<2>.COMB  | N_PZ_501  | s_operationChoose<0>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<5>  | s_operationRight<4>.COMB  | s_operationLeft<3>.COMB  | s_operationRight<0>.COMB  | s_operationLeft<2>.COMB  | N_PZ_187
+INPUTMC | 11 | 7 | 5 | 6 | 3 | 5 | 13 | 3 | 12 | 10 | 13 | 10 | 11 | 10 | 10 | 3 | 1 | 8 | 1 | 3 | 0 | 3 | 15
+EQ | 11 | 
+   N_PZ_377 = s_operationChoose<2>.COMB & N_PZ_501
+	# !s_operationChoose<0> & s_operationLeft<7> & 
+	!s_operationRight<7>
+	# !s_operationRight<5> & !s_operationRight<4>.COMB & 
+	N_PZ_501
+	# s_operationLeft<3>.COMB & 
+	s_operationRight<4>.COMB & N_PZ_501
+	# s_operationRight<4>.COMB & N_PZ_501 & 
+	!s_operationRight<0>.COMB
+	# !s_operationLeft<2>.COMB & 
+	s_operationRight<4>.COMB & N_PZ_501 & N_PZ_187;	// (6 pt, 11 inp)
+
+MACROCELL | 6 | 3 | N_PZ_501_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 4 | 4 | 13 | 1 | 10 | 5 | 1 | 1 | 14
+INPUTS | 2 | s_operationChoose<0>  | s_operationChoose<3>.COMB
+INPUTMC | 2 | 5 | 13 | 7 | 10
+EQ | 1 | 
+   N_PZ_501 = !s_operationChoose<0> & !s_operationChoose<3>.COMB;	// (1 pt, 2 inp)
+
+MACROCELL | 3 | 15 | N_PZ_187_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 14 | 4 | 13 | 4 | 12 | 8 | 0 | 2 | 14 | 9 | 0 | 1 | 0 | 1 | 15 | 9 | 15 | 4 | 9 | 1 | 13 | 1 | 14 | 8 | 1 | 8 | 5 | 8 | 11
+INPUTS | 2 | s_operationLeft<3>  | s_operationRight<3>
+INPUTMC | 2 | 3 | 1 | 8 | 11
+EQ | 1 | 
+   N_PZ_187 = s_operationLeft<3> & !s_operationRight<3>;	// (1 pt, 2 inp)
+
+MACROCELL | 4 | 12 | OP_RESULT<0>2_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 14 | s_operationLeft<3>.COMB  | N_PZ_226  | s_operationRight<4>.COMB  | s_operationLeft<2>.COMB  | s_operationRight<2>.COMB  | N_PZ_187  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationChoose<2>.COMB
+INPUTMC | 14 | 3 | 1 | 1 | 10 | 10 | 10 | 3 | 0 | 8 | 5 | 3 | 15 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 10 | 13 | 7 | 5
+EQ | 14 | 
+   OP_RESULT<0>2 = s_operationLeft<3>.COMB & N_PZ_226
+	# !s_operationRight<4>.COMB & N_PZ_226
+	# !s_operationLeft<2>.COMB & 
+	!s_operationRight<2>.COMB & N_PZ_226
+	# !s_operationLeft<2>.COMB & N_PZ_187 & N_PZ_226
+	# !s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationLeft<7> & !s_operationRight<7>
+	# !s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationLeft<7> & s_operationChoose<2>.COMB
+	# !s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationRight<7> & s_operationChoose<2>.COMB;	// (7 pt, 14 inp)
+
+MACROCELL | 1 | 10 | N_PZ_226_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 4 | 12
+INPUTS | 9 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<5>  | N_PZ_501  | s_operationLeft<5>  | s_operationRight<7>
+INPUTMC | 9 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 10 | 11 | 6 | 3 | 3 | 4 | 10 | 13
+EQ | 12 | 
+   N_PZ_226 = s_operationChoose<2> & s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7> & 
+	!s_operationRight<5> & N_PZ_501
+	# s_operationChoose<2> & s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7> & 
+	s_operationLeft<5> & N_PZ_501
+	# s_operationChoose<2> & s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & !s_operationRight<5> & 
+	!s_operationRight<7> & N_PZ_501
+	# s_operationChoose<2> & s_operationChoose<1> & 
+	s_operationChoose<3> & !s_operationChoose<4> & !s_operationRight<7> & 
+	s_operationLeft<5> & N_PZ_501;	// (4 pt, 9 inp)
+
+MACROCELL | 4 | 11 | OP_RESULT<0>3_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 0 | 2
+INPUTS | 12 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationChoose<3>.COMB  | s_operationRight<5>  | s_operationLeft<5>  | s_operationChoose<2>.COMB  | s_operationRight<0>.COMB
+INPUTMC | 12 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 10 | 13 | 7 | 10 | 10 | 11 | 3 | 4 | 7 | 5 | 8 | 1
+EQ | 33 | 
+   OP_RESULT<0>3 = s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationRight<7>
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationChoose<3>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<7> & s_operationChoose<3>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationRight<5> & !s_operationLeft<5> & 
+	!s_operationChoose<2>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & s_operationRight<5> & !s_operationChoose<2>.COMB & 
+	s_operationRight<0>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	!s_operationLeft<7> & !s_operationLeft<5> & !s_operationChoose<2>.COMB & 
+	s_operationRight<0>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<5> & s_operationRight<7> & !s_operationLeft<5> & 
+	!s_operationChoose<2>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<5> & s_operationRight<7> & !s_operationChoose<2>.COMB & 
+	s_operationRight<0>.COMB
+	# s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
+	s_operationRight<7> & !s_operationLeft<5> & !s_operationChoose<2>.COMB & 
+	s_operationRight<0>.COMB;	// (9 pt, 12 inp)
+
+MACROCELL | 1 | 12 | OP_RESULT<0>125_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 0 | 2
 INPUTS | 11 | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<1>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationLeft<5>  | s_operationLeft<6>  | s_operationLeft<4>
-INPUTMC | 11 | 0 | 2 | 3 | 1 | 0 | 11 | 0 | 5 | 0 | 12 | 3 | 2 | 0 | 13 | 3 | 0 | 2 | 13 | 2 | 15 | 2 | 11
+INPUTMC | 11 | 5 | 13 | 8 | 1 | 7 | 5 | 5 | 15 | 7 | 10 | 8 | 3 | 7 | 11 | 3 | 12 | 3 | 4 | 3 | 5 | 3 | 2
 EQ | 12 | 
    OP_RESULT<0>125 = s_operationChoose<0> & s_operationRight<0> & 
 	s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
@@ -934,11 +926,11 @@ EQ | 12 |
 	s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationRight<1> & s_operationChoose<4> & s_operationLeft<4>;	// (4 pt, 11 inp)
 
-MACROCELL | 0 | 14 | OP_RESULT<0>72_MC
+MACROCELL | 4 | 6 | OP_RESULT<0>72_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 6 | 4
+OUTPUTMC | 1 | 0 | 2
 INPUTS | 7 | s_operationChoose<0>  | s_operationRight<0>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<0>  | s_operationChoose<2>
-INPUTMC | 7 | 0 | 2 | 3 | 1 | 0 | 5 | 0 | 12 | 0 | 13 | 1 | 11 | 0 | 11
+INPUTMC | 7 | 5 | 13 | 8 | 1 | 5 | 15 | 7 | 10 | 7 | 11 | 1 | 13 | 7 | 5
 EQ | 6 | 
    OP_RESULT<0>72 = !s_operationChoose<0> & s_operationRight<0> & 
 	s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<4> & 
@@ -947,13 +939,13 @@ EQ | 6 |
 	!s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
 	s_operationChoose<4> & s_operationLeft<0>;	// (2 pt, 7 inp)
 
-MACROCELL | 9 | 0 | OP_RESULT<1>_MC
+MACROCELL | 8 | 0 | OP_RESULT<1>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 31 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationRight<4>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<1>  | s_operationChoose<4>  | N_PZ_106  | s_operationLeft<1>  | s_operationLeft<6>  | Madd_s_resultAdd__or0000  | s_operationLeft<0>  | s_operationRight<0>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<7>  | Mshift_s_resultRotateRight_Sh<3>  | N_PZ_114  | Msub_s_resultSub__or0001  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationChoose<1>.COMB  | s_operationRight<4>  | s_operationLeft<3>.COMB  | s_operationLeft<7>  | Mshift_s_resultRotateRight_Sh<5>  | Mshift_s_resultRotateRight_Sh<1>
-INPUTMC | 31 | 0 | 12 | 1 | 0 | 1 | 2 | 1 | 4 | 3 | 12 | 0 | 2 | 0 | 11 | 0 | 5 | 3 | 2 | 0 | 13 | 9 | 12 | 1 | 13 | 2 | 15 | 3 | 14 | 1 | 11 | 3 | 1 | 3 | 4 | 6 | 6 | 6 | 9 | 4 | 10 | 4 | 4 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13 | 0 | 5 | 3 | 12 | 2 | 4 | 3 | 0 | 6 | 8 | 9 | 14
+INPUTS | 31 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationLeft<6>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<1>  | s_operationChoose<4>  | N_PZ_106  | s_operationLeft<1>  | s_operationLeft<6>  | Madd_s_resultAdd__or0000  | s_operationLeft<0>  | s_operationRight<0>  | s_operationRight<2>  | s_operationChoose<7>.COMB  | Mshift_s_resultRotateRight_Sh<3>  | N_PZ_114  | Msub_s_resultSub__or0001  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>.COMB  | s_operationRight<4>  | N_PZ_187  | s_operationLeft<7>  | s_operationChoose<5>.COMB  | Mshift_s_resultRotateRight_Sh<1>
+INPUTMC | 31 | 7 | 10 | 7 | 12 | 7 | 13 | 7 | 14 | 3 | 5 | 5 | 13 | 7 | 5 | 5 | 15 | 8 | 3 | 7 | 11 | 8 | 12 | 1 | 14 | 3 | 5 | 7 | 6 | 1 | 13 | 8 | 1 | 8 | 5 | 7 | 14 | 10 | 8 | 8 | 14 | 7 | 4 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13 | 3 | 1 | 10 | 10 | 3 | 15 | 3 | 12 | 7 | 12 | 8 | 15
 EQ | 107 | 
    OP_RESULT<1> = !s_operationChoose<3> & !s_operationChoose<5> & 
-	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<4>.COMB
+	!s_operationChoose<6> & !s_operationChoose<7> & s_operationLeft<6>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1>
@@ -998,7 +990,7 @@ EQ | 107 |
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & s_operationRight<1> & s_operationRight<2> & 
-	s_operationChoose<4> & !Mshift_s_resultRotateRight_Sh<7>
+	s_operationChoose<4> & !s_operationChoose<7>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & s_operationRight<1> & !s_operationRight<2> & 
@@ -1028,13 +1020,13 @@ EQ | 107 |
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationChoose<1>.COMB
+	s_operationLeft<3>.COMB
 	# s_operationChoose<0> & !s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationLeft<3>.COMB
+	N_PZ_187
 	# s_operationChoose<0> & !s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
@@ -1046,7 +1038,7 @@ EQ | 107 |
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
 	s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & !Mshift_s_resultRotateRight_Sh<5>
+	!s_operationRight<7> & !s_operationChoose<5>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
@@ -1060,79 +1052,70 @@ EQ | 107 |
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
 	!s_operationRight<7> & N_PZ_114;	// (25 pt, 31 inp)
 
-MACROCELL | 3 | 14 | Madd_s_resultAdd__or0000_MC
+MACROCELL | 8 | 12 | N_PZ_106_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 9 | 0 | 5 | 15 | 8 | 15 | 4 | 7 | 5 | 1 | 5 | 11 | 5 | 13
+OUTPUTMC | 10 | 7 | 6 | 7 | 4 | 8 | 0 | 10 | 9 | 7 | 7 | 5 | 13 | 3 | 5 | 3 | 12 | 8 | 1 | 8 | 3
+INPUTS | 2 | s_operationRight<1>  | s_operationLeft<1>
+INPUTMC | 2 | 8 | 3 | 1 | 14
+EQ | 2 | 
+   N_PZ_106 = s_operationRight<1> & s_operationLeft<1>
+	# !s_operationRight<1> & !s_operationLeft<1>;	// (2 pt, 2 inp)
+
+MACROCELL | 7 | 6 | Madd_s_resultAdd__or0000_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 7 | 8 | 0 | 6 | 15 | 0 | 5 | 6 | 6 | 10 | 9 | 7 | 7 | 8 | 3
 INPUTS | 4 | s_operationLeft<1>  | N_PZ_106  | s_operationRight<0>  | N_PZ_114
-INPUTMC | 4 | 1 | 13 | 9 | 12 | 3 | 1 | 4 | 10
+INPUTMC | 4 | 1 | 14 | 8 | 12 | 8 | 1 | 8 | 14
 EQ | 2 | 
    Madd_s_resultAdd__or0000 = s_operationLeft<1> & N_PZ_106
 	# s_operationRight<0> & !N_PZ_106 & N_PZ_114;	// (2 pt, 4 inp)
 
-MACROCELL | 4 | 10 | N_PZ_114_MC
+MACROCELL | 8 | 14 | N_PZ_114_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 13 | 3 | 14 | 4 | 4 | 9 | 0 | 2 | 10 | 9 | 1 | 4 | 8 | 1 | 15 | 7 | 5 | 3 | 15 | 1 | 12 | 8 | 0 | 3 | 12 | 5 | 11
+OUTPUTMC | 13 | 7 | 6 | 7 | 4 | 8 | 0 | 2 | 14 | 9 | 0 | 7 | 7 | 5 | 12 | 1 | 15 | 2 | 4 | 4 | 9 | 6 | 4 | 5 | 13 | 3 | 5
 INPUTS | 3 | s_operationRight<0>  | s_operationLeft<0>  | s_operationLeft<1>
-INPUTMC | 3 | 3 | 1 | 1 | 11 | 1 | 13
+INPUTMC | 3 | 8 | 1 | 1 | 13 | 1 | 14
 EQ | 2 | 
    N_PZ_114 = s_operationRight<0> & s_operationLeft<0>
 	# !s_operationRight<0> & s_operationLeft<1>;	// (2 pt, 3 inp)
 
-MACROCELL | 4 | 4 | Msub_s_resultSub__or0001_MC
+MACROCELL | 7 | 4 | Msub_s_resultSub__or0001_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 5 | 9 | 0 | 8 | 14 | 8 | 15 | 5 | 1 | 5 | 11
+OUTPUTMC | 5 | 8 | 0 | 6 | 15 | 8 | 13 | 10 | 9 | 7 | 7
 INPUTS | 4 | s_operationLeft<1>  | N_PZ_106  | s_operationRight<0>  | N_PZ_114
-INPUTMC | 4 | 1 | 13 | 9 | 12 | 3 | 1 | 4 | 10
+INPUTMC | 4 | 1 | 14 | 8 | 12 | 8 | 1 | 8 | 14
 EQ | 2 | 
    Msub_s_resultSub__or0001 = !s_operationLeft<1> & !N_PZ_106
 	# s_operationRight<0> & N_PZ_106 & !N_PZ_114;	// (2 pt, 4 inp)
 
-MACROCELL | 6 | 9 | Mshift_s_resultRotateRight_Sh<3>_MC
+MACROCELL | 10 | 8 | Mshift_s_resultRotateRight_Sh<3>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 9 | 0 | 2 | 10 | 7 | 7 | 8 | 15 | 7 | 5 | 3 | 15 | 8 | 0
+OUTPUTMC | 7 | 8 | 0 | 2 | 14 | 10 | 9 | 10 | 14 | 2 | 4 | 6 | 4 | 5 | 13
 INPUTS | 3 | s_operationRight<0>  | s_operationLeft<4>  | s_operationLeft<3>
-INPUTMC | 3 | 3 | 1 | 2 | 11 | 2 | 4
+INPUTMC | 3 | 8 | 1 | 3 | 2 | 3 | 1
 EQ | 2 | 
    Mshift_s_resultRotateRight_Sh<3> = s_operationRight<0> & !s_operationLeft<4>
 	# !s_operationRight<0> & !s_operationLeft<3>;	// (2 pt, 3 inp)
 
-MACROCELL | 9 | 14 | Mshift_s_resultRotateRight_Sh<1>_MC
+MACROCELL | 8 | 15 | Mshift_s_resultRotateRight_Sh<1>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 9 | 0 | 2 | 10 | 8 | 15 | 4 | 7 | 7 | 5 | 8 | 0 | 3 | 12 | 5 | 11
+OUTPUTMC | 8 | 8 | 0 | 2 | 14 | 10 | 9 | 7 | 7 | 2 | 4 | 6 | 4 | 3 | 5 | 8 | 3
 INPUTS | 3 | s_operationRight<0>  | s_operationLeft<2>  | s_operationLeft<1>
-INPUTMC | 3 | 3 | 1 | 1 | 14 | 1 | 13
+INPUTMC | 3 | 8 | 1 | 3 | 0 | 1 | 14
 EQ | 2 | 
    Mshift_s_resultRotateRight_Sh<1> = s_operationRight<0> & !s_operationLeft<2>
 	# !s_operationRight<0> & !s_operationLeft<1>;	// (2 pt, 3 inp)
 
-MACROCELL | 6 | 8 | Mshift_s_resultRotateRight_Sh<5>_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 9 | 9 | 0 | 2 | 10 | 9 | 1 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 8 | 0 | 3 | 12
-INPUTS | 3 | s_operationRight<0>  | s_operationLeft<6>  | s_operationLeft<5>
-INPUTMC | 3 | 3 | 1 | 2 | 15 | 2 | 13
-EQ | 2 | 
-   Mshift_s_resultRotateRight_Sh<5> = s_operationRight<0> & !s_operationLeft<6>
-	# !s_operationRight<0> & !s_operationLeft<5>;	// (2 pt, 3 inp)
-
-MACROCELL | 6 | 6 | Mshift_s_resultRotateRight_Sh<7>_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 9 | 0 | 2 | 10 | 7 | 5 | 8 | 0
-INPUTS | 3 | s_operationRight<0>  | s_operationLeft<0>  | s_operationLeft<7>
-INPUTMC | 3 | 3 | 1 | 1 | 11 | 3 | 0
-EQ | 2 | 
-   Mshift_s_resultRotateRight_Sh<7> = s_operationRight<0> & !s_operationLeft<0>
-	# !s_operationRight<0> & !s_operationLeft<7>;	// (2 pt, 3 inp)
-
-MACROCELL | 5 | 15 | OP_RESULT<2>_MC
+MACROCELL | 0 | 5 | OP_RESULT<2>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 28 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationRight<3>.COMB  | s_operationChoose<0>  | s_operationRight<5>.COMB  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<2>  | s_operationChoose<4>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<1>  | s_operationLeft<0>  | N_PZ_296  | Madd_s_resultAdd__or0000  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<7>  | s_operationLeft<6>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>  | s_operationLeft<4>
-INPUTMC | 28 | 0 | 12 | 1 | 0 | 1 | 2 | 1 | 4 | 3 | 5 | 0 | 2 | 5 | 1 | 0 | 11 | 0 | 5 | 3 | 4 | 0 | 13 | 1 | 14 | 2 | 13 | 1 | 13 | 1 | 11 | 8 | 13 | 3 | 14 | 3 | 1 | 3 | 2 | 3 | 0 | 2 | 15 | 3 | 12 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13 | 2 | 4 | 2 | 11
+INPUTS | 28 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationLeft<5>.COMB  | s_operationChoose<0>  | OP_RESULT<2>88  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<2>  | s_operationChoose<4>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<1>  | s_operationLeft<0>  | Madd_s_resultAdd__or0000  | N_PZ_296  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<7>  | s_operationLeft<6>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>  | s_operationLeft<4>
+INPUTMC | 28 | 7 | 10 | 7 | 12 | 7 | 13 | 7 | 14 | 3 | 4 | 5 | 13 | 6 | 15 | 7 | 5 | 5 | 15 | 8 | 5 | 7 | 11 | 3 | 0 | 3 | 4 | 1 | 14 | 1 | 13 | 7 | 6 | 8 | 10 | 8 | 1 | 8 | 3 | 3 | 12 | 3 | 5 | 10 | 10 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13 | 3 | 1 | 3 | 2
 EQ | 121 | 
    OP_RESULT<2> = !s_operationChoose<3> & !s_operationChoose<5> & 
-	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<3>.COMB
+	!s_operationChoose<6> & !s_operationChoose<7> & s_operationLeft<5>.COMB
 	# s_operationChoose<0> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
-	s_operationRight<5>.COMB
+	OP_RESULT<2>88
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<2>
@@ -1176,11 +1159,11 @@ EQ | 121 |
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	N_PZ_296 & !Madd_s_resultAdd__or0000
+	Madd_s_resultAdd__or0000 & !N_PZ_296
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!N_PZ_296 & Madd_s_resultAdd__or0000
+	!Madd_s_resultAdd__or0000 & N_PZ_296
 	# !s_operationChoose<0> & s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & s_operationChoose<4> & !s_operationLeft<1> & 
@@ -1250,10 +1233,48 @@ EQ | 121 |
 	s_operationLeft<0> & !s_operationRight<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (28 pt, 28 inp)
 
-MACROCELL | 9 | 1 | OP_RESULT<3>_MC
+MACROCELL | 8 | 10 | N_PZ_296_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 13 | 6 | 15 | 0 | 5 | 6 | 6 | 8 | 13 | 7 | 7 | 1 | 15 | 4 | 9 | 6 | 4 | 3 | 4 | 3 | 5 | 3 | 12 | 8 | 1 | 8 | 3
+INPUTS | 2 | s_operationRight<2>  | s_operationLeft<2>
+INPUTMC | 2 | 8 | 5 | 3 | 0
+EQ | 2 | 
+   N_PZ_296 = s_operationRight<2> & !s_operationLeft<2>
+	# !s_operationRight<2> & s_operationLeft<2>;	// (2 pt, 2 inp)
+
+MACROCELL | 6 | 15 | OP_RESULT<2>88_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 1 | 0 | 5
+INPUTS | 10 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<4>  | Msub_s_resultSub__or0001  | N_PZ_296  | s_operationRight<0>  | s_operationLeft<0>  | s_operationRight<2>  | Madd_s_resultAdd__or0000  | s_operationLeft<2>
+INPUTMC | 10 | 7 | 5 | 5 | 15 | 7 | 11 | 7 | 4 | 8 | 10 | 8 | 1 | 1 | 13 | 8 | 5 | 7 | 6 | 3 | 0
+EQ | 22 | 
+   OP_RESULT<2>88 = !s_operationChoose<2> & !s_operationChoose<1> & 
+	!s_operationChoose<4> & Msub_s_resultSub__or0001 & !N_PZ_296
+	# !s_operationChoose<2> & !s_operationChoose<1> & 
+	!s_operationChoose<4> & !Msub_s_resultSub__or0001 & N_PZ_296
+	# s_operationRight<0> & !s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<0> & 
+	N_PZ_296
+	# !s_operationRight<0> & !s_operationChoose<2> & 
+	!s_operationChoose<1> & !s_operationRight<2> & s_operationChoose<4> & 
+	Madd_s_resultAdd__or0000
+	# !s_operationRight<0> & !s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<4> & !s_operationLeft<0> & 
+	Madd_s_resultAdd__or0000
+	# !s_operationChoose<2> & !s_operationChoose<1> & 
+	s_operationChoose<4> & !s_operationLeft<2> & !s_operationLeft<0> & 
+	Madd_s_resultAdd__or0000
+	# s_operationRight<0> & !s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationChoose<4> & s_operationLeft<2> & 
+	!s_operationLeft<0> & !Madd_s_resultAdd__or0000
+	# !s_operationRight<0> & !s_operationChoose<2> & 
+	!s_operationChoose<1> & s_operationRight<2> & s_operationChoose<4> & 
+	s_operationLeft<0> & !Madd_s_resultAdd__or0000;	// (8 pt, 10 inp)
+
+MACROCELL | 9 | 0 | OP_RESULT<3>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 27 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<3>122  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<3>  | s_operationLeft<4>.COMB  | N_PZ_437  | s_operationRight<7>.COMB  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>.COMB  | s_operationRight<3>  | s_operationChoose<1>.COMB  | Mshift_s_resultRotateRight_Sh<5>  | N_PZ_114  | s_operationLeft<7>  | s_operationLeft<2>
-INPUTMC | 27 | 1 | 0 | 1 | 2 | 1 | 4 | 2 | 10 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 2 | 4 | 2 | 11 | 8 | 14 | 5 | 13 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 12 | 5 | 11 | 5 | 1 | 5 | 13 | 2 | 4 | 3 | 5 | 0 | 5 | 6 | 8 | 4 | 10 | 3 | 0 | 1 | 14
+INPUTS | 27 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<3>122  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<3>  | s_operationRight<3>.COMB  | N_PZ_437  | Madd_s_resultAdd__or0001  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | s_operationRight<7>  | N_PZ_187  | s_operationRight<3>  | s_operationLeft<3>.COMB  | s_operationChoose<5>.COMB  | N_PZ_114  | s_operationLeft<7>  | s_operationLeft<2>
+INPUTMC | 27 | 7 | 12 | 7 | 13 | 7 | 14 | 2 | 14 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 1 | 8 | 11 | 8 | 13 | 6 | 6 | 8 | 1 | 8 | 3 | 8 | 5 | 10 | 10 | 10 | 12 | 10 | 11 | 10 | 13 | 3 | 15 | 8 | 11 | 3 | 1 | 7 | 12 | 8 | 14 | 3 | 12 | 3 | 0
 EQ | 68 | 
    OP_RESULT<3> = !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & OP_RESULT<3>122
@@ -1264,47 +1285,47 @@ EQ | 68 |
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<4>.COMB
+	s_operationRight<3>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<4>.COMB & !N_PZ_437
+	s_operationRight<3>.COMB & !N_PZ_437
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!s_operationLeft<4>.COMB & N_PZ_437
+	!s_operationRight<3>.COMB & N_PZ_437
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<4>.COMB & s_operationRight<7>.COMB
+	s_operationRight<3>.COMB & Madd_s_resultAdd__or0001
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!s_operationLeft<4>.COMB & !s_operationRight<7>.COMB
+	!s_operationRight<3>.COMB & !Madd_s_resultAdd__or0001
 	# s_operationChoose<0> & !s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationLeft<3>.COMB
+	N_PZ_187
 	# !s_operationRight<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationLeft<3>.COMB
+	N_PZ_187
 	# s_operationChoose<0> & s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
 	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationChoose<1>.COMB
+	!s_operationRight<7> & s_operationLeft<3>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & !Mshift_s_resultRotateRight_Sh<5>
+	!s_operationRight<7> & !s_operationChoose<5>.COMB
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
@@ -1324,12 +1345,12 @@ EQ | 68 |
 	s_operationLeft<2> & !s_operationRight<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (14 pt, 27 inp)
 
-MACROCELL | 2 | 10 | OP_RESULT<3>122_MC
+MACROCELL | 2 | 14 | OP_RESULT<3>122_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 9 | 1
-INPUTS | 24 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<3>  | s_operationChoose<4>  | s_operationLeft<3>  | s_operationLeft<4>  | s_operationLeft<3>.COMB  | N_PZ_231  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0009  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<1>  | Mshift_s_resultRotateRight_Sh<5>  | Mshift_s_resultRotateRight_Sh<7>  | Mshift_s_resultRotateRight_Sh<3>  | Mshift_s_resultRotateLeft_Sh<5>  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<7>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationRight<0>
-INPUTMC | 24 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 3 | 5 | 0 | 13 | 2 | 4 | 2 | 11 | 2 | 4 | 2 | 8 | 1 | 11 | 4 | 9 | 3 | 2 | 3 | 4 | 9 | 14 | 6 | 8 | 6 | 6 | 6 | 9 | 6 | 14 | 4 | 10 | 6 | 7 | 1 | 13 | 1 | 14 | 3 | 1
-EQ | 74 | 
+OUTPUTMC | 1 | 9 | 0
+INPUTS | 24 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<3>  | s_operationChoose<4>  | s_operationLeft<3>  | s_operationLeft<4>  | N_PZ_187  | N_PZ_231  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0009  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<1>  | s_operationChoose<5>.COMB  | s_operationChoose<7>.COMB  | Mshift_s_resultRotateRight_Sh<3>  | Mshift_s_resultRotateLeft_Sh<5>  | N_PZ_114  | s_operationChoose<4>.COMB  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationRight<0>
+INPUTMC | 24 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 8 | 11 | 7 | 11 | 3 | 1 | 3 | 2 | 3 | 15 | 6 | 9 | 1 | 13 | 6 | 14 | 8 | 3 | 8 | 5 | 8 | 15 | 7 | 12 | 7 | 14 | 10 | 8 | 10 | 15 | 8 | 14 | 7 | 11 | 1 | 14 | 3 | 0 | 8 | 1
+EQ | 71 | 
    OP_RESULT<3>122 = s_operationChoose<0> & s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & s_operationRight<3>
 	# s_operationChoose<0> & s_operationChoose<1> & 
@@ -1349,7 +1370,7 @@ EQ | 74 |
 	s_operationLeft<3>
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<4> & 
-	s_operationLeft<3>.COMB
+	N_PZ_187
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & s_operationChoose<4> & 
 	!N_PZ_231
@@ -1368,12 +1389,10 @@ EQ | 74 |
 	!Mshift_s_resultRotateRight_Sh<1>
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & s_operationRight<1> & 
-	!s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<5>
+	!s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<5>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationRight<1> & 
-	s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<7>
+	s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<7>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & s_operationChoose<4> & 
@@ -1391,8 +1410,7 @@ EQ | 74 |
 	!s_operationRight<2> & s_operationChoose<4> & N_PZ_114
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationRight<1> & 
-	s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateLeft_Sh<7>
+	s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<4>.COMB
 	# !s_operationChoose<0> & s_operationChoose<1> & 
 	!s_operationChoose<3> & s_operationChoose<4> & !s_operationLeft<1> & 
 	!s_operationLeft<2> & s_operationLeft<3> & !s_operationLeft<0>
@@ -1405,11 +1423,11 @@ EQ | 74 |
 	!s_operationRight<1> & !s_operationRight<2> & s_operationChoose<4> & 
 	s_operationLeft<3>;	// (23 pt, 24 inp)
 
-MACROCELL | 4 | 9 | Mmult_s_resultMul_mult0001_Mxor__index0009_MC
+MACROCELL | 6 | 14 | Mmult_s_resultMul_mult0001_Mxor__index0009_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 2 | 10 | 10 | 15 | 10 | 14 | 0 | 11
+OUTPUTMC | 4 | 2 | 14 | 9 | 8 | 9 | 9 | 3 | 2
 INPUTS | 7 | s_operationRight<0>  | s_operationLeft<3>  | s_operationRight<2>  | s_operationLeft<1>  | s_operationLeft<0>  | s_operationRight<1>  | s_operationLeft<2>
-INPUTMC | 7 | 3 | 1 | 2 | 4 | 3 | 4 | 1 | 13 | 1 | 11 | 3 | 2 | 1 | 14
+INPUTMC | 7 | 8 | 1 | 3 | 1 | 8 | 5 | 1 | 14 | 1 | 13 | 8 | 3 | 3 | 0
 EQ | 23 | 
    Mmult_s_resultMul_mult0001_Mxor__index0009 = s_operationRight<0> & s_operationLeft<3>
 	$ s_operationRight<0> & s_operationRight<2> & 
@@ -1435,59 +1453,61 @@ EQ | 23 |
 	s_operationRight<2> & !s_operationLeft<1> & s_operationLeft<2> & 
 	s_operationLeft<0>;	// (11 pt, 7 inp)
 
-MACROCELL | 2 | 8 | N_PZ_231_MC
+MACROCELL | 6 | 9 | N_PZ_231_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 2 | 10 | 6 | 5 | 2 | 9 | 8 | 15 | 2 | 14 | 3 | 2 | 3 | 4 | 5 | 11
+OUTPUTMC | 8 | 2 | 14 | 1 | 0 | 2 | 12 | 10 | 9 | 7 | 7 | 9 | 14 | 4 | 8 | 7 | 13
 INPUTS | 4 | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<0>
-INPUTMC | 4 | 2 | 4 | 1 | 13 | 1 | 14 | 1 | 11
+INPUTMC | 4 | 3 | 1 | 1 | 14 | 3 | 0 | 1 | 13
 EQ | 3 | 
    N_PZ_231 = s_operationLeft<3>
 	# !s_operationLeft<1> & !s_operationLeft<2> & 
 	!s_operationLeft<0>;	// (2 pt, 4 inp)
 
-MACROCELL | 6 | 14 | Mshift_s_resultRotateLeft_Sh<5>_MC
+MACROCELL | 10 | 15 | Mshift_s_resultRotateLeft_Sh<5>_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 8 | 2 | 10 | 1 | 15 | 7 | 5 | 3 | 15 | 7 | 9 | 1 | 12 | 8 | 0 | 3 | 12
+OUTPUTMC | 8 | 2 | 14 | 1 | 15 | 2 | 4 | 4 | 9 | 6 | 4 | 5 | 13 | 5 | 15 | 3 | 5
 INPUTS | 3 | s_operationRight<0>  | s_operationLeft<4>  | s_operationLeft<5>
-INPUTMC | 3 | 3 | 1 | 2 | 11 | 2 | 13
+INPUTMC | 3 | 8 | 1 | 3 | 2 | 3 | 4
 EQ | 2 | 
    Mshift_s_resultRotateLeft_Sh<5> = s_operationRight<0> & !s_operationLeft<4>
 	# !s_operationRight<0> & !s_operationLeft<5>;	// (2 pt, 3 inp)
 
-MACROCELL | 6 | 7 | Mshift_s_resultRotateLeft_Sh<7>_MC
+MACROCELL | 6 | 6 | Madd_s_resultAdd__or0001_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 2 | 10 | 7 | 5 | 1 | 12 | 7 | 8 | 8 | 0 | 3 | 12
-INPUTS | 3 | s_operationRight<0>  | s_operationLeft<6>  | s_operationLeft<7>
-INPUTMC | 3 | 3 | 1 | 2 | 15 | 3 | 0
+OUTPUTMC | 3 | 9 | 0 | 9 | 12 | 3 | 2
+INPUTS | 3 | s_operationLeft<2>  | N_PZ_296  | Madd_s_resultAdd__or0000
+INPUTMC | 3 | 3 | 0 | 8 | 10 | 7 | 6
 EQ | 2 | 
-   Mshift_s_resultRotateLeft_Sh<7> = s_operationRight<0> & !s_operationLeft<6>
-	# !s_operationRight<0> & !s_operationLeft<7>;	// (2 pt, 3 inp)
+   Madd_s_resultAdd__or0001 = !s_operationLeft<2> & !N_PZ_296
+	# !Madd_s_resultAdd__or0000 & N_PZ_296;	// (2 pt, 3 inp)
 
-MACROCELL | 8 | 14 | N_PZ_437_MC
+MACROCELL | 8 | 13 | N_PZ_437_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 9 | 1 | 4 | 7 | 2 | 13
+OUTPUTMC | 3 | 9 | 0 | 8 | 3 | 8 | 5
 INPUTS | 3 | s_operationLeft<2>  | N_PZ_296  | Msub_s_resultSub__or0001
-INPUTMC | 3 | 1 | 14 | 8 | 13 | 4 | 4
+INPUTMC | 3 | 3 | 0 | 8 | 10 | 7 | 4
 EQ | 2 | 
    N_PZ_437 = !s_operationLeft<2> & N_PZ_296
-	# !N_PZ_296 & Msub_s_resultSub__or0001;	// (2 pt, 3 inp)
+	# Msub_s_resultSub__or0001 & !N_PZ_296;	// (2 pt, 3 inp)
 
-MACROCELL | 6 | 5 | OP_RESULT<4>_MC
+MACROCELL | 1 | 0 | OP_RESULT<4>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 30 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationChoose<2>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<4>  | s_operationChoose<4>  | s_operationChoose<5>.COMB  | s_operationLeft<4>  | s_operationLeft<3>  | N_PZ_231  | N_PZ_134  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationChoose<1>.COMB  | s_operationLeft<3>.COMB  | s_operationLeft<7>  | s_operationLeft<5>  | s_operationLeft<6>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<0>
-INPUTMC | 30 | 0 | 12 | 1 | 0 | 1 | 2 | 1 | 4 | 0 | 11 | 0 | 2 | 0 | 11 | 0 | 5 | 3 | 12 | 0 | 13 | 1 | 0 | 2 | 11 | 2 | 4 | 2 | 8 | 9 | 13 | 3 | 1 | 3 | 2 | 3 | 4 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13 | 0 | 5 | 2 | 4 | 3 | 0 | 2 | 13 | 2 | 15 | 1 | 13 | 1 | 14 | 1 | 11
-EQ | 87 | 
+INPUTS | 30 | s_operationChoose<3>  | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationLeft<4>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationRight<4>  | s_operationChoose<4>  | Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000  | s_operationLeft<4>  | s_operationLeft<3>  | N_PZ_231  | N_PZ_134  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationLeft<3>.COMB  | N_PZ_187  | s_operationLeft<7>  | s_operationLeft<5>  | s_operationLeft<6>  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<0>
+INPUTMC | 30 | 7 | 10 | 7 | 12 | 7 | 13 | 7 | 14 | 3 | 2 | 5 | 13 | 7 | 5 | 5 | 15 | 10 | 10 | 7 | 11 | 4 | 15 | 3 | 2 | 3 | 1 | 6 | 9 | 6 | 7 | 8 | 1 | 8 | 3 | 8 | 5 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13 | 3 | 1 | 3 | 15 | 3 | 12 | 3 | 4 | 3 | 5 | 1 | 14 | 3 | 0 | 1 | 13
+EQ | 89 | 
    OP_RESULT<4> = !s_operationChoose<3> & !s_operationChoose<5> & 
-	!s_operationChoose<6> & !s_operationChoose<7> & s_operationChoose<2>.COMB
+	!s_operationChoose<6> & !s_operationChoose<7> & s_operationLeft<4>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<4>
 	# s_operationChoose<0> & s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationChoose<5>.COMB
+	!s_operationChoose<7> & !s_operationChoose<4> & 
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
-	!s_operationChoose<4> & s_operationRight<4> & s_operationChoose<5>.COMB
+	!s_operationChoose<4> & s_operationRight<4> & 
+	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationLeft<4> & 
@@ -1503,7 +1523,7 @@ EQ | 87 |
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!s_operationChoose<5>.COMB
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationChoose<2> & s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & s_operationChoose<4> & !s_operationLeft<4> & 
@@ -1521,13 +1541,13 @@ EQ | 87 |
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7> & 
-	s_operationChoose<1>.COMB
+	s_operationLeft<3>.COMB
 	# !s_operationChoose<0> & s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
 	!s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationLeft<3>.COMB
+	!s_operationRight<7> & N_PZ_187
 	# s_operationChoose<0> & s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
@@ -1565,20 +1585,28 @@ EQ | 87 |
 	s_operationLeft<0> & !s_operationRight<4> & !s_operationRight<6> & 
 	!s_operationRight<3> & !s_operationRight<5> & !s_operationRight<7>;	// (19 pt, 30 inp)
 
-MACROCELL | 9 | 13 | N_PZ_134_MC
+MACROCELL | 4 | 15 | Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 7 | 6 | 5 | 7 | 7 | 8 | 15 | 3 | 15 | 7 | 9 | 7 | 8 | 5 | 11
+OUTPUTMC | 4 | 1 | 0 | 9 | 12 | 3 | 2 | 3 | 12
+INPUTS | 2 | s_operationLeft<2>.COMB  | s_operationLeft<3>.COMB
+INPUTMC | 2 | 3 | 0 | 3 | 1
+EQ | 1 | 
+   Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000 = !s_operationLeft<2>.COMB & !s_operationLeft<3>.COMB;	// (1 pt, 2 inp)
+
+MACROCELL | 6 | 7 | N_PZ_134_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 7 | 1 | 0 | 10 | 9 | 7 | 7 | 10 | 14 | 5 | 13 | 5 | 15 | 5 | 14
 INPUTS | 3 | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<2>
-INPUTMC | 3 | 2 | 4 | 1 | 13 | 1 | 14
+INPUTMC | 3 | 3 | 1 | 1 | 14 | 3 | 0
 EQ | 2 | 
    N_PZ_134 = s_operationLeft<3>
 	# s_operationLeft<1> & s_operationLeft<2>;	// (2 pt, 3 inp)
 
-MACROCELL | 7 | 5 | OP_RESULT<5>_MC
+MACROCELL | 2 | 4 | OP_RESULT<5>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 31 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<5>124  | s_operationChoose<1>  | s_operationChoose<3>  | OP_RESULT<5>90  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<5>  | s_operationChoose<4>  | s_operationLeft<5>  | s_operationLeft<2>  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0025  | Msub_s_resultSub_Mxor_Result<5>__xor0000  | s_operationChoose<0>.COMB  | Madd_s_resultAdd__or0003  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<3>  | Mshift_s_resultRotateRight_Sh<7>  | Mshift_s_resultRotateRight_Sh<1>  | Mshift_s_resultRotateRight_Sh<5>  | s_operationChoose<1>.COMB  | s_operationLeft<5>.COMB  | Mshift_s_resultRotateLeft_Sh<7>  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationRight<0>  | s_operationLeft<3>
-INPUTMC | 31 | 1 | 0 | 1 | 2 | 1 | 4 | 1 | 15 | 0 | 5 | 0 | 12 | 2 | 9 | 0 | 2 | 0 | 11 | 5 | 1 | 0 | 13 | 2 | 13 | 1 | 14 | 1 | 11 | 11 | 15 | 7 | 4 | 0 | 2 | 9 | 15 | 3 | 2 | 3 | 4 | 6 | 9 | 6 | 6 | 9 | 14 | 6 | 8 | 0 | 5 | 2 | 13 | 6 | 7 | 4 | 10 | 6 | 14 | 3 | 1 | 2 | 4
-EQ | 117 | 
+INPUTS | 31 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<5>124  | s_operationChoose<1>  | s_operationChoose<3>  | OP_RESULT<5>90  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<5>  | s_operationChoose<4>  | s_operationLeft<5>  | s_operationLeft<2>  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0025  | s_operationLeft<2>.COMB  | s_operationRight<4>.COMB  | Madd_s_resultAdd__or0003  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<3>  | s_operationChoose<7>.COMB  | Mshift_s_resultRotateRight_Sh<1>  | s_operationChoose<5>.COMB  | s_operationLeft<3>.COMB  | s_operationRight<2>.COMB  | s_operationChoose<4>.COMB  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationRight<0>  | s_operationLeft<3>
+INPUTMC | 31 | 7 | 12 | 7 | 13 | 7 | 14 | 1 | 15 | 5 | 15 | 7 | 10 | 2 | 12 | 5 | 13 | 7 | 5 | 10 | 11 | 7 | 11 | 3 | 4 | 3 | 0 | 1 | 13 | 10 | 4 | 3 | 0 | 10 | 10 | 9 | 12 | 8 | 3 | 8 | 5 | 10 | 8 | 7 | 14 | 8 | 15 | 7 | 12 | 3 | 1 | 8 | 5 | 7 | 11 | 8 | 14 | 10 | 15 | 8 | 1 | 3 | 1
+EQ | 114 | 
    OP_RESULT<5> = !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & OP_RESULT<5>124
 	# s_operationChoose<1> & !s_operationChoose<3> & 
@@ -1619,7 +1647,7 @@ EQ | 117 |
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	Msub_s_resultSub_Mxor_Result<5>__xor0000 & s_operationChoose<0>.COMB
+	s_operationLeft<2>.COMB & s_operationRight<4>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
@@ -1627,11 +1655,11 @@ EQ | 117 |
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	Msub_s_resultSub_Mxor_Result<5>__xor0000 & !Madd_s_resultAdd__or0003
+	s_operationRight<4>.COMB & !Madd_s_resultAdd__or0003
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!Msub_s_resultSub_Mxor_Result<5>__xor0000 & Madd_s_resultAdd__or0003
+	!s_operationRight<4>.COMB & Madd_s_resultAdd__or0003
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
@@ -1640,8 +1668,7 @@ EQ | 117 |
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
-	!s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<7>
+	!s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<7>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
@@ -1650,8 +1677,7 @@ EQ | 117 |
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
-	!s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<5>
+	!s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<5>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationChoose<4> & 
@@ -1660,23 +1686,22 @@ EQ | 117 |
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	Msub_s_resultSub_Mxor_Result<5>__xor0000 & !s_operationChoose<1>.COMB & 
-	s_operationLeft<5>.COMB
+	!s_operationLeft<2>.COMB & s_operationLeft<3>.COMB & 
+	!s_operationRight<4>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!Msub_s_resultSub_Mxor_Result<5>__xor0000 & s_operationChoose<1>.COMB & 
-	!s_operationChoose<0>.COMB
+	!s_operationLeft<2>.COMB & !s_operationRight<2>.COMB & 
+	!s_operationRight<4>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	!Msub_s_resultSub_Mxor_Result<5>__xor0000 & !s_operationChoose<0>.COMB & 
-	!s_operationLeft<5>.COMB
+	!s_operationLeft<3>.COMB & s_operationRight<2>.COMB & 
+	s_operationRight<4>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
-	s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateLeft_Sh<7>
+	s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<4>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
@@ -1697,11 +1722,11 @@ EQ | 117 |
 	s_operationRight<1> & !s_operationRight<2> & s_operationChoose<4> & 
 	s_operationLeft<3>;	// (28 pt, 31 inp)
 
-MACROCELL | 2 | 9 | OP_RESULT<5>90_MC
+MACROCELL | 2 | 12 | OP_RESULT<5>90_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 7 | 5 | 3 | 2 | 3 | 4
+OUTPUTMC | 3 | 2 | 4 | 4 | 8 | 7 | 13
 INPUTS | 10 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<4>  | s_operationLeft<5>  | s_operationLeft<4>  | s_operationLeft<3>  | N_PZ_231  | s_operationLeft<1>  | s_operationLeft<2>  | s_operationLeft<0>
-INPUTMC | 10 | 0 | 2 | 0 | 11 | 0 | 13 | 2 | 13 | 2 | 11 | 2 | 4 | 2 | 8 | 1 | 13 | 1 | 14 | 1 | 11
+INPUTMC | 10 | 5 | 13 | 7 | 5 | 7 | 11 | 3 | 4 | 3 | 2 | 3 | 1 | 6 | 9 | 1 | 14 | 3 | 0 | 1 | 13
 EQ | 12 | 
    OP_RESULT<5>90 = !s_operationChoose<0> & s_operationChoose<2> & 
 	s_operationChoose<4> & s_operationLeft<5>
@@ -1716,11 +1741,11 @@ EQ | 12 |
 	!s_operationLeft<2> & !s_operationLeft<3> & !s_operationLeft<0> & 
 	s_operationLeft<5>;	// (5 pt, 10 inp)
 
-MACROCELL | 11 | 15 | Mmult_s_resultMul_mult0001_Mxor__index0025_MC
+MACROCELL | 10 | 4 | Mmult_s_resultMul_mult0001_Mxor__index0025_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 7 | 5 | 4 | 11 | 4 | 12
+OUTPUTMC | 3 | 2 | 4 | 7 | 8 | 7 | 9
 INPUTS | 5 | N_PZ_442  | Mmult_s_resultMul_mult0001__or0018  | Mmult_s_resultMul_mult0001__and0043  | s_operationLeft<1>  | s_operationRight<4>
-INPUTMC | 5 | 10 | 8 | 11 | 11 | 10 | 14 | 1 | 13 | 3 | 12
+INPUTMC | 5 | 9 | 10 | 10 | 5 | 9 | 9 | 1 | 14 | 10 | 10
 EQ | 7 | 
    Mmult_s_resultMul_mult0001_Mxor__index0025 = N_PZ_442 & !Mmult_s_resultMul_mult0001__or0018
 	# Mmult_s_resultMul_mult0001__and0043 & 
@@ -1730,96 +1755,98 @@ EQ | 7 |
 	# s_operationLeft<1> & s_operationRight<4> & 
 	N_PZ_442 & Mmult_s_resultMul_mult0001__and0043;	// (4 pt, 5 inp)
 
-MACROCELL | 10 | 8 | N_PZ_442_MC
+MACROCELL | 9 | 10 | N_PZ_442_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 11 | 11 | 11 | 15 | 2 | 14 | 2 | 15
+OUTPUTMC | 4 | 10 | 5 | 10 | 4 | 9 | 14 | 9 | 15
 INPUTS | 3 | N_PZ_117  | s_operationLeft<2>  | s_operationRight<3>
-INPUTMC | 3 | 11 | 2 | 1 | 14 | 3 | 5
+INPUTMC | 3 | 11 | 15 | 3 | 0 | 8 | 11
 EQ | 2 | 
    N_PZ_442 = N_PZ_117
 	$ s_operationLeft<2> & s_operationRight<3>;	// (2 pt, 3 inp)
 
-MACROCELL | 11 | 2 | N_PZ_117_MC
+MACROCELL | 11 | 15 | N_PZ_117_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 10 | 8 | 2 | 12 | 2 | 15
-INPUTS | 4 | Mmult_s_resultMul_mult0001__or0012  | Mmult_s_resultMul_mult0001_Mxor__index0004  | N_PZ_317  | N_PZ_374
-INPUTMC | 4 | 10 | 15 | 7 | 7 | 4 | 8 | 4 | 7
+OUTPUTMC | 3 | 9 | 10 | 9 | 13 | 9 | 15
+INPUTS | 4 | Mmult_s_resultMul_mult0001__or0012  | Mmult_s_resultMul_mult0001_Mxor__index0004  | N_PZ_317  | s_operationRight<1>.COMB
+INPUTMC | 4 | 9 | 8 | 10 | 14 | 5 | 12 | 8 | 3
 EQ | 7 | 
    N_PZ_117 = Mmult_s_resultMul_mult0001__or0012
 	$ Mmult_s_resultMul_mult0001_Mxor__index0004 & 
 	!N_PZ_317
 	# Mmult_s_resultMul_mult0001_Mxor__index0004 & 
-	N_PZ_374
+	s_operationRight<1>.COMB
 	# !Mmult_s_resultMul_mult0001_Mxor__index0004 & 
-	N_PZ_317 & !N_PZ_374;	// (4 pt, 4 inp)
+	N_PZ_317 & !s_operationRight<1>.COMB;	// (4 pt, 4 inp)
 
-MACROCELL | 10 | 15 | Mmult_s_resultMul_mult0001__or0012_MC
+MACROCELL | 9 | 8 | Mmult_s_resultMul_mult0001__or0012_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 6 | 11 | 2 | 10 | 14 | 2 | 12 | 2 | 14 | 0 | 11 | 2 | 15
-INPUTS | 5 | s_operationLeft<1>  | s_operationRight<3>  | s_operationRight<6>.COMB  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0009
-INPUTMC | 5 | 1 | 13 | 3 | 5 | 5 | 11 | 1 | 11 | 4 | 9
+OUTPUTMC | 6 | 11 | 15 | 9 | 9 | 9 | 13 | 9 | 14 | 9 | 15 | 3 | 2
+INPUTS | 5 | s_operationLeft<1>  | s_operationRight<3>  | Mmult_s_resultMul_mult0001_Mxor__index0010  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0009
+INPUTMC | 5 | 1 | 14 | 8 | 11 | 7 | 7 | 1 | 13 | 6 | 14
 EQ | 6 | 
    Mmult_s_resultMul_mult0001__or0012 = s_operationLeft<1> & s_operationRight<3> & 
-	s_operationRight<6>.COMB
+	Mmult_s_resultMul_mult0001_Mxor__index0010
 	# s_operationLeft<1> & s_operationLeft<0> & 
 	s_operationRight<3> & Mmult_s_resultMul_mult0001_Mxor__index0009
 	# s_operationLeft<0> & s_operationRight<3> & 
-	Mmult_s_resultMul_mult0001_Mxor__index0009 & s_operationRight<6>.COMB;	// (3 pt, 5 inp)
+	Mmult_s_resultMul_mult0001_Mxor__index0009 & Mmult_s_resultMul_mult0001_Mxor__index0010;	// (3 pt, 5 inp)
 
-MACROCELL | 7 | 7 | Mmult_s_resultMul_mult0001_Mxor__index0004_MC
+MACROCELL | 7 | 7 | Mmult_s_resultMul_mult0001_Mxor__index0010_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 2 | 11 | 3
-INPUTS | 7 | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<5>  | N_PZ_203  | s_operationLeft<4>  | N_PZ_134  | Mshift_s_resultRotateRight_Sh<3>
-INPUTMC | 7 | 3 | 1 | 3 | 2 | 2 | 13 | 6 | 15 | 2 | 11 | 9 | 13 | 6 | 9
-EQ | 12 | 
-   Mmult_s_resultMul_mult0001_Mxor__index0004 = s_operationRight<0> & !s_operationRight<1> & 
-	s_operationLeft<5>
-	# s_operationRight<0> & s_operationLeft<5> & 
-	!N_PZ_203
-	# !s_operationRight<0> & s_operationRight<1> & 
-	s_operationLeft<4>
-	# s_operationRight<0> & s_operationLeft<4> & 
-	s_operationLeft<5> & N_PZ_134
-	# s_operationRight<1> & !s_operationLeft<5> & 
-	Mshift_s_resultRotateRight_Sh<3> & N_PZ_203
-	# s_operationRight<1> & !s_operationLeft<5> & 
-	!N_PZ_134 & N_PZ_203;	// (6 pt, 7 inp)
-
-MACROCELL | 6 | 15 | N_PZ_203_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 7 | 7 | 8 | 15 | 3 | 15 | 7 | 8
-INPUTS | 5 | s_operationLeft<4>  | s_operationLeft<2>  | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<0>
-INPUTMC | 5 | 2 | 11 | 1 | 14 | 2 | 4 | 1 | 13 | 1 | 11
-EQ | 4 | 
-   N_PZ_203 = s_operationLeft<4>
-	# s_operationLeft<2> & s_operationLeft<3>
-	# s_operationLeft<1> & s_operationLeft<3> & 
-	s_operationLeft<0>;	// (3 pt, 5 inp)
-
-MACROCELL | 4 | 8 | N_PZ_317_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 2 | 11 | 3
-INPUTS | 10 | s_operationRight<2>  | s_operationLeft<3>  | s_operationRight<6>.COMB  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<2>  | s_operationRight<1>  | N_PZ_114  | s_operationRight<0>  | s_operationLeft<1>  | s_operationLeft<0>
-INPUTMC | 10 | 3 | 4 | 2 | 4 | 5 | 11 | 8 | 15 | 1 | 14 | 3 | 2 | 4 | 10 | 3 | 1 | 1 | 13 | 1 | 11
-EQ | 12 | 
-   N_PZ_317 = s_operationRight<2> & s_operationLeft<3>
-	# !s_operationRight<6>.COMB & 
+OUTPUTMC | 5 | 9 | 8 | 5 | 12 | 9 | 9 | 3 | 2 | 8 | 3
+INPUTS | 16 | s_operationRight<2>  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<1>  | N_PZ_296  | s_operationRight<0>  | Madd_s_resultAdd__or0000  | s_operationRight<1>  | Msub_s_resultSub__or0001  | s_operationLeft<0>  | N_PZ_114  | N_PZ_106  | N_PZ_231  | N_PZ_134  | s_operationLeft<2>  | s_operationLeft<3>  | Mshift_s_resultRotateRight_Sh<1>
+INPUTMC | 16 | 8 | 5 | 10 | 9 | 1 | 14 | 8 | 10 | 8 | 1 | 7 | 6 | 8 | 3 | 7 | 4 | 1 | 13 | 8 | 14 | 8 | 12 | 6 | 9 | 6 | 7 | 3 | 0 | 3 | 1 | 8 | 15
+EQ | 44 | 
+   Mmult_s_resultMul_mult0001_Mxor__index0010 = !s_operationRight<2> & 
 	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<2> & s_operationLeft<2> & 
-	!s_operationRight<6>.COMB
-	# s_operationRight<1> & s_operationRight<2> & 
-	s_operationLeft<2> & N_PZ_114
-	# s_operationRight<0> & s_operationRight<2> & 
-	s_operationLeft<1> & s_operationLeft<2> & s_operationLeft<0>
-	# s_operationRight<1> & s_operationRight<2> & 
-	s_operationLeft<1> & s_operationLeft<0> & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003;	// (6 pt, 10 inp)
+	# !s_operationLeft<1> & N_PZ_296 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationRight<0> & !Madd_s_resultAdd__or0000 & 
+	N_PZ_296 & Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<1> & !Msub_s_resultSub__or0001 & 
+	!N_PZ_296 & Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationLeft<0> & N_PZ_114 & N_PZ_296 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !N_PZ_106 & Madd_s_resultAdd__or0000 & !N_PZ_231 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !N_PZ_114 & N_PZ_296 & !N_PZ_134 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<0> & s_operationLeft<1> & 
+	!N_PZ_296 & N_PZ_231 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<0> & N_PZ_106 & N_PZ_114 & 
+	N_PZ_231 & Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationRight<0> & s_operationLeft<2> & 
+	!N_PZ_106 & !N_PZ_296 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationLeft<1> & s_operationLeft<2> & 
+	!N_PZ_114 & !N_PZ_296 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationLeft<2> & N_PZ_106 & !N_PZ_296 & 
+	!N_PZ_134 & !Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationLeft<2> & !N_PZ_114 & !N_PZ_296 & 
+	!N_PZ_231 & !Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<2> & s_operationLeft<1> & 
+	!N_PZ_114 & N_PZ_296 & N_PZ_231 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationLeft<1> & s_operationLeft<3> & 
+	!N_PZ_106 & Mshift_s_resultRotateRight_Sh<1> & N_PZ_296 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationLeft<1> & s_operationLeft<0> & 
+	N_PZ_106 & N_PZ_296 & !N_PZ_134 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationLeft<1> & s_operationLeft<2> & 
+	s_operationLeft<3> & !N_PZ_106 & !N_PZ_296 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003
+	# !s_operationLeft<2> & s_operationLeft<0> & 
+	Madd_s_resultAdd__or0000 & !Mshift_s_resultRotateRight_Sh<1> & N_PZ_296 & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0003;	// (18 pt, 16 inp)
 
-MACROCELL | 8 | 15 | Mmult_s_resultMul_mult0001_Mxor__index0003_MC
+MACROCELL | 10 | 9 | Mmult_s_resultMul_mult0001_Mxor__index0003_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 4 | 8 | 4 | 7 | 5 | 11
+OUTPUTMC | 3 | 7 | 7 | 5 | 12 | 8 | 3
 INPUTS | 13 | Mshift_s_resultRotateRight_Sh<3>  | N_PZ_134  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<4>  | s_operationLeft<3>  | Msub_s_resultSub__or0001  | Mshift_s_resultRotateRight_Sh<1>  | N_PZ_231  | Madd_s_resultAdd__or0000  | s_operationLeft<2>  | N_PZ_106  | N_PZ_203
-INPUTMC | 13 | 6 | 9 | 9 | 13 | 3 | 1 | 3 | 2 | 2 | 11 | 2 | 4 | 4 | 4 | 9 | 14 | 2 | 8 | 3 | 14 | 1 | 14 | 9 | 12 | 6 | 15
+INPUTMC | 13 | 10 | 8 | 6 | 7 | 8 | 1 | 8 | 3 | 3 | 2 | 3 | 1 | 7 | 4 | 8 | 15 | 6 | 9 | 7 | 6 | 3 | 0 | 8 | 12 | 6 | 8
 EQ | 13 | 
    Mmult_s_resultMul_mult0001_Mxor__index0003 = !Mshift_s_resultRotateRight_Sh<3> & !N_PZ_134
 	# s_operationRight<0> & !s_operationRight<1> & 
@@ -1835,53 +1862,78 @@ EQ | 13 |
 	# s_operationRight<1> & !s_operationLeft<4> & 
 	!s_operationLeft<2> & s_operationLeft<3> & Msub_s_resultSub__or0001;	// (7 pt, 13 inp)
 
-MACROCELL | 4 | 7 | N_PZ_374_MC
+MACROCELL | 6 | 8 | N_PZ_203_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 2 | 11 | 3
-INPUTS | 12 | s_operationRight<0>  | s_operationRight<2>  | s_operationLeft<3>  | N_PZ_437  | N_PZ_296  | s_operationRight<6>.COMB  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<1>  | N_PZ_106  | s_operationLeft<0>  | Madd_s_resultAdd__or0000  | Mshift_s_resultRotateRight_Sh<1>
-INPUTMC | 12 | 3 | 1 | 3 | 4 | 2 | 4 | 8 | 14 | 8 | 13 | 5 | 11 | 8 | 15 | 1 | 13 | 9 | 12 | 1 | 11 | 3 | 14 | 9 | 14
-EQ | 17 | 
-   N_PZ_374 = s_operationRight<0> & s_operationRight<2> & 
-	s_operationLeft<3> & !N_PZ_437
-	# s_operationRight<2> & s_operationLeft<3> & 
-	!N_PZ_296 & !s_operationRight<6>.COMB
-	# s_operationRight<2> & s_operationLeft<3> & 
-	!s_operationRight<6>.COMB & Mmult_s_resultMul_mult0001_Mxor__index0003
-	# s_operationRight<2> & s_operationLeft<1> & 
-	s_operationLeft<3> & N_PZ_106 & !N_PZ_296
-	# s_operationRight<0> & s_operationRight<2> & 
-	s_operationLeft<3> & !s_operationLeft<0> & Madd_s_resultAdd__or0000 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
-	# !s_operationRight<0> & s_operationRight<2> & 
-	s_operationLeft<3> & s_operationLeft<0> & Madd_s_resultAdd__or0000 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003
+OUTPUTMC | 4 | 10 | 9 | 10 | 14 | 5 | 13 | 5 | 14
+INPUTS | 5 | s_operationLeft<4>  | s_operationLeft<2>  | s_operationLeft<3>  | s_operationLeft<1>  | s_operationLeft<0>
+INPUTMC | 5 | 3 | 2 | 3 | 0 | 3 | 1 | 1 | 14 | 1 | 13
+EQ | 4 | 
+   N_PZ_203 = s_operationLeft<4>
+	# s_operationLeft<2> & s_operationLeft<3>
 	# s_operationLeft<1> & s_operationLeft<3> & 
-	!N_PZ_106 & Mshift_s_resultRotateRight_Sh<1> & N_PZ_437 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0003;	// (7 pt, 12 inp)
+	s_operationLeft<0>;	// (3 pt, 5 inp)
 
-MACROCELL | 10 | 14 | Mmult_s_resultMul_mult0001__and0043_MC
+MACROCELL | 10 | 14 | Mmult_s_resultMul_mult0001_Mxor__index0004_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 11 | 11 | 11 | 15 | 0 | 11
-INPUTS | 7 | s_operationLeft<0>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__or0012  | s_operationRight<6>.COMB  | s_operationLeft<1>  | s_operationRight<3>  | Mmult_s_resultMul_mult0001_Mxor__index0009
-INPUTMC | 7 | 1 | 11 | 3 | 12 | 10 | 15 | 5 | 11 | 1 | 13 | 3 | 5 | 4 | 9
+OUTPUTMC | 2 | 11 | 15 | 11 | 11
+INPUTS | 7 | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<5>  | N_PZ_203  | s_operationLeft<4>  | N_PZ_134  | Mshift_s_resultRotateRight_Sh<3>
+INPUTMC | 7 | 8 | 1 | 8 | 3 | 3 | 4 | 6 | 8 | 3 | 2 | 6 | 7 | 10 | 8
+EQ | 12 | 
+   Mmult_s_resultMul_mult0001_Mxor__index0004 = s_operationRight<0> & !s_operationRight<1> & 
+	s_operationLeft<5>
+	# s_operationRight<0> & s_operationLeft<5> & 
+	!N_PZ_203
+	# !s_operationRight<0> & s_operationRight<1> & 
+	s_operationLeft<4>
+	# s_operationRight<0> & s_operationLeft<4> & 
+	s_operationLeft<5> & N_PZ_134
+	# s_operationRight<1> & !s_operationLeft<5> & 
+	Mshift_s_resultRotateRight_Sh<3> & N_PZ_203
+	# s_operationRight<1> & !s_operationLeft<5> & 
+	!N_PZ_134 & N_PZ_203;	// (6 pt, 7 inp)
+
+MACROCELL | 5 | 12 | N_PZ_317_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 11 | 15 | 11 | 11
+INPUTS | 10 | s_operationRight<2>  | s_operationLeft<3>  | Mmult_s_resultMul_mult0001_Mxor__index0010  | Mmult_s_resultMul_mult0001_Mxor__index0003  | s_operationLeft<2>  | s_operationRight<1>  | N_PZ_114  | s_operationRight<0>  | s_operationLeft<1>  | s_operationLeft<0>
+INPUTMC | 10 | 8 | 5 | 3 | 1 | 7 | 7 | 10 | 9 | 3 | 0 | 8 | 3 | 8 | 14 | 8 | 1 | 1 | 14 | 1 | 13
+EQ | 12 | 
+   N_PZ_317 = s_operationRight<2> & s_operationLeft<3>
+	# !Mmult_s_resultMul_mult0001_Mxor__index0010 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003
+	# s_operationRight<2> & s_operationLeft<2> & 
+	!Mmult_s_resultMul_mult0001_Mxor__index0010
+	# s_operationRight<1> & s_operationRight<2> & 
+	s_operationLeft<2> & N_PZ_114
+	# s_operationRight<0> & s_operationRight<2> & 
+	s_operationLeft<1> & s_operationLeft<2> & s_operationLeft<0>
+	# s_operationRight<1> & s_operationRight<2> & 
+	s_operationLeft<1> & s_operationLeft<0> & 
+	Mmult_s_resultMul_mult0001_Mxor__index0003;	// (6 pt, 10 inp)
+
+MACROCELL | 9 | 9 | Mmult_s_resultMul_mult0001__and0043_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 3 | 10 | 5 | 10 | 4 | 3 | 2
+INPUTS | 7 | s_operationLeft<0>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__or0012  | Mmult_s_resultMul_mult0001_Mxor__index0010  | s_operationLeft<1>  | s_operationRight<3>  | Mmult_s_resultMul_mult0001_Mxor__index0009
+INPUTMC | 7 | 1 | 13 | 10 | 10 | 9 | 8 | 7 | 7 | 1 | 14 | 8 | 11 | 6 | 14
 EQ | 11 | 
    Mmult_s_resultMul_mult0001__and0043 = s_operationLeft<0> & s_operationRight<4> & 
-	!Mmult_s_resultMul_mult0001__or0012 & s_operationRight<6>.COMB
+	!Mmult_s_resultMul_mult0001__or0012 & Mmult_s_resultMul_mult0001_Mxor__index0010
 	# s_operationLeft<1> & s_operationLeft<0> & 
 	s_operationRight<4> & s_operationRight<3> & 
 	!Mmult_s_resultMul_mult0001__or0012
 	# s_operationLeft<1> & s_operationLeft<0> & 
 	s_operationRight<4> & Mmult_s_resultMul_mult0001_Mxor__index0009 & 
-	s_operationRight<6>.COMB
+	Mmult_s_resultMul_mult0001_Mxor__index0010
 	# s_operationLeft<0> & s_operationRight<4> & 
 	s_operationRight<3> & Mmult_s_resultMul_mult0001_Mxor__index0009 & 
 	!Mmult_s_resultMul_mult0001__or0012;	// (4 pt, 7 inp)
 
-MACROCELL | 11 | 11 | Mmult_s_resultMul_mult0001__or0018_MC
+MACROCELL | 10 | 5 | Mmult_s_resultMul_mult0001__or0018_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 11 | 15 | 11 | 9 | 11 | 8
+OUTPUTMC | 3 | 10 | 4 | 10 | 3 | 10 | 2
 INPUTS | 4 | N_PZ_442  | Mmult_s_resultMul_mult0001__and0043  | s_operationLeft<1>  | s_operationRight<4>
-INPUTMC | 4 | 10 | 8 | 10 | 14 | 1 | 13 | 3 | 12
+INPUTMC | 4 | 9 | 10 | 9 | 9 | 1 | 14 | 10 | 10
 EQ | 5 | 
    Mmult_s_resultMul_mult0001__or0018 = N_PZ_442 & Mmult_s_resultMul_mult0001__and0043
 	# s_operationLeft<1> & s_operationRight<4> & 
@@ -1889,42 +1941,43 @@ EQ | 5 |
 	# s_operationLeft<1> & s_operationRight<4> & 
 	Mmult_s_resultMul_mult0001__and0043;	// (3 pt, 4 inp)
 
-MACROCELL | 9 | 15 | Madd_s_resultAdd__or0003_MC
+MACROCELL | 9 | 12 | Madd_s_resultAdd__or0003_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 7 | 5 | 7 | 6 | 0 | 11
-INPUTS | 5 | s_operationRight<4>  | s_operationChoose<5>.COMB  | s_operationLeft<3>  | s_operationRight<3>  | s_operationRight<7>.COMB
-INPUTMC | 5 | 3 | 12 | 1 | 0 | 2 | 4 | 3 | 5 | 5 | 13
-EQ | 7 | 
-   Madd_s_resultAdd__or0003 = !s_operationRight<4> & s_operationChoose<5>.COMB
+OUTPUTMC | 3 | 2 | 4 | 3 | 2 | 10 | 12
+INPUTS | 5 | s_operationRight<4>  | Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000  | s_operationLeft<3>  | s_operationRight<3>  | Madd_s_resultAdd__or0001
+INPUTMC | 5 | 10 | 10 | 4 | 15 | 3 | 1 | 8 | 11 | 6 | 6
+EQ | 8 | 
+   Madd_s_resultAdd__or0003 = !s_operationRight<4> & 
+	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
 	# !s_operationLeft<3> & !s_operationRight<3> & 
-	!s_operationChoose<5>.COMB
-	# !s_operationLeft<3> & !s_operationChoose<5>.COMB & 
-	s_operationRight<7>.COMB
-	# !s_operationRight<3> & !s_operationChoose<5>.COMB & 
-	s_operationRight<7>.COMB;	// (4 pt, 5 inp)
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+	# !s_operationLeft<3> & Madd_s_resultAdd__or0001 & 
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+	# !s_operationRight<3> & Madd_s_resultAdd__or0001 & 
+	!Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000;	// (4 pt, 5 inp)
 
 MACROCELL | 1 | 15 | OP_RESULT<5>124_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 7 | 5
-INPUTS | 22 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<5>  | Msub_s_resultSub_Mxor_Result<5>__xor0000  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | Mshift_s_resultRotateRight_Sh<5>  | s_operationRight<0>  | s_operationLeft<3>.COMB  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationLeft<7>  | s_operationLeft<2>  | N_PZ_296
-INPUTMC | 22 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 2 | 13 | 7 | 4 | 3 | 2 | 3 | 4 | 3 | 12 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13 | 6 | 8 | 3 | 1 | 2 | 4 | 4 | 10 | 6 | 14 | 3 | 0 | 1 | 14 | 8 | 13
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 22 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<5>  | s_operationRight<4>.COMB  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<3>  | s_operationRight<5>  | s_operationRight<7>  | s_operationChoose<5>.COMB  | s_operationRight<0>  | N_PZ_187  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationLeft<7>  | s_operationLeft<2>  | N_PZ_296
+INPUTMC | 22 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 4 | 10 | 10 | 8 | 3 | 8 | 5 | 10 | 10 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13 | 7 | 12 | 8 | 1 | 3 | 15 | 8 | 14 | 10 | 15 | 3 | 12 | 3 | 0 | 8 | 10
 EQ | 36 | 
    OP_RESULT<5>124 = s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
 	!s_operationLeft<5>
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
-	!Msub_s_resultSub_Mxor_Result<5>__xor0000
+	!s_operationRight<4>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & !Mshift_s_resultRotateRight_Sh<5>
+	!s_operationRight<7> & !s_operationChoose<5>.COMB
 	# !s_operationChoose<0> & !s_operationRight<0> & 
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	s_operationRight<1> & !s_operationRight<2> & !s_operationChoose<4> & 
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationLeft<3>.COMB
+	!s_operationRight<7> & N_PZ_187
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
 	s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
@@ -1946,32 +1999,32 @@ EQ | 36 |
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<3> & 
 	!s_operationRight<5> & !s_operationRight<7> & N_PZ_296;	// (8 pt, 22 inp)
 
-MACROCELL | 10 | 10 | OP_RESULT<6>_MC
+MACROCELL | 5 | 1 | OP_RESULT<6>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 28 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationChoose<4>.COMB  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<1>.COMB  | s_operationChoose<0>  | s_operationChoose<4>  | s_operationRight<0>.COMB  | Msub_s_resultSub__or0005  | s_operationChoose<2>  | s_operationLeft<7>.COMB  | Madd_s_resultAdd__or0004  | N_PZ_501  | s_operationLeft<6>  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0033  | s_operationRight<6>  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<1>  | s_operationLeft<3>  | s_operationLeft<7>  | s_operationLeft<4>
-INPUTMC | 28 | 1 | 0 | 1 | 2 | 1 | 4 | 0 | 13 | 0 | 5 | 0 | 12 | 3 | 2 | 0 | 2 | 0 | 13 | 3 | 1 | 11 | 4 | 0 | 11 | 3 | 0 | 7 | 6 | 4 | 15 | 2 | 15 | 1 | 11 | 4 | 11 | 5 | 11 | 3 | 1 | 3 | 2 | 3 | 4 | 1 | 14 | 2 | 13 | 1 | 13 | 2 | 4 | 3 | 0 | 2 | 11
+INPUTS | 28 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | s_operationLeft<1>.COMB  | s_operationChoose<1>  | s_operationChoose<3>  | OP_RESULT<6>94  | s_operationChoose<0>  | s_operationChoose<4>  | s_operationChoose<3>.COMB  | s_operationRight<7>.COMB  | s_operationChoose<2>  | s_operationChoose<2>.COMB  | s_operationRight<6>.COMB  | N_PZ_501  | s_operationLeft<6>  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0033  | s_operationRight<6>  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<2>  | s_operationLeft<5>  | s_operationLeft<1>  | s_operationLeft<3>  | s_operationLeft<7>  | s_operationLeft<4>
+INPUTMC | 28 | 7 | 12 | 7 | 13 | 7 | 14 | 1 | 14 | 5 | 15 | 7 | 10 | 4 | 8 | 5 | 13 | 7 | 11 | 7 | 10 | 10 | 13 | 7 | 5 | 7 | 5 | 10 | 12 | 6 | 3 | 3 | 5 | 1 | 13 | 7 | 8 | 10 | 12 | 8 | 1 | 8 | 3 | 8 | 5 | 3 | 0 | 3 | 4 | 1 | 14 | 3 | 1 | 3 | 12 | 3 | 2
 EQ | 118 | 
    OP_RESULT<6> = !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & s_operationChoose<4>.COMB
+	!s_operationChoose<7> & s_operationLeft<1>.COMB
 	# s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
-	s_operationRight<1>.COMB
+	OP_RESULT<6>94
 	# s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & !s_operationChoose<4> & s_operationRight<0>.COMB & 
-	!Msub_s_resultSub__or0005
+	!s_operationChoose<7> & !s_operationChoose<4> & s_operationChoose<3>.COMB & 
+	!s_operationRight<7>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7>.COMB
+	s_operationChoose<2>.COMB
 	# !s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & !s_operationChoose<4> & s_operationLeft<7>.COMB & 
-	Madd_s_resultAdd__or0004
+	!s_operationChoose<7> & !s_operationChoose<4> & s_operationChoose<2>.COMB & 
+	s_operationRight<6>.COMB
 	# !s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !N_PZ_501 & 
-	Madd_s_resultAdd__or0004
+	s_operationRight<6>.COMB
 	# s_operationChoose<2> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<6> & 
@@ -1983,15 +2036,15 @@ EQ | 118 |
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7>.COMB & !Msub_s_resultSub__or0005
+	s_operationChoose<2>.COMB & !s_operationRight<7>.COMB
 	# !s_operationChoose<2> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & s_operationChoose<4> & !s_operationRight<6> & 
-	Mmult_s_resultMul_mult0001_Mxor__index0033 & !N_PZ_501
+	!N_PZ_501 & Mmult_s_resultMul_mult0001_Mxor__index0033
 	# !s_operationChoose<2> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<7>.COMB & 
-	N_PZ_501 & !Madd_s_resultAdd__or0004
+	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationChoose<2>.COMB & 
+	N_PZ_501 & !s_operationRight<6>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationChoose<4> & 
@@ -2007,8 +2060,8 @@ EQ | 118 |
 	!s_operationRight<2> & s_operationChoose<4> & s_operationLeft<6>
 	# !s_operationChoose<2> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
-	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationRight<0>.COMB & 
-	!s_operationLeft<7>.COMB & !N_PZ_501 & Msub_s_resultSub__or0005
+	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB & !N_PZ_501 & s_operationRight<7>.COMB
 	# s_operationChoose<0> & s_operationRight<0> & 
 	s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
@@ -2070,11 +2123,11 @@ EQ | 118 |
 	s_operationRight<1> & !s_operationRight<2> & s_operationChoose<4> & 
 	s_operationLeft<4>;	// (27 pt, 28 inp)
 
-MACROCELL | 4 | 11 | Mmult_s_resultMul_mult0001_Mxor__index0033_MC
+MACROCELL | 7 | 8 | Mmult_s_resultMul_mult0001_Mxor__index0033_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 10 | 10 | 4 | 13 | 4 | 12
+OUTPUTMC | 3 | 5 | 1 | 7 | 15 | 7 | 9
 INPUTS | 5 | Mmult_s_resultMul_mult0001_Mxor__index0026  | s_operationLeft<1>  | s_operationLeft<0>  | s_operationRight<5>  | Mmult_s_resultMul_mult0001_Mxor__index0025
-INPUTMC | 5 | 11 | 9 | 1 | 13 | 1 | 11 | 5 | 1 | 11 | 15
+INPUTMC | 5 | 10 | 3 | 1 | 14 | 1 | 13 | 10 | 11 | 10 | 4
 EQ | 7 | 
    Mmult_s_resultMul_mult0001_Mxor__index0033 = Mmult_s_resultMul_mult0001_Mxor__index0026
 	$ s_operationLeft<1> & !s_operationLeft<0> & 
@@ -2084,20 +2137,20 @@ EQ | 7 |
 	# !s_operationLeft<1> & s_operationLeft<0> & 
 	s_operationRight<5> & Mmult_s_resultMul_mult0001_Mxor__index0025;	// (4 pt, 5 inp)
 
-MACROCELL | 11 | 9 | Mmult_s_resultMul_mult0001_Mxor__index0026_MC
+MACROCELL | 10 | 3 | Mmult_s_resultMul_mult0001_Mxor__index0026_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 4 | 11 | 11 | 8 | 4 | 12
-INPUTS | 3 | Mmult_s_resultMul_mult0001__or0018  | N_PZ_457  | s_operationLeft<6>.COMB
-INPUTMC | 3 | 11 | 11 | 2 | 14 | 2 | 15
+OUTPUTMC | 3 | 7 | 8 | 10 | 2 | 7 | 9
+INPUTS | 3 | Mmult_s_resultMul_mult0001__or0018  | N_PZ_457  | N_PZ_311
+INPUTMC | 3 | 10 | 5 | 9 | 14 | 9 | 15
 EQ | 2 | 
    Mmult_s_resultMul_mult0001_Mxor__index0026 = Mmult_s_resultMul_mult0001__or0018
-	$ !N_PZ_457 & s_operationLeft<6>.COMB;	// (2 pt, 3 inp)
+	$ !N_PZ_457 & N_PZ_311;	// (2 pt, 3 inp)
 
-MACROCELL | 2 | 14 | N_PZ_457_MC
+MACROCELL | 9 | 14 | N_PZ_457_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 9 | 11 | 8
+OUTPUTMC | 2 | 10 | 3 | 10 | 2
 INPUTS | 9 | s_operationLeft<2>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__or0014  | s_operationLeft<3>  | N_PZ_442  | Mmult_s_resultMul_mult0001_Mxor__index0012  | Mmult_s_resultMul_mult0001__or0012  | s_operationRight<3>  | N_PZ_231
-INPUTMC | 9 | 1 | 14 | 3 | 12 | 2 | 12 | 2 | 4 | 10 | 8 | 11 | 7 | 10 | 15 | 3 | 5 | 2 | 8
+INPUTMC | 9 | 3 | 0 | 10 | 10 | 9 | 13 | 3 | 1 | 9 | 10 | 10 | 1 | 9 | 8 | 8 | 11 | 6 | 9
 EQ | 14 | 
    N_PZ_457 = s_operationLeft<2> & s_operationRight<4> & 
 	!Mmult_s_resultMul_mult0001__or0014
@@ -2114,11 +2167,11 @@ EQ | 14 |
 	!N_PZ_231 & N_PZ_442 & !Mmult_s_resultMul_mult0001__or0012 & 
 	!Mmult_s_resultMul_mult0001__or0014 & !Mmult_s_resultMul_mult0001_Mxor__index0012;	// (5 pt, 9 inp)
 
-MACROCELL | 2 | 12 | Mmult_s_resultMul_mult0001__or0014_MC
+MACROCELL | 9 | 13 | Mmult_s_resultMul_mult0001__or0014_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 2 | 14 | 10 | 7 | 2 | 15
+OUTPUTMC | 3 | 9 | 14 | 9 | 15 | 10 | 6
 INPUTS | 6 | s_operationLeft<2>  | s_operationLeft<3>  | Mmult_s_resultMul_mult0001__or0012  | Mmult_s_resultMul_mult0001_Mxor__index0012  | s_operationRight<3>  | N_PZ_117
-INPUTMC | 6 | 1 | 14 | 2 | 4 | 10 | 15 | 11 | 7 | 3 | 5 | 11 | 2
+INPUTMC | 6 | 3 | 0 | 3 | 1 | 9 | 8 | 10 | 1 | 8 | 11 | 11 | 15
 EQ | 16 | 
    Mmult_s_resultMul_mult0001__or0014 = s_operationLeft<2> & s_operationLeft<3> & 
 	Mmult_s_resultMul_mult0001__or0012
@@ -2137,105 +2190,87 @@ EQ | 16 |
 	# s_operationLeft<2> & s_operationRight<3> & 
 	N_PZ_117 & Mmult_s_resultMul_mult0001_Mxor__index0012;	// (8 pt, 6 inp)
 
-MACROCELL | 11 | 7 | Mmult_s_resultMul_mult0001_Mxor__index0012_MC
+MACROCELL | 10 | 1 | Mmult_s_resultMul_mult0001_Mxor__index0012_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 3 | 2 | 12 | 2 | 14 | 2 | 15
-INPUTS | 3 | N_PZ_429  | N_PZ_318  | N_PZ_497
-INPUTMC | 3 | 11 | 3 | 3 | 15 | 7 | 9
-EQ | 2 | 
-   Mmult_s_resultMul_mult0001_Mxor__index0012 = N_PZ_429
-	$ N_PZ_318 & !N_PZ_497;	// (2 pt, 3 inp)
-
-MACROCELL | 11 | 3 | N_PZ_429_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 7 | 11 | 6
-INPUTS | 3 | N_PZ_374  | Mmult_s_resultMul_mult0001_Mxor__index0004  | N_PZ_317
-INPUTMC | 3 | 4 | 7 | 7 | 7 | 4 | 8
+OUTPUTMC | 3 | 9 | 13 | 9 | 14 | 9 | 15
+INPUTS | 3 | N_PZ_429  | s_operationChoose<0>.COMB  | s_operationChoose<1>.COMB
+INPUTMC | 3 | 11 | 11 | 5 | 13 | 5 | 15
 EQ | 3 | 
-   N_PZ_429 = N_PZ_374
+   Mmult_s_resultMul_mult0001_Mxor__index0012 = N_PZ_429
+	$ s_operationChoose<0>.COMB & 
+	!s_operationChoose<1>.COMB;	// (2 pt, 3 inp)
+
+MACROCELL | 11 | 11 | N_PZ_429_MC
+ATTRIBUTES | 536871680 | 0
+OUTPUTMC | 2 | 10 | 1 | 10 | 0
+INPUTS | 3 | s_operationRight<1>.COMB  | Mmult_s_resultMul_mult0001_Mxor__index0004  | N_PZ_317
+INPUTMC | 3 | 8 | 3 | 10 | 14 | 5 | 12
+EQ | 3 | 
+   N_PZ_429 = s_operationRight<1>.COMB
 	# Mmult_s_resultMul_mult0001_Mxor__index0004 & 
 	N_PZ_317;	// (2 pt, 3 inp)
 
-MACROCELL | 3 | 15 | N_PZ_318_MC
+MACROCELL | 9 | 15 | N_PZ_311_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 7 | 11 | 6
-INPUTS | 15 | s_operationRight<2>  | s_operationLeft<4>  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<6>  | s_operationLeft<5>  | Mshift_s_resultRotateRight_Sh<3>  | Mshift_s_resultRotateRight_Sh<5>  | N_PZ_134  | N_PZ_203  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationLeft<2>  | s_operationLeft<3>  | N_PZ_106  | N_PZ_114
-INPUTMC | 15 | 3 | 4 | 2 | 11 | 3 | 1 | 3 | 2 | 2 | 15 | 2 | 13 | 6 | 9 | 6 | 8 | 9 | 13 | 6 | 15 | 6 | 14 | 1 | 14 | 2 | 4 | 9 | 12 | 4 | 10
+OUTPUTMC | 2 | 10 | 3 | 10 | 2
+INPUTS | 10 | s_operationLeft<2>  | s_operationRight<4>  | Mmult_s_resultMul_mult0001__or0014  | Mmult_s_resultMul_mult0001_Mxor__index0012  | Mmult_s_resultMul_mult0001__or0012  | s_operationLeft<3>  | N_PZ_187  | s_operationRight<3>  | N_PZ_442  | N_PZ_117
+INPUTMC | 10 | 3 | 0 | 10 | 10 | 9 | 13 | 10 | 1 | 9 | 8 | 3 | 1 | 3 | 15 | 8 | 11 | 9 | 10 | 11 | 15
 EQ | 17 | 
-   N_PZ_318 = s_operationRight<2> & s_operationLeft<4>
-	# s_operationRight<0> & !s_operationRight<1> & 
-	s_operationLeft<6>
-	# !s_operationLeft<5> & 
-	Mshift_s_resultRotateRight_Sh<3> & !Mshift_s_resultRotateRight_Sh<5>
-	# !Mshift_s_resultRotateRight_Sh<3> & 
-	!Mshift_s_resultRotateRight_Sh<5> & !N_PZ_134
-	# s_operationRight<1> & !s_operationLeft<6> & 
-	s_operationLeft<5> & !N_PZ_203
-	# s_operationRight<1> & s_operationLeft<5> & 
-	!Mshift_s_resultRotateRight_Sh<5> & !Mshift_s_resultRotateLeft_Sh<5>
+   N_PZ_311 = s_operationLeft<2> & s_operationRight<4>
+	# !Mmult_s_resultMul_mult0001__or0014 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0012
+	# s_operationLeft<2> & 
+	Mmult_s_resultMul_mult0001__or0012 & !Mmult_s_resultMul_mult0001__or0014
+	# s_operationLeft<3> & !N_PZ_187 & 
+	!Mmult_s_resultMul_mult0001__or0014
+	# !s_operationRight<3> & !N_PZ_442 & 
+	Mmult_s_resultMul_mult0001_Mxor__index0012
+	# !N_PZ_442 & N_PZ_117 & 
+	!Mmult_s_resultMul_mult0001__or0014
+	# !N_PZ_117 & Mmult_s_resultMul_mult0001__or0012 & 
+	!Mmult_s_resultMul_mult0001__or0014
 	# s_operationLeft<2> & s_operationLeft<3> & 
-	Mshift_s_resultRotateRight_Sh<3> & !Mshift_s_resultRotateRight_Sh<5>
-	# s_operationRight<1> & !s_operationLeft<6> & 
-	!s_operationLeft<5> & !Mshift_s_resultRotateLeft_Sh<5> & N_PZ_134
-	# s_operationLeft<3> & N_PZ_106 & N_PZ_114 & 
-	Mshift_s_resultRotateRight_Sh<3> & !Mshift_s_resultRotateRight_Sh<5>;	// (9 pt, 15 inp)
+	N_PZ_117 & Mmult_s_resultMul_mult0001_Mxor__index0012
+	# s_operationLeft<3> & !N_PZ_117 & 
+	Mmult_s_resultMul_mult0001__or0012 & Mmult_s_resultMul_mult0001_Mxor__index0012;	// (9 pt, 10 inp)
 
-MACROCELL | 7 | 9 | N_PZ_497_MC
+MACROCELL | 4 | 8 | OP_RESULT<6>94_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 11 | 7 | 11 | 6
-INPUTS | 9 | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationLeft<4>  | s_operationLeft<6>  | N_PZ_134  | s_operationLeft<5>  | Mshift_s_resultRotateRight_Sh<5>  | Mshift_s_resultRotateLeft_Sh<5>
-INPUTMC | 9 | 3 | 1 | 3 | 2 | 3 | 4 | 2 | 11 | 2 | 15 | 9 | 13 | 2 | 13 | 6 | 8 | 6 | 14
-EQ | 10 | 
-   N_PZ_497 = s_operationRight<0> & !s_operationRight<1> & 
-	s_operationRight<2> & s_operationLeft<4> & s_operationLeft<6>
-	# s_operationRight<0> & s_operationRight<2> & 
-	s_operationLeft<4> & s_operationLeft<6> & !N_PZ_134
-	# s_operationRight<1> & s_operationRight<2> & 
-	s_operationLeft<4> & s_operationLeft<5> & 
-	!Mshift_s_resultRotateRight_Sh<5>
-	# s_operationRight<1> & s_operationRight<2> & 
-	!s_operationLeft<6> & !s_operationLeft<5> & 
-	!Mshift_s_resultRotateLeft_Sh<5> & N_PZ_134;	// (4 pt, 9 inp)
+OUTPUTMC | 1 | 5 | 1
+INPUTS | 11 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationRight<6>  | s_operationChoose<4>  | s_operationChoose<3>.COMB  | s_operationChoose<2>.COMB  | s_operationLeft<6>  | s_operationLeft<5>  | OP_RESULT<5>90  | s_operationLeft<1>  | N_PZ_231
+INPUTMC | 11 | 5 | 13 | 7 | 5 | 10 | 12 | 7 | 11 | 7 | 10 | 7 | 5 | 3 | 5 | 3 | 4 | 2 | 12 | 1 | 14 | 6 | 9
+EQ | 20 | 
+   OP_RESULT<6>94 = s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationRight<6>
+	# s_operationChoose<0> & !s_operationChoose<4> & 
+	s_operationChoose<3>.COMB
+	# s_operationChoose<0> & !s_operationChoose<4> & 
+	s_operationChoose<2>.COMB
+	# !s_operationLeft<6> & !s_operationLeft<5> & 
+	OP_RESULT<5>90
+	# s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & s_operationLeft<1>
+	# !s_operationChoose<0> & s_operationChoose<2> & 
+	s_operationChoose<4> & s_operationLeft<6>
+	# !s_operationChoose<4> & s_operationRight<6> & 
+	!s_operationChoose<3>.COMB & !s_operationChoose<2>.COMB
+	# !s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & !s_operationLeft<6> & s_operationLeft<5>
+	# !s_operationChoose<0> & !s_operationChoose<2> & 
+	s_operationChoose<4> & !s_operationLeft<6> & !N_PZ_231
+	# !s_operationChoose<0> & s_operationChoose<4> & 
+	s_operationLeft<6> & !s_operationLeft<5> & !OP_RESULT<5>90;	// (10 pt, 11 inp)
 
-MACROCELL | 4 | 15 | N_PZ_501_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 4 | 10 | 10 | 0 | 13 | 1 | 4 | 7 | 15
-INPUTS | 2 | s_operationChoose<0>  | s_operationRight<0>.COMB
-INPUTMC | 2 | 0 | 2 | 3 | 1
-EQ | 1 | 
-   N_PZ_501 = !s_operationChoose<0> & !s_operationRight<0>.COMB;	// (1 pt, 2 inp)
-
-MACROCELL | 7 | 6 | Madd_s_resultAdd__or0004_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 10 | 10 | 4 | 14
-INPUTS | 3 | s_operationRight<5>  | Msub_s_resultSub_Mxor_Result<5>__xor0000  | Madd_s_resultAdd__or0003
-INPUTMC | 3 | 5 | 1 | 7 | 4 | 9 | 15
-EQ | 4 | 
-   Madd_s_resultAdd__or0004 = !s_operationRight<5> & 
-	Msub_s_resultSub_Mxor_Result<5>__xor0000
-	# !Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	Madd_s_resultAdd__or0003;	// (2 pt, 3 inp)
-
-MACROCELL | 11 | 4 | Msub_s_resultSub__or0005_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 10 | 10 | 8 | 0
-INPUTS | 3 | s_operationRight<5>  | s_operationChoose<6>.COMB  | Msub_s_resultSub_Mxor_Result<5>__xor0000
-INPUTMC | 3 | 5 | 1 | 1 | 2 | 7 | 4
-EQ | 3 | 
-   Msub_s_resultSub__or0005 = s_operationRight<5> & s_operationChoose<6>.COMB
-	# Msub_s_resultSub_Mxor_Result<5>__xor0000 & 
-	s_operationChoose<6>.COMB;	// (2 pt, 3 inp)
-
-MACROCELL | 8 | 0 | OP_RESULT<7>_MC
+MACROCELL | 6 | 4 | OP_RESULT<7>_MC
 ATTRIBUTES | 1074004738 | 0
-INPUTS | 31 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<7>111  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationRight<2>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | N_PZ_361  | Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000  | s_operationRight<0>.COMB  | Madd_s_resultAdd__or0005  | s_operationRight<1>  | s_operationRight<2>  | Mshift_s_resultRotateRight_Sh<5>  | Mshift_s_resultRotateRight_Sh<1>  | Mshift_s_resultRotateRight_Sh<3>  | Mshift_s_resultRotateRight_Sh<7>  | s_operationLeft<7>.COMB  | Msub_s_resultSub__or0005  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | Mshift_s_resultRotateLeft_Sh<7>  | s_operationRight<0>  | s_operationLeft<2>  | N_PZ_296  | s_operationLeft<3>
-INPUTMC | 31 | 1 | 0 | 1 | 2 | 1 | 4 | 1 | 12 | 0 | 5 | 0 | 12 | 3 | 4 | 0 | 2 | 0 | 11 | 0 | 13 | 3 | 0 | 5 | 13 | 4 | 13 | 4 | 12 | 3 | 1 | 4 | 14 | 3 | 2 | 3 | 4 | 6 | 8 | 9 | 14 | 6 | 9 | 6 | 6 | 3 | 0 | 11 | 4 | 4 | 10 | 6 | 14 | 6 | 7 | 3 | 1 | 1 | 14 | 8 | 13 | 2 | 4
-EQ | 123 | 
+INPUTS | 31 | s_operationChoose<5>  | s_operationChoose<6>  | s_operationChoose<7>  | OP_RESULT<7>111  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<6>.COMB  | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | N_PZ_361  | Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000  | s_operationChoose<3>.COMB  | Madd_s_resultAdd__or0005  | s_operationRight<1>  | s_operationRight<2>  | s_operationChoose<5>.COMB  | Mshift_s_resultRotateRight_Sh<1>  | Mshift_s_resultRotateRight_Sh<3>  | s_operationChoose<7>.COMB  | s_operationChoose<2>.COMB  | s_operationRight<7>.COMB  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationChoose<4>.COMB  | s_operationRight<0>  | s_operationLeft<2>  | N_PZ_296  | s_operationLeft<3>
+INPUTMC | 31 | 7 | 12 | 7 | 13 | 7 | 14 | 4 | 9 | 5 | 15 | 7 | 10 | 7 | 13 | 5 | 13 | 7 | 5 | 7 | 11 | 3 | 12 | 10 | 13 | 7 | 15 | 7 | 9 | 7 | 10 | 11 | 9 | 8 | 3 | 8 | 5 | 7 | 12 | 8 | 15 | 10 | 8 | 7 | 14 | 7 | 5 | 10 | 13 | 8 | 14 | 10 | 15 | 7 | 11 | 8 | 1 | 3 | 0 | 8 | 10 | 3 | 1
+EQ | 120 | 
    OP_RESULT<7> = !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & OP_RESULT<7>111
 	# s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
-	s_operationRight<2>.COMB
+	s_operationChoose<6>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
@@ -2255,7 +2290,7 @@ EQ | 123 |
 	# s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<7> & 
-	!s_operationRight<7> & s_operationRight<0>.COMB
+	!s_operationRight<7> & s_operationChoose<3>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
@@ -2271,8 +2306,7 @@ EQ | 123 |
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
-	s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<5>
+	s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<5>.COMB
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
@@ -2286,27 +2320,26 @@ EQ | 123 |
 	# s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
-	!s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateRight_Sh<7>
+	!s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<7>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7> & s_operationRight<7> & s_operationRight<0>.COMB
+	s_operationLeft<7> & s_operationRight<7> & s_operationChoose<3>.COMB
 	# s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<7> & 
-	s_operationRight<7> & !s_operationRight<0>.COMB & 
-	s_operationLeft<7>.COMB
+	s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	s_operationChoose<2>.COMB
 	# s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<7> & 
-	s_operationRight<7> & !s_operationRight<0>.COMB & 
-	!Msub_s_resultSub__or0005
+	s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationRight<7>.COMB
 	# s_operationChoose<0> & !s_operationChoose<1> & 
 	!s_operationChoose<3> & !s_operationChoose<5> & !s_operationChoose<6> & 
 	!s_operationChoose<7> & !s_operationChoose<4> & !s_operationLeft<7> & 
-	!s_operationRight<7> & !s_operationLeft<7>.COMB & 
-	Msub_s_resultSub__or0005
+	!s_operationRight<7> & !s_operationChoose<2>.COMB & 
+	s_operationRight<7>.COMB
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & s_operationRight<1> & 
@@ -2319,8 +2352,7 @@ EQ | 123 |
 	# !s_operationChoose<0> & s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationRight<1> & 
-	!s_operationRight<2> & s_operationChoose<4> & 
-	!Mshift_s_resultRotateLeft_Sh<7>
+	!s_operationRight<2> & s_operationChoose<4> & !s_operationChoose<4>.COMB
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
@@ -2332,18 +2364,18 @@ EQ | 123 |
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7> & s_operationRight<7> & !s_operationLeft<7>.COMB & 
-	Msub_s_resultSub__or0005
+	s_operationLeft<7> & s_operationRight<7> & !s_operationChoose<2>.COMB & 
+	s_operationRight<7>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7> & !s_operationRight<7> & !s_operationRight<0>.COMB & 
-	s_operationLeft<7>.COMB
+	s_operationLeft<7> & !s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	s_operationChoose<2>.COMB
 	# s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & !s_operationChoose<3> & !s_operationChoose<5> & 
 	!s_operationChoose<6> & !s_operationChoose<7> & !s_operationChoose<4> & 
-	s_operationLeft<7> & !s_operationRight<7> & !s_operationRight<0>.COMB & 
-	!Msub_s_resultSub__or0005
+	s_operationLeft<7> & !s_operationRight<7> & !s_operationChoose<3>.COMB & 
+	!s_operationRight<7>.COMB
 	# !s_operationChoose<0> & s_operationRight<0> & 
 	s_operationChoose<2> & !s_operationChoose<1> & !s_operationChoose<3> & 
 	!s_operationChoose<5> & !s_operationChoose<6> & !s_operationChoose<7> & 
@@ -2355,11 +2387,11 @@ EQ | 123 |
 	!s_operationRight<1> & s_operationRight<2> & s_operationChoose<4> & 
 	s_operationLeft<3>;	// (28 pt, 31 inp)
 
-MACROCELL | 1 | 12 | OP_RESULT<7>111_MC
+MACROCELL | 4 | 9 | OP_RESULT<7>111_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 8 | 0
-INPUTS | 19 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | s_operationLeft<3>.COMB  | s_operationRight<3>  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | Mshift_s_resultRotateLeft_Sh<7>  | N_PZ_296
-INPUTMC | 19 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 5 | 13 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 12 | 5 | 11 | 5 | 1 | 2 | 4 | 3 | 5 | 4 | 10 | 6 | 14 | 6 | 7 | 8 | 13
+OUTPUTMC | 1 | 6 | 4
+INPUTS | 19 | s_operationChoose<0>  | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<7>  | s_operationRight<0>  | s_operationRight<1>  | s_operationRight<2>  | s_operationRight<4>  | s_operationRight<6>  | s_operationRight<5>  | N_PZ_187  | s_operationRight<3>  | N_PZ_114  | Mshift_s_resultRotateLeft_Sh<5>  | s_operationChoose<4>.COMB  | N_PZ_296
+INPUTMC | 19 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 11 | 3 | 12 | 10 | 13 | 8 | 1 | 8 | 3 | 8 | 5 | 10 | 10 | 10 | 12 | 10 | 11 | 3 | 15 | 8 | 11 | 8 | 14 | 10 | 15 | 7 | 11 | 8 | 10
 EQ | 39 | 
    OP_RESULT<7>111 = s_operationChoose<0> & !s_operationChoose<2> & 
 	!s_operationChoose<1> & s_operationChoose<3> & !s_operationChoose<4> & 
@@ -2374,7 +2406,7 @@ EQ | 39 |
 	!s_operationChoose<2> & s_operationChoose<1> & s_operationChoose<3> & 
 	!s_operationRight<1> & s_operationRight<2> & !s_operationChoose<4> & 
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<5> & 
-	!s_operationRight<7> & s_operationLeft<3>.COMB
+	!s_operationRight<7> & N_PZ_187
 	# !s_operationChoose<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & s_operationRight<1> & 
 	s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
@@ -2389,7 +2421,7 @@ EQ | 39 |
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & !s_operationRight<4> & 
 	!s_operationRight<6> & !s_operationRight<3> & !s_operationRight<5> & 
-	!s_operationRight<7> & !Mshift_s_resultRotateLeft_Sh<7>
+	!s_operationRight<7> & !s_operationChoose<4>.COMB
 	# !s_operationRight<0> & !s_operationChoose<2> & 
 	s_operationChoose<1> & s_operationChoose<3> & !s_operationRight<1> & 
 	!s_operationRight<2> & !s_operationChoose<4> & s_operationLeft<7> & 
@@ -2401,21 +2433,21 @@ EQ | 39 |
 	!s_operationRight<4> & !s_operationRight<6> & !s_operationRight<3> & 
 	!s_operationRight<5> & !s_operationRight<7> & !N_PZ_296;	// (9 pt, 19 inp)
 
-MACROCELL | 4 | 13 | N_PZ_361_MC
+MACROCELL | 7 | 15 | N_PZ_361_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 8 | 0
+OUTPUTMC | 1 | 6 | 4
 INPUTS | 4 | s_operationLeft<0>  | s_operationRight<7>  | s_operationRight<6>  | Mmult_s_resultMul_mult0001_Mxor__index0033
-INPUTMC | 4 | 1 | 11 | 5 | 13 | 5 | 11 | 4 | 11
+INPUTMC | 4 | 1 | 13 | 10 | 13 | 10 | 12 | 7 | 8
 EQ | 3 | 
    N_PZ_361 = s_operationLeft<0> & s_operationRight<7>
 	$ s_operationLeft<0> & s_operationRight<6> & 
 	Mmult_s_resultMul_mult0001_Mxor__index0033;	// (2 pt, 4 inp)
 
-MACROCELL | 4 | 12 | Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000_MC
+MACROCELL | 7 | 9 | Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 8 | 0
+OUTPUTMC | 1 | 6 | 4
 INPUTS | 8 | s_operationLeft<1>  | Mmult_s_resultMul_mult0001_Mxor__index0033  | Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000  | Mmult_s_resultMul_mult0001_Mxor__index0026  | s_operationRight<6>  | s_operationRight<5>  | s_operationLeft<0>  | Mmult_s_resultMul_mult0001_Mxor__index0025
-INPUTMC | 8 | 1 | 13 | 4 | 11 | 11 | 8 | 11 | 9 | 5 | 11 | 5 | 1 | 1 | 11 | 11 | 15
+INPUTMC | 8 | 1 | 14 | 7 | 8 | 10 | 2 | 10 | 3 | 10 | 12 | 10 | 11 | 1 | 13 | 10 | 4
 EQ | 29 | 
    Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000 = !s_operationLeft<1> & 
 	Mmult_s_resultMul_mult0001_Mxor__index0033 & Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000
@@ -2447,42 +2479,46 @@ EQ | 29 |
 	!s_operationRight<6> & s_operationRight<5> & 
 	Mmult_s_resultMul_mult0001_Mxor__index0025 & !Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000;	// (11 pt, 8 inp)
 
-MACROCELL | 11 | 8 | Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000_MC
+MACROCELL | 10 | 2 | Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 4 | 12
-INPUTS | 5 | N_PZ_457  | N_PZ_435  | Mmult_s_resultMul_mult0001__or0018  | Mmult_s_resultMul_mult0001_Mxor__index0026  | s_operationLeft<6>.COMB
-INPUTMC | 5 | 2 | 14 | 11 | 5 | 11 | 11 | 11 | 9 | 2 | 15
+OUTPUTMC | 1 | 7 | 9
+INPUTS | 5 | N_PZ_457  | s_operationRight<5>.COMB  | Mmult_s_resultMul_mult0001__or0018  | Mmult_s_resultMul_mult0001_Mxor__index0026  | N_PZ_311
+INPUTMC | 5 | 9 | 14 | 10 | 11 | 10 | 5 | 10 | 3 | 9 | 15
 EQ | 6 | 
-   Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000 = N_PZ_457 & !N_PZ_435
+   Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000 = N_PZ_457 & !s_operationRight<5>.COMB
 	# !Mmult_s_resultMul_mult0001__or0018 & 
-	Mmult_s_resultMul_mult0001_Mxor__index0026 & N_PZ_435
+	Mmult_s_resultMul_mult0001_Mxor__index0026 & s_operationRight<5>.COMB
 	# !Mmult_s_resultMul_mult0001_Mxor__index0026 & 
-	s_operationLeft<6>.COMB & !N_PZ_435
-	# !N_PZ_457 & !s_operationLeft<6>.COMB & N_PZ_435;	// (4 pt, 5 inp)
+	N_PZ_311 & !s_operationRight<5>.COMB
+	# !N_PZ_457 & !N_PZ_311 & s_operationRight<5>.COMB;	// (4 pt, 5 inp)
 
-MACROCELL | 11 | 5 | N_PZ_435_MC
+MACROCELL | 11 | 9 | Madd_s_resultAdd__or0005_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 11 | 8
-INPUTS | 3 | Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000  | s_operationLeft<2>  | s_operationRight<5>
-INPUTMC | 3 | 10 | 9 | 1 | 14 | 5 | 1
-EQ | 2 | 
-   N_PZ_435 = Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000
-	$ s_operationLeft<2> & s_operationRight<5>;	// (2 pt, 3 inp)
+OUTPUTMC | 1 | 6 | 4
+INPUTS | 4 | s_operationChoose<3>.COMB  | s_operationRight<6>.COMB  | s_operationChoose<2>.COMB  | s_operationRight<6>
+INPUTMC | 4 | 7 | 10 | 10 | 12 | 7 | 5 | 10 | 12
+EQ | 6 | 
+   Madd_s_resultAdd__or0005 = s_operationChoose<3>.COMB & 
+	s_operationRight<6>.COMB
+	# s_operationChoose<2>.COMB & 
+	s_operationRight<6>.COMB
+	# !s_operationRight<6> & !s_operationChoose<3>.COMB & 
+	!s_operationChoose<2>.COMB;	// (3 pt, 4 inp)
 
-MACROCELL | 10 | 9 | Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000_MC
+MACROCELL | 10 | 7 | Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 11 | 5
+OUTPUTMC | 1 | 10 | 11
 INPUTS | 3 | N_PZ_460  | s_operationLeft<3>  | s_operationRight<4>
-INPUTMC | 3 | 10 | 7 | 2 | 4 | 3 | 12
+INPUTMC | 3 | 10 | 6 | 3 | 1 | 10 | 10
 EQ | 2 | 
    Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000 = N_PZ_460
 	$ s_operationLeft<3> & s_operationRight<4>;	// (2 pt, 3 inp)
 
-MACROCELL | 10 | 7 | N_PZ_460_MC
+MACROCELL | 10 | 6 | N_PZ_460_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 10 | 9
+OUTPUTMC | 1 | 10 | 7
 INPUTS | 4 | Mmult_s_resultMul_mult0001__or0014  | s_operationLeft<4>  | N_PZ_459  | s_operationRight<3>
-INPUTMC | 4 | 2 | 12 | 2 | 11 | 11 | 6 | 3 | 5
+INPUTMC | 4 | 9 | 13 | 3 | 2 | 10 | 0 | 8 | 11
 EQ | 5 | 
    N_PZ_460 = Mmult_s_resultMul_mult0001__or0014
 	$ !s_operationLeft<4> & N_PZ_459
@@ -2490,21 +2526,22 @@ EQ | 5 |
 	# s_operationLeft<4> & s_operationRight<3> & 
 	!N_PZ_459;	// (4 pt, 4 inp)
 
-MACROCELL | 11 | 6 | N_PZ_459_MC
+MACROCELL | 10 | 0 | N_PZ_459_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 10 | 7
-INPUTS | 4 | Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000  | N_PZ_429  | N_PZ_497  | N_PZ_318
-INPUTMC | 4 | 7 | 8 | 11 | 3 | 7 | 9 | 3 | 15
-EQ | 3 | 
+OUTPUTMC | 1 | 10 | 6
+INPUTS | 4 | Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000  | N_PZ_429  | s_operationChoose<1>.COMB  | s_operationChoose<0>.COMB
+INPUTMC | 4 | 5 | 14 | 11 | 11 | 5 | 15 | 5 | 13
+EQ | 4 | 
    N_PZ_459 = !Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000
-	$ !N_PZ_429 & !N_PZ_497
-	# !N_PZ_318 & !N_PZ_497;	// (3 pt, 4 inp)
+	$ !N_PZ_429 & !s_operationChoose<1>.COMB
+	# !s_operationChoose<0>.COMB & 
+	!s_operationChoose<1>.COMB;	// (3 pt, 4 inp)
 
-MACROCELL | 7 | 8 | Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000_MC
+MACROCELL | 5 | 14 | Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000_MC
 ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 11 | 6
-INPUTS | 10 | s_operationRight<2>  | s_operationLeft<5>  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<7>  | s_operationLeft<6>  | N_PZ_203  | Mshift_s_resultRotateLeft_Sh<7>  | s_operationLeft<4>  | N_PZ_134
-INPUTMC | 10 | 3 | 4 | 2 | 13 | 3 | 1 | 3 | 2 | 3 | 0 | 2 | 15 | 6 | 15 | 6 | 7 | 2 | 11 | 9 | 13
+OUTPUTMC | 1 | 10 | 0
+INPUTS | 10 | s_operationRight<2>  | s_operationLeft<5>  | s_operationRight<0>  | s_operationRight<1>  | s_operationLeft<7>  | s_operationLeft<6>  | N_PZ_203  | s_operationChoose<4>.COMB  | s_operationLeft<4>  | N_PZ_134
+INPUTMC | 10 | 8 | 5 | 3 | 4 | 8 | 1 | 8 | 3 | 3 | 12 | 3 | 5 | 6 | 8 | 7 | 11 | 3 | 2 | 6 | 7
 EQ | 20 | 
    Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000 = s_operationRight<2> & s_operationLeft<5>
 	$ s_operationRight<0> & !s_operationRight<1> & 
@@ -2516,7 +2553,7 @@ EQ | 20 |
 	# s_operationRight<1> & s_operationLeft<7> & 
 	s_operationLeft<6> & s_operationLeft<5>
 	# s_operationLeft<7> & !s_operationLeft<6> & 
-	!s_operationLeft<5> & Mshift_s_resultRotateLeft_Sh<7>
+	!s_operationLeft<5> & s_operationChoose<4>.COMB
 	# s_operationRight<1> & s_operationLeft<4> & 
 	s_operationLeft<7> & s_operationLeft<6> & N_PZ_134
 	# s_operationRight<1> & !s_operationLeft<4> & 
@@ -2527,88 +2564,38 @@ EQ | 20 |
 	!s_operationLeft<7> & !s_operationLeft<6> & s_operationLeft<5> & 
 	N_PZ_203;	// (10 pt, 10 inp)
 
-MACROCELL | 4 | 14 | Madd_s_resultAdd__or0005_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 8 | 0
-INPUTS | 4 | s_operationRight<0>.COMB  | Madd_s_resultAdd__or0004  | s_operationLeft<7>.COMB  | s_operationRight<6>
-INPUTMC | 4 | 3 | 1 | 7 | 6 | 3 | 0 | 5 | 11
-EQ | 6 | 
-   Madd_s_resultAdd__or0005 = s_operationRight<0>.COMB & 
-	Madd_s_resultAdd__or0004
-	# s_operationLeft<7>.COMB & 
-	Madd_s_resultAdd__or0004
-	# !s_operationRight<6> & !s_operationRight<0>.COMB & 
-	!s_operationLeft<7>.COMB;	// (3 pt, 4 inp)
-
-MACROCELL | 4 | 6 | N_PZ_314_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 2 | 1 | 4 | 1 | 13
-INPUTS | 11 | s_operationChoose<0>.COMB  | s_operationLeft<3>  | s_operationRight<3>  | s_operationChoose<1>.COMB  | s_operationLeft<2>  | N_PZ_296  | s_operationLeft<3>.COMB  | s_operationRight<0>  | N_PZ_106  | s_operationLeft<1>  | s_operationLeft<0>
-INPUTMC | 11 | 0 | 2 | 2 | 4 | 3 | 5 | 0 | 5 | 1 | 14 | 8 | 13 | 2 | 4 | 3 | 1 | 9 | 12 | 1 | 13 | 1 | 11
-EQ | 11 | 
-   N_PZ_314 = s_operationChoose<0>.COMB
-	# !s_operationLeft<3> & s_operationRight<3> & 
-	!s_operationChoose<1>.COMB
-	# !s_operationLeft<2> & N_PZ_296 & 
-	!s_operationChoose<1>.COMB & !s_operationLeft<3>.COMB
-	# s_operationRight<0> & N_PZ_106 & !N_PZ_296 & 
-	!s_operationChoose<1>.COMB & !s_operationLeft<3>.COMB
-	# !s_operationLeft<1> & !N_PZ_106 & !N_PZ_296 & 
-	!s_operationChoose<1>.COMB & !s_operationLeft<3>.COMB
-	# !s_operationLeft<0> & N_PZ_106 & !N_PZ_296 & 
-	!s_operationChoose<1>.COMB & !s_operationLeft<3>.COMB;	// (6 pt, 11 inp)
-
-MACROCELL | 7 | 15 | N_PZ_226_MC
-ATTRIBUTES | 536871680 | 0
-OUTPUTMC | 1 | 1 | 11
-INPUTS | 9 | s_operationChoose<2>  | s_operationChoose<1>  | s_operationChoose<3>  | s_operationChoose<4>  | s_operationLeft<7>  | s_operationRight<5>  | N_PZ_501  | s_operationLeft<5>  | s_operationRight<7>
-INPUTMC | 9 | 0 | 11 | 0 | 5 | 0 | 12 | 0 | 13 | 3 | 0 | 5 | 1 | 4 | 15 | 2 | 13 | 5 | 13
-EQ | 12 | 
-   N_PZ_226 = s_operationChoose<2> & s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7> & 
-	!s_operationRight<5> & N_PZ_501
-	# s_operationChoose<2> & s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & s_operationLeft<7> & 
-	s_operationLeft<5> & N_PZ_501
-	# s_operationChoose<2> & s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & !s_operationRight<5> & 
-	!s_operationRight<7> & N_PZ_501
-	# s_operationChoose<2> & s_operationChoose<1> & 
-	s_operationChoose<3> & !s_operationChoose<4> & !s_operationRight<7> & 
-	s_operationLeft<5> & N_PZ_501;	// (4 pt, 9 inp)
-
-PIN | CLK_CHOOSE | 4096 | 0 | LVCMOS33 | 48 | 8 | 0 | 2 | 0 | 11 | 0 | 5 | 0 | 12 | 1 | 0 | 1 | 2 | 1 | 4 | 0 | 13
-PIN | CLK_LEFT | 16384 | 0 | LVCMOS33 | 59 | 8 | 2 | 11 | 1 | 13 | 1 | 14 | 2 | 4 | 3 | 0 | 1 | 11 | 2 | 15 | 2 | 13
-PIN | CLK_RIGHT | 8192 | 0 | LVCMOS33 | 50 | 8 | 3 | 1 | 3 | 2 | 3 | 4 | 3 | 12 | 5 | 11 | 3 | 5 | 5 | 1 | 5 | 13
-PIN | OP_CHOOSE<0> | 64 | 0 | LVCMOS33 | 218 | 1 | 0 | 2
-PIN | OP_CHOOSE<1> | 64 | 0 | LVCMOS33 | 214 | 1 | 0 | 5
-PIN | OP_CHOOSE<2> | 64 | 0 | LVCMOS33 | 213 | 1 | 0 | 11
-PIN | OP_CHOOSE<3> | 64 | 0 | LVCMOS33 | 212 | 1 | 0 | 12
-PIN | OP_CHOOSE<4> | 64 | 0 | LVCMOS33 | 211 | 1 | 0 | 13
-PIN | OP_CHOOSE<5> | 64 | 0 | LVCMOS33 | 1 | 1 | 1 | 0
-PIN | OP_CHOOSE<6> | 64 | 0 | LVCMOS33 | 3 | 1 | 1 | 2
-PIN | OP_CHOOSE<7> | 64 | 0 | LVCMOS33 | 5 | 1 | 1 | 4
-PIN | OP_LEFT<0> | 64 | 0 | LVCMOS33 | 7 | 1 | 1 | 11
-PIN | OP_LEFT<1> | 64 | 0 | LVCMOS33 | 10 | 1 | 1 | 13
-PIN | OP_LEFT<2> | 64 | 0 | LVCMOS33 | 12 | 1 | 1 | 14
-PIN | OP_LEFT<3> | 64 | 0 | LVCMOS33 | 204 | 1 | 2 | 4
-PIN | OP_LEFT<4> | 64 | 0 | LVCMOS33 | 201 | 1 | 2 | 11
-PIN | OP_LEFT<5> | 64 | 0 | LVCMOS33 | 199 | 1 | 2 | 13
-PIN | OP_LEFT<6> | 64 | 0 | LVCMOS33 | 197 | 1 | 2 | 15
-PIN | OP_LEFT<7> | 64 | 0 | LVCMOS33 | 15 | 1 | 3 | 0
-PIN | OP_RIGHT<0> | 64 | 0 | LVCMOS33 | 16 | 1 | 3 | 1
-PIN | OP_RIGHT<1> | 64 | 0 | LVCMOS33 | 17 | 1 | 3 | 2
-PIN | OP_RIGHT<2> | 64 | 0 | LVCMOS33 | 19 | 1 | 3 | 4
-PIN | OP_RIGHT<3> | 64 | 0 | LVCMOS33 | 20 | 1 | 3 | 5
-PIN | OP_RIGHT<4> | 64 | 0 | LVCMOS33 | 22 | 1 | 3 | 12
-PIN | OP_RIGHT<5> | 64 | 0 | LVCMOS33 | 55 | 1 | 5 | 1
-PIN | OP_RIGHT<6> | 64 | 0 | LVCMOS33 | 62 | 1 | 5 | 11
-PIN | OP_RIGHT<7> | 64 | 0 | LVCMOS33 | 65 | 1 | 5 | 13
-PIN | OP_RESULT<0> | 536871040 | 0 | LVCMOS33 | 35
-PIN | OP_RESULT<1> | 536871040 | 0 | LVCMOS33 | 167
-PIN | OP_RESULT<2> | 536871040 | 0 | LVCMOS33 | 67
-PIN | OP_RESULT<3> | 536871040 | 0 | LVCMOS33 | 166
-PIN | OP_RESULT<4> | 536871040 | 0 | LVCMOS33 | 34
-PIN | OP_RESULT<5> | 536871040 | 0 | LVCMOS33 | 74
-PIN | OP_RESULT<6> | 536871040 | 0 | LVCMOS33 | 190
-PIN | OP_RESULT<7> | 536871040 | 0 | LVCMOS33 | 168
+PIN | CLK_CHOOSE | 4096 | 0 | LVCMOS33 | 48 | 8 | 5 | 13 | 7 | 5 | 5 | 15 | 7 | 10 | 7 | 12 | 7 | 13 | 7 | 14 | 7 | 11
+PIN | CLK_LEFT | 16384 | 0 | LVCMOS33 | 59 | 8 | 3 | 2 | 1 | 14 | 3 | 0 | 3 | 1 | 3 | 12 | 1 | 13 | 3 | 5 | 3 | 4
+PIN | CLK_RIGHT | 8192 | 0 | LVCMOS33 | 50 | 8 | 8 | 1 | 8 | 3 | 8 | 5 | 10 | 10 | 10 | 12 | 8 | 11 | 10 | 11 | 10 | 13
+PIN | OP_CHOOSE<0> | 64 | 0 | LVCMOS33 | 65 | 1 | 5 | 13
+PIN | OP_CHOOSE<1> | 64 | 0 | LVCMOS33 | 67 | 1 | 5 | 15
+PIN | OP_CHOOSE<2> | 64 | 0 | LVCMOS33 | 74 | 1 | 7 | 5
+PIN | OP_CHOOSE<3> | 64 | 0 | LVCMOS33 | 75 | 1 | 7 | 10
+PIN | OP_CHOOSE<4> | 64 | 0 | LVCMOS33 | 76 | 1 | 7 | 11
+PIN | OP_CHOOSE<5> | 64 | 0 | LVCMOS33 | 77 | 1 | 7 | 12
+PIN | OP_CHOOSE<6> | 64 | 0 | LVCMOS33 | 78 | 1 | 7 | 13
+PIN | OP_CHOOSE<7> | 64 | 0 | LVCMOS33 | 79 | 1 | 7 | 14
+PIN | OP_LEFT<0> | 64 | 0 | LVCMOS33 | 10 | 1 | 1 | 13
+PIN | OP_LEFT<1> | 64 | 0 | LVCMOS33 | 12 | 1 | 1 | 14
+PIN | OP_LEFT<2> | 64 | 0 | LVCMOS33 | 15 | 1 | 3 | 0
+PIN | OP_LEFT<3> | 64 | 0 | LVCMOS33 | 16 | 1 | 3 | 1
+PIN | OP_LEFT<4> | 64 | 0 | LVCMOS33 | 17 | 1 | 3 | 2
+PIN | OP_LEFT<5> | 64 | 0 | LVCMOS33 | 19 | 1 | 3 | 4
+PIN | OP_LEFT<6> | 64 | 0 | LVCMOS33 | 20 | 1 | 3 | 5
+PIN | OP_LEFT<7> | 64 | 0 | LVCMOS33 | 22 | 1 | 3 | 12
+PIN | OP_RIGHT<0> | 64 | 0 | LVCMOS33 | 169 | 1 | 8 | 1
+PIN | OP_RIGHT<1> | 64 | 0 | LVCMOS33 | 171 | 1 | 8 | 3
+PIN | OP_RIGHT<2> | 64 | 0 | LVCMOS33 | 173 | 1 | 8 | 5
+PIN | OP_RIGHT<3> | 64 | 0 | LVCMOS33 | 175 | 1 | 8 | 11
+PIN | OP_RIGHT<4> | 64 | 0 | LVCMOS33 | 190 | 1 | 10 | 10
+PIN | OP_RIGHT<5> | 64 | 0 | LVCMOS33 | 191 | 1 | 10 | 11
+PIN | OP_RIGHT<6> | 64 | 0 | LVCMOS33 | 192 | 1 | 10 | 12
+PIN | OP_RIGHT<7> | 64 | 0 | LVCMOS33 | 194 | 1 | 10 | 13
+PIN | OP_RESULT<0> | 536871040 | 0 | LVCMOS33 | 218
+PIN | OP_RESULT<1> | 536871040 | 0 | LVCMOS33 | 168
+PIN | OP_RESULT<2> | 536871040 | 0 | LVCMOS33 | 214
+PIN | OP_RESULT<3> | 536871040 | 0 | LVCMOS33 | 167
+PIN | OP_RESULT<4> | 536871040 | 0 | LVCMOS33 | 1
+PIN | OP_RESULT<5> | 536871040 | 0 | LVCMOS33 | 204
+PIN | OP_RESULT<6> | 536871040 | 0 | LVCMOS33 | 55
+PIN | OP_RESULT<7> | 536871040 | 0 | LVCMOS33 | 35

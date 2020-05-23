@@ -4,87 +4,89 @@ Pin Freeze File:  version P.20131013
 CLK_CHOOSE S:PIN22
 CLK_LEFT S:PIN27
 CLK_RIGHT S:PIN23
-OP_CHOOSE<0> S:PIN99
-OP_CHOOSE<1> S:PIN97
-OP_CHOOSE<2> S:PIN96
-OP_CHOOSE<3> S:PIN95
-OP_CHOOSE<4> S:PIN94
-OP_CHOOSE<5> S:PIN1
-OP_CHOOSE<6> S:PIN2
-OP_CHOOSE<7> S:PIN3
-OP_LEFT<0> S:PIN4
-OP_LEFT<1> S:PIN6
-OP_LEFT<2> S:PIN7
-OP_LEFT<3> S:PIN93
-OP_LEFT<4> S:PIN92
-OP_LEFT<5> S:PIN91
-OP_LEFT<6> S:PIN90
-OP_LEFT<7> S:PIN8
-OP_RIGHT<0> S:PIN9
-OP_RIGHT<1> S:PIN10
-OP_RIGHT<2> S:PIN11
-OP_RIGHT<3> S:PIN12
-OP_RIGHT<4> S:PIN13
-OP_RIGHT<5> S:PIN24
-OP_RIGHT<6> S:PIN28
-OP_RIGHT<7> S:PIN29
-OP_RESULT<0> S:PIN19
-OP_RESULT<1> S:PIN77
-OP_RESULT<2> S:PIN30
-OP_RESULT<3> S:PIN76
-OP_RESULT<4> S:PIN18
-OP_RESULT<5> S:PIN32
-OP_RESULT<6> S:PIN85
-OP_RESULT<7> S:PIN78
+OP_CHOOSE<0> S:PIN29
+OP_CHOOSE<1> S:PIN30
+OP_CHOOSE<2> S:PIN32
+OP_CHOOSE<3> S:PIN33
+OP_CHOOSE<4> S:PIN34
+OP_CHOOSE<5> S:PIN35
+OP_CHOOSE<6> S:PIN36
+OP_CHOOSE<7> S:PIN37
+OP_LEFT<0> S:PIN6
+OP_LEFT<1> S:PIN7
+OP_LEFT<2> S:PIN8
+OP_LEFT<3> S:PIN9
+OP_LEFT<4> S:PIN10
+OP_LEFT<5> S:PIN11
+OP_LEFT<6> S:PIN12
+OP_LEFT<7> S:PIN13
+OP_RIGHT<0> S:PIN79
+OP_RIGHT<1> S:PIN80
+OP_RIGHT<2> S:PIN81
+OP_RIGHT<3> S:PIN82
+OP_RIGHT<4> S:PIN85
+OP_RIGHT<5> S:PIN86
+OP_RIGHT<6> S:PIN87
+OP_RIGHT<7> S:PIN89
+OP_RESULT<0> S:PIN99
+OP_RESULT<1> S:PIN78
+OP_RESULT<2> S:PIN97
+OP_RESULT<3> S:PIN77
+OP_RESULT<4> S:PIN1
+OP_RESULT<5> S:PIN93
+OP_RESULT<6> S:PIN24
+OP_RESULT<7> S:PIN19
 
 
 ;The remaining section of the .gyd file is for documentation purposes only.
 ;It shows where your internal equations were placed in the last successful fit.
 
-PARTITION FB1_3 s_operationChoose<0>
-PARTITION FB1_6 s_operationChoose<1>
-PARTITION FB1_12 s_operationChoose<2> s_operationChoose<3> s_operationChoose<4> OP_RESULT<0>72
-		 OP_RESULT<0>125
-PARTITION FB2_1 s_operationChoose<5>
-PARTITION FB2_3 s_operationChoose<6>
-PARTITION FB2_5 s_operationChoose<7>
-PARTITION FB2_10 OP_RESULT<0>155 OP_RESULT<0>124 s_operationLeft<0> OP_RESULT<7>111
-		 s_operationLeft<1> s_operationLeft<2> OP_RESULT<5>124
-PARTITION FB3_5 s_operationLeft<3>
-PARTITION FB3_9 N_PZ_231 OP_RESULT<5>90 OP_RESULT<3>122 s_operationLeft<4>
-		 Mmult_s_resultMul_mult0001__or0014 s_operationLeft<5> N_PZ_457 s_operationLeft<6>
+PARTITION FB1_3 OP_RESULT<0>
+PARTITION FB1_6 OP_RESULT<2>
+
+PARTITION FB2_1 OP_RESULT<4>
+PARTITION FB2_11 N_PZ_226
+PARTITION FB2_13 OP_RESULT<0>125 s_operationLeft<0> s_operationLeft<1> OP_RESULT<5>124
 		
-PARTITION FB4_1 s_operationLeft<7> s_operationRight<0> s_operationRight<1>
-PARTITION FB4_5 s_operationRight<2> s_operationRight<3>
-PARTITION FB4_13 s_operationRight<4>
-PARTITION FB4_15 Madd_s_resultAdd__or0000 N_PZ_318
-PARTITION FB5_5 Msub_s_resultSub__or0001
-PARTITION FB5_7 N_PZ_314 N_PZ_374 N_PZ_317 Mmult_s_resultMul_mult0001_Mxor__index0009
-		 N_PZ_114 Mmult_s_resultMul_mult0001_Mxor__index0033 Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000 N_PZ_361
-		 Madd_s_resultAdd__or0005 N_PZ_501
-PARTITION FB6_2 s_operationRight<5>
-PARTITION FB6_12 s_operationRight<6>
-PARTITION FB6_14 s_operationRight<7>
-PARTITION FB6_16 OP_RESULT<2>
-PARTITION FB7_5 OP_RESULT<0> OP_RESULT<4> Mshift_s_resultRotateRight_Sh<7> Mshift_s_resultRotateLeft_Sh<7>
-		 Mshift_s_resultRotateRight_Sh<5> Mshift_s_resultRotateRight_Sh<3>
-PARTITION FB7_15 Mshift_s_resultRotateLeft_Sh<5> N_PZ_203
-PARTITION FB8_5 Msub_s_resultSub_Mxor_Result<5>__xor0000 OP_RESULT<5> Madd_s_resultAdd__or0004 Mmult_s_resultMul_mult0001_Mxor__index0004
-		 Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000 N_PZ_497
-PARTITION FB8_16 N_PZ_226
-PARTITION FB9_1 OP_RESULT<7>
-PARTITION FB9_14 N_PZ_296 N_PZ_437 Mmult_s_resultMul_mult0001_Mxor__index0003
-PARTITION FB10_1 OP_RESULT<1> OP_RESULT<3>
-PARTITION FB10_13 N_PZ_106 N_PZ_134 Mshift_s_resultRotateRight_Sh<1> Madd_s_resultAdd__or0003
+PARTITION FB3_5 OP_RESULT<5>
+PARTITION FB3_13 OP_RESULT<5>90
+PARTITION FB3_15 OP_RESULT<3>122
+
+PARTITION FB4_1 s_operationLeft<2> s_operationLeft<3> s_operationLeft<4>
+PARTITION FB4_5 s_operationLeft<5> s_operationLeft<6>
+PARTITION FB4_13 s_operationLeft<7>
+PARTITION FB4_16 N_PZ_187
+PARTITION FB5_7 OP_RESULT<0>72 OP_RESULT<0>155 OP_RESULT<6>94 OP_RESULT<7>111
+		 OP_RESULT<0>154 OP_RESULT<0>3 OP_RESULT<0>2 N_PZ_377
+		 N_PZ_378 Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000
+PARTITION FB6_2 OP_RESULT<6>
+PARTITION FB6_13 N_PZ_317 s_operationChoose<0> Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000 s_operationChoose<1>
 		
-PARTITION FB11_8 N_PZ_460 N_PZ_442 Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000 OP_RESULT<6>
+PARTITION FB7_4 N_PZ_501 OP_RESULT<7>
+PARTITION FB7_7 Madd_s_resultAdd__or0001 N_PZ_134 N_PZ_203 N_PZ_231
 		
-PARTITION FB11_15 Mmult_s_resultMul_mult0001__and0043 Mmult_s_resultMul_mult0001__or0012
-PARTITION FB12_3 N_PZ_117 N_PZ_429 Msub_s_resultSub__or0005 N_PZ_435
-		 N_PZ_459 Mmult_s_resultMul_mult0001_Mxor__index0012 Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000 Mmult_s_resultMul_mult0001_Mxor__index0026
+PARTITION FB7_15 Mmult_s_resultMul_mult0001_Mxor__index0009 OP_RESULT<2>88
+PARTITION FB8_5 Msub_s_resultSub__or0001 s_operationChoose<2> Madd_s_resultAdd__or0000 Mmult_s_resultMul_mult0001_Mxor__index0010
+		 Mmult_s_resultMul_mult0001_Mxor__index0033 Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000 s_operationChoose<3> s_operationChoose<4>
+		 s_operationChoose<5> s_operationChoose<6> s_operationChoose<7> N_PZ_361
 		
-PARTITION FB12_12 Mmult_s_resultMul_mult0001__or0018
-PARTITION FB12_16 Mmult_s_resultMul_mult0001_Mxor__index0025
+PARTITION FB9_1 OP_RESULT<1> s_operationRight<0>
+PARTITION FB9_4 s_operationRight<1>
+PARTITION FB9_6 s_operationRight<2>
+PARTITION FB9_11 N_PZ_296 s_operationRight<3> N_PZ_106 N_PZ_437
+		 N_PZ_114 Mshift_s_resultRotateRight_Sh<1>
+PARTITION FB10_1 OP_RESULT<3>
+PARTITION FB10_9 Mmult_s_resultMul_mult0001__or0012 Mmult_s_resultMul_mult0001__and0043 N_PZ_442
+PARTITION FB10_13 Madd_s_resultAdd__or0003 Mmult_s_resultMul_mult0001__or0014 N_PZ_457 N_PZ_311
+		
+PARTITION FB11_1 N_PZ_459 Mmult_s_resultMul_mult0001_Mxor__index0012 Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000 Mmult_s_resultMul_mult0001_Mxor__index0026
+		 Mmult_s_resultMul_mult0001_Mxor__index0025 Mmult_s_resultMul_mult0001__or0018 N_PZ_460 Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000
+		 Mshift_s_resultRotateRight_Sh<3> Mmult_s_resultMul_mult0001_Mxor__index0003 s_operationRight<4> s_operationRight<5>
+		 s_operationRight<6> s_operationRight<7> Mmult_s_resultMul_mult0001_Mxor__index0004 Mshift_s_resultRotateLeft_Sh<5>
+		
+PARTITION FB12_10 Madd_s_resultAdd__or0005
+PARTITION FB12_12 N_PZ_429
+PARTITION FB12_16 N_PZ_117
 
 
 

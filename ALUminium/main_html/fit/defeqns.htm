@@ -10,27 +10,29 @@ Madd_s_resultAdd__or0000 <= ((s_operationLeft(1) AND N_PZ_106)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT N_PZ_106 AND N_PZ_114));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Madd_s_resultAdd__or0003 <= ((NOT s_operationRight(4) AND s_operationChoose(5).COMB)
+Madd_s_resultAdd__or0001 <= ((NOT s_operationLeft(2) AND NOT N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Madd_s_resultAdd__or0000 AND N_PZ_296));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Madd_s_resultAdd__or0003 <= ((NOT s_operationRight(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND NOT s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND NOT s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(3) AND NOT s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7).COMB));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND Madd_s_resultAdd__or0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(3) AND Madd_s_resultAdd__or0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Madd_s_resultAdd__or0004 <= ((NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub_Mxor_Result(5)__xor0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0003));
+Madd_s_resultAdd__or0005 <= ((s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(6) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Madd_s_resultAdd__or0005 <= ((s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0004)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0004)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(6) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB));
+Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000 <= (NOT s_operationLeft(2).COMB AND NOT s_operationLeft(3).COMB);
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__index0003 <= ((NOT Mshift_s_resultRotateRight_Sh(3) AND NOT N_PZ_134)
@@ -87,8 +89,55 @@ Mmult_s_resultMul_mult0001_Mxor__index0009 <= (s_operationRight(0) AND s_operati
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+Mmult_s_resultMul_mult0001_Mxor__index0010 <= ((NOT s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT Madd_s_resultAdd__or0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT Msub_s_resultSub__or0001 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(0) AND N_PZ_114 AND N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_106 AND Madd_s_resultAdd__or0000 AND NOT N_PZ_231 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_114 AND N_PZ_296 AND NOT N_PZ_134 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationLeft(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND N_PZ_231 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND N_PZ_106 AND N_PZ_114 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_231 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND s_operationLeft(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND s_operationLeft(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_114 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_134 AND NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND NOT N_PZ_114 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_231 AND NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_114 AND N_PZ_296 AND N_PZ_231 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND Mshift_s_resultRotateRight_Sh(1) AND N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND N_PZ_296 AND NOT N_PZ_134 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND s_operationLeft(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000 AND NOT Mshift_s_resultRotateRight_Sh(1) AND N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003));
+</td></tr><tr><td>
+</td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__index0012 <= N_PZ_429
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (N_PZ_318 AND NOT N_PZ_497);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (s_operationChoose(0).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB);
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__index0025 <= ((N_PZ_442 AND NOT Mmult_s_resultMul_mult0001__or0018)
@@ -101,7 +150,7 @@ Mmult_s_resultMul_mult0001_Mxor__index0025 <= ((N_PZ_442 AND NOT Mmult_s_resultM
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__index0026 <= Mmult_s_resultMul_mult0001__or0018
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (NOT N_PZ_457 AND s_operationLeft(6).COMB);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (NOT N_PZ_457 AND N_PZ_311);
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__index0033 <= Mmult_s_resultMul_mult0001_Mxor__index0026
@@ -123,7 +172,7 @@ Mmult_s_resultMul_mult0001_Mxor__n0002(5)__xor0000 <= (s_operationRight(2) AND s
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationLeft(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6) AND s_operationLeft(5))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(7) AND NOT s_operationLeft(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5) AND Mshift_s_resultRotateLeft_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5) AND s_operationChoose(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationLeft(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationLeft(6) AND N_PZ_134)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT s_operationLeft(4) AND 
@@ -139,12 +188,12 @@ Mmult_s_resultMul_mult0001_Mxor__n0006(3)__xor0000 <= N_PZ_460
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (s_operationLeft(3) AND s_operationRight(4));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Mmult_s_resultMul_mult0001_Mxor__n0008(2)__xor0000 <= ((N_PZ_457 AND NOT N_PZ_435)
+Mmult_s_resultMul_mult0001_Mxor__n0008(2)__xor0000 <= ((N_PZ_457 AND NOT s_operationRight(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001__or0018 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0026 AND N_PZ_435)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0026 AND s_operationRight(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001_Mxor__index0026 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6).COMB AND NOT N_PZ_435)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_457 AND NOT s_operationLeft(6).COMB AND N_PZ_435));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_311 AND NOT s_operationRight(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_457 AND NOT N_PZ_311 AND s_operationRight(5).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001_Mxor__n0010(1)__xor0000 <= ((NOT s_operationLeft(1) AND 
@@ -179,24 +228,24 @@ Mmult_s_resultMul_mult0001_Mxor__n0010(1)__xor0000 <= ((NOT s_operationLeft(1) A
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001__and0043 <= ((s_operationLeft(0) AND s_operationRight(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND Mmult_s_resultMul_mult0001_Mxor__index0010)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4) AND s_operationRight(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4) AND Mmult_s_resultMul_mult0001_Mxor__index0009 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0010)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(0) AND s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3) AND Mmult_s_resultMul_mult0001_Mxor__index0009 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001__or0012 <= ((s_operationLeft(1) AND s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0010)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3) AND Mmult_s_resultMul_mult0001_Mxor__index0009)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(0) AND s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0009 AND s_operationRight(6).COMB));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0009 AND Mmult_s_resultMul_mult0001_Mxor__index0010));
 </td></tr><tr><td>
 </td></tr><tr><td>
 Mmult_s_resultMul_mult0001__or0014 <= ((s_operationLeft(2) AND s_operationLeft(3) AND 
@@ -228,10 +277,6 @@ Mshift_s_resultRotateLeft_Sh(5) <= ((s_operationRight(0) AND NOT s_operationLeft
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(5)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Mshift_s_resultRotateLeft_Sh(7) <= ((s_operationRight(0) AND NOT s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(7)));
-</td></tr><tr><td>
-</td></tr><tr><td>
 Mshift_s_resultRotateRight_Sh(1) <= ((s_operationRight(0) AND NOT s_operationLeft(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(1)));
 </td></tr><tr><td>
@@ -240,25 +285,8 @@ Mshift_s_resultRotateRight_Sh(3) <= ((s_operationRight(0) AND NOT s_operationLef
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-Mshift_s_resultRotateRight_Sh(5) <= ((s_operationRight(0) AND NOT s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(5)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Mshift_s_resultRotateRight_Sh(7) <= ((s_operationRight(0) AND NOT s_operationLeft(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(7)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Msub_s_resultSub_Mxor_Result(5)__xor0000 <= ((s_operationRight(5) AND s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(5) AND NOT s_operationLeft(5)));
-</td></tr><tr><td>
-</td></tr><tr><td>
 Msub_s_resultSub__or0001 <= ((NOT s_operationLeft(1) AND NOT N_PZ_106)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND N_PZ_106 AND NOT N_PZ_114));
-</td></tr><tr><td>
-</td></tr><tr><td>
-Msub_s_resultSub__or0005 <= ((s_operationRight(5) AND s_operationChoose(6).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_106 <= ((s_operationRight(1) AND s_operationLeft(1))
@@ -273,13 +301,16 @@ N_PZ_117 <= Mmult_s_resultMul_mult0001__or0012
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((Mmult_s_resultMul_mult0001_Mxor__index0004 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_317)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Mmult_s_resultMul_mult0001_Mxor__index0004 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_374)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001_Mxor__index0004 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_317 AND NOT N_PZ_374));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_317 AND NOT s_operationRight(1).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_134 <= ((s_operationLeft(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_187 <= (s_operationLeft(3) AND NOT s_operationRight(3));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_203 <= ((s_operationLeft(4))
@@ -311,24 +342,30 @@ N_PZ_296 <= ((s_operationRight(2) AND NOT s_operationLeft(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(2) AND s_operationLeft(2)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_314 <= ((s_operationChoose(0).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2) AND N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB AND NOT s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB AND NOT s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND NOT N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB AND NOT s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(0) AND N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB AND NOT s_operationLeft(3).COMB));
+N_PZ_311 <= ((s_operationLeft(2) AND s_operationRight(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001__or0014 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0012)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001__or0012 AND NOT Mmult_s_resultMul_mult0001__or0014)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND NOT N_PZ_187 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(3) AND NOT N_PZ_442 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0012)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_442 AND N_PZ_117 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_117 AND Mmult_s_resultMul_mult0001__or0012 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_117 AND Mmult_s_resultMul_mult0001_Mxor__index0012)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND NOT N_PZ_117 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001__or0012 AND Mmult_s_resultMul_mult0001_Mxor__index0012));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_317 <= ((s_operationRight(2) AND s_operationLeft(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(6).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001_Mxor__index0010 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0010)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationRight(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2) AND N_PZ_114)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationRight(2) AND 
@@ -338,60 +375,37 @@ N_PZ_317 <= ((s_operationRight(2) AND s_operationLeft(3))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_318 <= ((s_operationRight(2) AND s_operationLeft(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT Mshift_s_resultRotateRight_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mshift_s_resultRotateRight_Sh(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5) AND NOT N_PZ_134)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT s_operationLeft(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5) AND NOT N_PZ_203)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5) AND NOT Mshift_s_resultRotateLeft_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT Mshift_s_resultRotateRight_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT s_operationLeft(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5) AND NOT Mshift_s_resultRotateLeft_Sh(5) AND N_PZ_134)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND N_PZ_106 AND N_PZ_114 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT Mshift_s_resultRotateRight_Sh(5)));
-</td></tr><tr><td>
-</td></tr><tr><td>
 N_PZ_361 <= (s_operationLeft(0) AND s_operationRight(7))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (s_operationLeft(0) AND s_operationRight(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0033);
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_374 <= ((s_operationRight(0) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT N_PZ_437)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND NOT s_operationRight(6).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6).COMB AND Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND N_PZ_106 AND NOT N_PZ_296)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT s_operationLeft(0) AND Madd_s_resultAdd__or0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND s_operationLeft(0) AND Madd_s_resultAdd__or0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND Mshift_s_resultRotateRight_Sh(1) AND N_PZ_437 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003));
+N_PZ_377 <= ((s_operationChoose(2).COMB AND N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationLeft(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(5) AND NOT s_operationRight(4).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4).COMB AND N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(4).COMB AND N_PZ_501 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4).COMB AND N_PZ_501 AND N_PZ_187));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_429 <= ((N_PZ_374)
+N_PZ_378 <= ((s_operationLeft(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(5) AND NOT s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2).COMB));
+</td></tr><tr><td>
+</td></tr><tr><td>
+N_PZ_429 <= ((s_operationRight(1).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Mmult_s_resultMul_mult0001_Mxor__index0004 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_317));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_435 <= Mmult_s_resultMul_mult0001_Mxor__n0006(3)__xor0000
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (s_operationLeft(2) AND s_operationRight(5));
-</td></tr><tr><td>
-</td></tr><tr><td>
 N_PZ_437 <= ((NOT s_operationLeft(2) AND N_PZ_296)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_296 AND Msub_s_resultSub__or0001));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Msub_s_resultSub__or0001 AND NOT N_PZ_296));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_442 <= N_PZ_117
@@ -415,8 +429,9 @@ N_PZ_457 <= (s_operationLeft(2) AND s_operationRight(4) AND
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_459 <= NOT Mmult_s_resultMul_mult0001_Mxor__n0002(5)__xor0000
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT N_PZ_429 AND NOT N_PZ_497)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_318 AND NOT N_PZ_497));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR ((NOT N_PZ_429 AND NOT s_operationChoose(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
 N_PZ_460 <= Mmult_s_resultMul_mult0001__or0014
@@ -426,57 +441,7 @@ N_PZ_460 <= Mmult_s_resultMul_mult0001__or0014
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_459));
 </td></tr><tr><td>
 </td></tr><tr><td>
-N_PZ_497 <= ((s_operationRight(0) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationLeft(4) AND s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4) AND s_operationLeft(6) AND NOT N_PZ_134)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4) AND s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(5) AND N_PZ_134));
-</td></tr><tr><td>
-</td></tr><tr><td>
-N_PZ_501 <= (NOT s_operationChoose(0) AND NOT s_operationRight(0).COMB);
-</td></tr><tr><td>
-</td></tr><tr><td>
-OP_RESULT(0)72 <= ((NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(0)));
-</td></tr><tr><td>
-</td></tr><tr><td>
-OP_RESULT(0)124 <= ((NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB AND Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND NOT s_operationLeft(7).COMB AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB AND Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND NOT s_operationLeft(7).COMB AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7) AND NOT s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB AND Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND NOT s_operationLeft(7).COMB AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND NOT s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB AND Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND NOT s_operationLeft(7).COMB AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB));
+N_PZ_501 <= (NOT s_operationChoose(0) AND NOT s_operationChoose(3).COMB);
 </td></tr><tr><td>
 </td></tr><tr><td>
 OP_RESULT(0)125 <= ((s_operationChoose(0) AND s_operationRight(0) AND 
@@ -493,26 +458,114 @@ OP_RESULT(0)125 <= ((s_operationChoose(0) AND s_operationRight(0) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationChoose(4) AND s_operationLeft(4)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+OP_RESULT(0)2 <= ((s_operationLeft(3).COMB AND N_PZ_226)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(4).COMB AND N_PZ_226)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2).COMB AND N_PZ_226)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2).COMB AND N_PZ_187 AND N_PZ_226)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(2).COMB));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OP_RESULT(0)72 <= ((NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
 OP_RESULT(0)155 <= ((s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_377)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(7).COMB));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_377));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OP_RESULT(0)154 <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_378)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND NOT s_operationLeft(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_378)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_378)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationLeft(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_378));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OP_RESULT(0)3 <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationChoose(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationChoose(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND NOT s_operationLeft(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationLeft(5) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(0).COMB));
 </td></tr><tr><td>
 </td></tr><tr><td>
 OP_RESULT(0) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationChoose(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(0).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)124)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)154)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)155)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)2)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)3)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(0)72)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
@@ -606,7 +659,7 @@ OP_RESULT(0) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 </td></tr><tr><td>
 </td></tr><tr><td>
 OP_RESULT(1) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(4).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationLeft(6).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1))
@@ -651,7 +704,7 @@ OP_RESULT(1) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationRight(1) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT Mshift_s_resultRotateRight_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationChoose(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationRight(1) AND NOT s_operationRight(2) AND 
@@ -681,13 +734,13 @@ OP_RESULT(1) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
@@ -699,7 +752,7 @@ OP_RESULT(1) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
@@ -714,11 +767,35 @@ OP_RESULT(1) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_114));
 </td></tr><tr><td>
 </td></tr><tr><td>
+OP_RESULT(2)88 <= ((NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND Msub_s_resultSub__or0001 AND NOT N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND NOT Msub_s_resultSub__or0001 AND N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND NOT s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(2) AND NOT s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(0) AND NOT Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND NOT Madd_s_resultAdd__or0000));
+</td></tr><tr><td>
+</td></tr><tr><td>
 OP_RESULT(2) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationLeft(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OP_RESULT(2)88)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(2))
@@ -762,11 +839,11 @@ OP_RESULT(2) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296 AND NOT Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000 AND NOT N_PZ_296)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND Madd_s_resultAdd__or0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_s_resultAdd__or0000 AND N_PZ_296)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationChoose(4) AND NOT s_operationLeft(1) AND 
@@ -837,6 +914,79 @@ OP_RESULT(2) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+OP_RESULT(3)122 <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationLeft(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationRight(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND s_operationLeft(3) AND s_operationRight(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_187)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_231)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND NOT s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(0) AND Mmult_s_resultMul_mult0001_Mxor__index0009)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND Mmult_s_resultMul_mult0001_Mxor__index0009)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND s_operationRight(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0009)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND N_PZ_114)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(4).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND s_operationChoose(4) AND NOT s_operationLeft(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2) AND s_operationLeft(3) AND NOT s_operationLeft(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
 OP_RESULT(3) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(3)122)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
@@ -846,47 +996,47 @@ OP_RESULT(3) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4).COMB AND NOT N_PZ_437)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3).COMB AND NOT N_PZ_437)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB AND N_PZ_437)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND N_PZ_437)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4).COMB AND s_operationRight(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3).COMB AND Madd_s_resultAdd__or0001)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(4).COMB AND NOT s_operationRight(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND NOT Madd_s_resultAdd__or0001)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
@@ -907,93 +1057,19 @@ OP_RESULT(3) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-OP_RESULT(3)122 <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationLeft(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationRight(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND s_operationLeft(3) AND s_operationRight(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_231)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(4) AND NOT s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(0) AND Mmult_s_resultMul_mult0001_Mxor__index0009)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND Mmult_s_resultMul_mult0001_Mxor__index0009)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0009)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND N_PZ_114)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND s_operationChoose(4) AND NOT s_operationLeft(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2) AND s_operationLeft(3) AND NOT s_operationLeft(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3)));
-</td></tr><tr><td>
-</td></tr><tr><td>
 OP_RESULT(4) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationLeft(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND s_operationRight(4) AND s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND s_operationRight(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationLeft(4) AND 
@@ -1009,7 +1085,7 @@ OP_RESULT(4) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationChoose(4) AND NOT s_operationLeft(4) AND 
@@ -1027,13 +1103,13 @@ OP_RESULT(4) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
@@ -1070,6 +1146,20 @@ OP_RESULT(4) <= ((NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+OP_RESULT(5)90 <= ((NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(4) AND NOT s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(3) AND NOT s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(5) AND NOT N_PZ_231)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(4) AND NOT s_operationLeft(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2) AND NOT s_operationLeft(3) AND NOT s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5)));
 </td></tr><tr><td>
 </td></tr><tr><td>
 OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
@@ -1112,7 +1202,7 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub_Mxor_Result(5)__xor0000 AND s_operationChoose(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2).COMB AND s_operationRight(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
@@ -1120,11 +1210,11 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub_Mxor_Result(5)__xor0000 AND NOT Madd_s_resultAdd__or0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4).COMB AND NOT Madd_s_resultAdd__or0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND Madd_s_resultAdd__or0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4).COMB AND Madd_s_resultAdd__or0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
@@ -1133,8 +1223,7 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
@@ -1143,8 +1232,7 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationChoose(4) AND 
@@ -1153,23 +1241,22 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub_Mxor_Result(5)__xor0000 AND NOT s_operationChoose(1).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2).COMB AND s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND s_operationChoose(1).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2).COMB AND NOT s_operationRight(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND NOT s_operationChoose(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(3).COMB AND s_operationRight(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
@@ -1191,36 +1278,22 @@ OP_RESULT(5) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3)));
 </td></tr><tr><td>
 </td></tr><tr><td>
-OP_RESULT(5)90 <= ((NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(4) AND NOT s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(3) AND NOT s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(5) AND NOT N_PZ_231)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(4) AND NOT s_operationLeft(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(2) AND NOT s_operationLeft(3) AND NOT s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5)));
-</td></tr><tr><td>
-</td></tr><tr><td>
 OP_RESULT(5)124 <= ((s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub_Mxor_Result(5)__xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
@@ -1244,26 +1317,26 @@ OP_RESULT(5)124 <= ((s_operationChoose(0) AND NOT s_operationChoose(2) AND
 </td></tr><tr><td>
 </td></tr><tr><td>
 OP_RESULT(6) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationChoose(4).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationLeft(1).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OP_RESULT(6)94)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT N_PZ_501 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(6) AND 
@@ -1275,15 +1348,15 @@ OP_RESULT(6) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB AND NOT Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB AND NOT s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND s_operationChoose(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0033 AND NOT N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_501 AND Mmult_s_resultMul_mult0001_Mxor__index0033)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501 AND NOT Madd_s_resultAdd__or0004)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501 AND NOT s_operationRight(6).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationChoose(4) AND 
@@ -1299,8 +1372,8 @@ OP_RESULT(6) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(6))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB AND NOT N_PZ_501 AND Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB AND NOT N_PZ_501 AND s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
@@ -1363,11 +1436,33 @@ OP_RESULT(6) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4)));
 </td></tr><tr><td>
 </td></tr><tr><td>
+OP_RESULT(6)94 <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OP_RESULT(5)90)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(4) AND s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3).COMB AND NOT s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(6) AND s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(6) AND NOT N_PZ_231)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6) AND NOT s_operationLeft(5) AND NOT OP_RESULT(5)90));
+</td></tr><tr><td>
+</td></tr><tr><td>
 OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND OP_RESULT(7)111)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
@@ -1387,7 +1482,7 @@ OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
@@ -1403,8 +1498,7 @@ OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
@@ -1418,27 +1512,26 @@ OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationRight(7) AND s_operationRight(0).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationRight(7) AND s_operationChoose(3).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND NOT s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND s_operationRight(1) AND 
@@ -1451,8 +1544,7 @@ OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND NOT s_operationChoose(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
@@ -1464,18 +1556,18 @@ OP_RESULT(7) <= ((NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationRight(7) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationRight(7) AND NOT s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationChoose(5) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7) AND NOT s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub__or0005)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5) AND NOT s_operationChoose(6) AND NOT s_operationChoose(7) AND 
@@ -1501,7 +1593,7 @@ OP_RESULT(7)111 <= ((s_operationChoose(0) AND NOT s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_187)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
@@ -1516,7 +1608,7 @@ OP_RESULT(7)111 <= ((s_operationChoose(0) AND NOT s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT Mshift_s_resultRotateLeft_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND s_operationLeft(7) AND 
@@ -1529,41 +1621,212 @@ OP_RESULT(7)111 <= ((s_operationChoose(0) AND NOT s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(5) AND NOT s_operationRight(7) AND NOT N_PZ_296));
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationChoose(0).COMB <= (NOT s_operationLeft(4) AND s_operationRight(4));FDCPE_s_operationChoose0: FDCPE port map (s_operationChoose(0),OP_CHOOSE(0),CLK_CHOOSE,'0','0','1');
+s_operationChoose(0).COMB <= ((s_operationRight(2) AND s_operationLeft(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mshift_s_resultRotateRight_Sh(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5).COMB AND NOT N_PZ_134)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT s_operationLeft(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5) AND NOT N_PZ_203)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(5).COMB AND NOT Mshift_s_resultRotateLeft_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT s_operationLeft(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5) AND NOT Mshift_s_resultRotateLeft_Sh(5) AND N_PZ_134)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND N_PZ_106 AND N_PZ_114 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mshift_s_resultRotateRight_Sh(3) AND NOT s_operationChoose(5).COMB));FDCPE_s_operationChoose0: FDCPE port map (s_operationChoose(0),OP_CHOOSE(0),CLK_CHOOSE,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationChoose(1).COMB <= (s_operationLeft(4) AND NOT s_operationRight(4));FDCPE_s_operationChoose1: FDCPE port map (s_operationChoose(1),OP_CHOOSE(1),CLK_CHOOSE,'0','0','1');
+s_operationChoose(1).COMB <= ((s_operationRight(0) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationLeft(4) AND s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4) AND s_operationLeft(6) AND NOT N_PZ_134)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(4) AND s_operationLeft(5) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateLeft_Sh(5) AND N_PZ_134));FDCPE_s_operationChoose1: FDCPE port map (s_operationChoose(1),OP_CHOOSE(1),CLK_CHOOSE,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationChoose(2).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+s_operationChoose(2).COMB <= (NOT s_operationRight(6) AND s_operationLeft(6));FDCPE_s_operationChoose2: FDCPE port map (s_operationChoose(2),OP_CHOOSE(2),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationChoose(3).COMB <= (s_operationRight(6) AND NOT s_operationLeft(6));FDCPE_s_operationChoose3: FDCPE port map (s_operationChoose(3),OP_CHOOSE(3),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationChoose(4).COMB <= ((s_operationRight(0) AND NOT s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(7)));FDCPE_s_operationChoose4: FDCPE port map (s_operationChoose(4),OP_CHOOSE(4),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationChoose(5).COMB <= ((s_operationRight(0) AND NOT s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(5)));FDCPE_s_operationChoose5: FDCPE port map (s_operationChoose(5),OP_CHOOSE(5),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationChoose(6).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(4) AND s_operationLeft(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND NOT N_PZ_231)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationLeft(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND OP_RESULT(5)90)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_231 AND NOT OP_RESULT(5)90));FDCPE_s_operationChoose6: FDCPE port map (s_operationChoose(6),OP_CHOOSE(6),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationChoose(7).COMB <= ((s_operationRight(0) AND NOT s_operationLeft(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationLeft(7)));FDCPE_s_operationChoose7: FDCPE port map (s_operationChoose(7),OP_CHOOSE(7),CLK_CHOOSE,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationLeft(0).COMB <= ((NOT s_operationRight(0) AND s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_187)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(5) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));FDCPE_s_operationLeft0: FDCPE port map (s_operationLeft(0),OP_LEFT(0),CLK_LEFT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationLeft(1).COMB <= ((NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND NOT s_operationLeft(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationChoose(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND N_PZ_187)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(5) AND NOT s_operationRight(7) AND s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));FDCPE_s_operationLeft1: FDCPE port map (s_operationLeft(1),OP_LEFT(1),CLK_LEFT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationLeft(2).COMB <= (NOT s_operationLeft(4) AND s_operationRight(4));FDCPE_s_operationLeft2: FDCPE port map (s_operationLeft(2),OP_LEFT(2),CLK_LEFT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationLeft(3).COMB <= (s_operationLeft(4) AND NOT s_operationRight(4));FDCPE_s_operationLeft3: FDCPE port map (s_operationLeft(3),OP_LEFT(3),CLK_LEFT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationLeft(4).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationLeft(4))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND NOT s_operationChoose(5).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND s_operationRight(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationChoose(5).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationRight(2).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(4) AND NOT Mmult_s_resultMul_mult0001__and0043)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND s_operationRight(6).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND Mmult_s_resultMul_mult0001_Mxor__index0010 AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__and0043)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3) AND s_operationChoose(5).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3) AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(5).COMB AND NOT s_operationRight(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_s_resultAdd__or0001 AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(5).COMB AND NOT s_operationRight(7).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_s_resultAdd__or0001 AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(1) AND s_operationRight(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(0))
@@ -1613,299 +1876,14 @@ s_operationChoose(2).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(1) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND Mmult_s_resultMul_mult0001_Mxor__index0009 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6).COMB AND NOT Mmult_s_resultMul_mult0001__and0043)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0010 AND NOT Mmult_s_resultMul_mult0001__and0043)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(3) AND Mmult_s_resultMul_mult0001_Mxor__index0009 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND NOT Mmult_s_resultMul_mult0001__and0043));FDCPE_s_operationChoose2: FDCPE port map (s_operationChoose(2),OP_CHOOSE(2),CLK_CHOOSE,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0012 AND NOT Mmult_s_resultMul_mult0001__and0043));FDCPE_s_operationLeft4: FDCPE port map (s_operationLeft(4),OP_LEFT(4),CLK_LEFT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationChoose(3).COMB <= ((NOT s_operationRight(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(5) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));FDCPE_s_operationChoose3: FDCPE port map (s_operationChoose(3),OP_CHOOSE(3),CLK_CHOOSE,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationChoose(4).COMB <= ((NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND NOT s_operationLeft(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_501)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(3) AND NOT s_operationChoose(4) AND s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND NOT s_operationChoose(4) AND NOT s_operationRight(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(6) AND NOT s_operationRight(3) AND NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationChoose(1).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(1) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND NOT s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(4) AND NOT s_operationRight(6) AND NOT s_operationRight(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(5) AND NOT s_operationRight(7) AND s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND s_operationChoose(1) AND s_operationChoose(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(1) AND s_operationRight(2) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(2) AND NOT s_operationRight(4) AND NOT s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3) AND NOT s_operationRight(5) AND NOT s_operationRight(7)));FDCPE_s_operationChoose4: FDCPE port map (s_operationChoose(4),OP_CHOOSE(4),CLK_CHOOSE,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationChoose(5).COMB <= (NOT s_operationChoose(1).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(0).COMB);FDCPE_s_operationChoose5: FDCPE port map (s_operationChoose(5),OP_CHOOSE(5),CLK_CHOOSE,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationChoose(6).COMB <= ((s_operationChoose(0).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(5) AND NOT s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(1).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(5).COMB));FDCPE_s_operationChoose6: FDCPE port map (s_operationChoose(6),OP_CHOOSE(6),CLK_CHOOSE,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationChoose(7).COMB <= ((s_operationLeft(7).COMB AND N_PZ_501)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND N_PZ_501)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1).COMB AND N_PZ_501)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_501 AND NOT N_PZ_314)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3).COMB AND NOT s_operationChoose(0).COMB AND N_PZ_501));FDCPE_s_operationChoose7: FDCPE port map (s_operationChoose(7),OP_CHOOSE(7),CLK_CHOOSE,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(0).COMB <= ((NOT Msub_s_resultSub_Mxor_Result(5)__xor0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_226)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(1).COMB AND N_PZ_226)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(0).COMB AND N_PZ_226)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(5).COMB AND N_PZ_226)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND s_operationLeft(7).COMB));FDCPE_s_operationLeft0: FDCPE port map (s_operationLeft(0),OP_LEFT(0),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(1).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(0).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationRight(0).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_314)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND NOT s_operationLeft(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_314)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_314)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationLeft(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_314));FDCPE_s_operationLeft1: FDCPE port map (s_operationLeft(1),OP_LEFT(1),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(2).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND s_operationRight(0).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND s_operationRight(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(7) AND NOT s_operationLeft(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(5) AND s_operationRight(7) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(3) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationLeft(5) AND NOT s_operationLeft(7).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(6).COMB));FDCPE_s_operationLeft2: FDCPE port map (s_operationLeft(2),OP_LEFT(2),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(3).COMB <= (s_operationLeft(3) AND NOT s_operationRight(3));FDCPE_s_operationLeft3: FDCPE port map (s_operationLeft(3),OP_LEFT(3),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(4).COMB <= ((s_operationLeft(3).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND s_operationRight(3)));FDCPE_s_operationLeft4: FDCPE port map (s_operationLeft(4),OP_LEFT(4),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(5).COMB <= ((NOT s_operationLeft(3) AND s_operationRight(3))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3).COMB AND N_PZ_437));FDCPE_s_operationLeft5: FDCPE port map (s_operationLeft(5),OP_LEFT(5),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(6).COMB <= ((s_operationLeft(2) AND s_operationRight(4))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT Mmult_s_resultMul_mult0001__or0014 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0012)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001__or0012 AND NOT Mmult_s_resultMul_mult0001__or0014)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND NOT s_operationLeft(3).COMB AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(3) AND NOT N_PZ_442 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0012)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_442 AND N_PZ_117 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_117 AND Mmult_s_resultMul_mult0001__or0012 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001__or0014)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_117 AND Mmult_s_resultMul_mult0001_Mxor__index0012)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(3) AND NOT N_PZ_117 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001__or0012 AND Mmult_s_resultMul_mult0001_Mxor__index0012));FDCPE_s_operationLeft6: FDCPE port map (s_operationLeft(6),OP_LEFT(6),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationLeft(7).COMB <= (NOT s_operationRight(6) AND s_operationLeft(6));FDCPE_s_operationLeft7: FDCPE port map (s_operationLeft(7),OP_LEFT(7),CLK_LEFT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationRight(0).COMB <= (s_operationRight(6) AND NOT s_operationLeft(6));FDCPE_s_operationRight0: FDCPE port map (s_operationRight(0),OP_RIGHT(0),CLK_RIGHT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationRight(1).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(0).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OP_RESULT(5)90)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(1))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(4) AND s_operationRight(6) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(0).COMB AND NOT s_operationLeft(7).COMB)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(6) AND s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(6) AND NOT N_PZ_231)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(6) AND NOT s_operationLeft(5) AND NOT OP_RESULT(5)90));FDCPE_s_operationRight1: FDCPE port map (s_operationRight(1),OP_RIGHT(1),CLK_RIGHT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationRight(2).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(4) AND s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(0))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(6))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(5))
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND NOT N_PZ_231)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationLeft(7) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND OP_RESULT(5)90)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(7) AND NOT s_operationLeft(6) AND NOT s_operationLeft(5) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_231 AND NOT OP_RESULT(5)90));FDCPE_s_operationRight2: FDCPE port map (s_operationRight(2),OP_RIGHT(2),CLK_RIGHT,'0','0','1');
-</td></tr><tr><td>
-</td></tr><tr><td>
-s_operationRight(3).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+s_operationLeft(5).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationLeft(2))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND N_PZ_296)
@@ -1941,22 +1919,22 @@ s_operationRight(3).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(0))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(6)));FDCPE_s_operationRight3: FDCPE port map (s_operationRight(3),OP_RIGHT(3),CLK_RIGHT,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(6)));FDCPE_s_operationLeft5: FDCPE port map (s_operationLeft(5),OP_LEFT(5),CLK_LEFT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationRight(4).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
+s_operationLeft(6).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT s_operationLeft(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationChoose(4) AND NOT N_PZ_106)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(1) AND s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT Mshift_s_resultRotateRight_Sh(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationChoose(5).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(1) AND NOT s_operationRight(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT Mshift_s_resultRotateRight_Sh(1))
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationRight(1) AND NOT s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT Mshift_s_resultRotateLeft_Sh(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationChoose(4).COMB)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationChoose(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(1) AND s_operationRight(2) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT Mshift_s_resultRotateLeft_Sh(5))
@@ -1968,81 +1946,90 @@ s_operationRight(4).COMB <= ((s_operationChoose(0) AND s_operationChoose(2) AND
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(2) AND NOT N_PZ_296)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(2) AND NOT s_operationChoose(1) AND s_operationRight(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(3)));FDCPE_s_operationRight4: FDCPE port map (s_operationRight(4),OP_RIGHT(4),CLK_RIGHT,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(2) AND s_operationChoose(4) AND s_operationLeft(3)));FDCPE_s_operationLeft6: FDCPE port map (s_operationLeft(6),OP_LEFT(6),CLK_LEFT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationRight(5).COMB <= ((NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND N_PZ_296 AND NOT Msub_s_resultSub__or0001)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(4) AND NOT N_PZ_296 AND Msub_s_resultSub__or0001)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND NOT s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND NOT s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(2) AND NOT s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationChoose(4) AND s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(0) AND NOT Madd_s_resultAdd__or0000)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND NOT s_operationChoose(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(1) AND s_operationRight(2) AND s_operationChoose(4) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(0) AND NOT Madd_s_resultAdd__or0000));FDCPE_s_operationRight5: FDCPE port map (s_operationRight(5),OP_RIGHT(5),CLK_RIGHT,'0','0','1');
+s_operationLeft(7).COMB <= ((NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB AND s_operationRight(4).COMB AND N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB AND s_operationRight(4).COMB AND N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND s_operationLeft(7) AND NOT s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB AND s_operationRight(4).COMB AND N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationChoose(0) AND NOT s_operationRight(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2) AND NOT s_operationChoose(1) AND NOT s_operationChoose(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationChoose(4) AND NOT s_operationLeft(7) AND NOT s_operationLeft(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(7) AND NOT s_operationChoose(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationChoose(2).COMB AND s_operationRight(4).COMB AND N_PZ_106 AND NOT N_PZ_296 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationRight(3).COMB AND Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000));FDCPE_s_operationLeft7: FDCPE port map (s_operationLeft(7),OP_LEFT(7),CLK_LEFT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationRight(6).COMB <= ((NOT s_operationRight(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Madd_s_resultAdd__or0000 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(1) AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_s_resultSub__or0001 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(0) AND N_PZ_296 AND N_PZ_114 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_106 AND Madd_s_resultAdd__or0000 AND NOT N_PZ_231 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_296 AND NOT N_PZ_114 AND NOT N_PZ_134 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationLeft(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND N_PZ_231 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND N_PZ_106 AND N_PZ_114 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_231 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND NOT N_PZ_114 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_134 AND NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(2) AND NOT N_PZ_296 AND NOT N_PZ_114 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_231 AND NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+s_operationRight(0).COMB <= ((s_operationLeft(2).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND s_operationRight(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT s_operationLeft(3).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2) AND NOT s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_187 AND N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND NOT s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_187 AND N_PZ_106 AND NOT N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND NOT s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_187 AND NOT N_PZ_106 AND NOT N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(0) AND NOT s_operationLeft(3).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_187 AND N_PZ_106 AND NOT N_PZ_296));FDCPE_s_operationRight0: FDCPE port map (s_operationRight(0),OP_RIGHT(0),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(1).COMB <= ((s_operationRight(0) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT N_PZ_437)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_296 AND NOT Mmult_s_resultMul_mult0001_Mxor__index0010)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0010 AND Mmult_s_resultMul_mult0001_Mxor__index0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(2) AND s_operationLeft(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296 AND NOT N_PZ_114 AND N_PZ_231 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND N_PZ_106 AND NOT N_PZ_296)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationRight(0) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT s_operationLeft(0) AND Madd_s_resultAdd__or0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(0) AND s_operationRight(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND s_operationLeft(0) AND Madd_s_resultAdd__or0000 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003)
 <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(3) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND N_PZ_296 AND Mshift_s_resultRotateRight_Sh(1) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (s_operationLeft(1) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_106 AND N_PZ_296 AND NOT N_PZ_134 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(1) AND s_operationLeft(2) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	s_operationLeft(3) AND NOT N_PZ_106 AND NOT N_PZ_296 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mmult_s_resultMul_mult0001_Mxor__index0003)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(2) AND s_operationLeft(0) AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	N_PZ_296 AND Madd_s_resultAdd__or0000 AND 
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Mshift_s_resultRotateRight_Sh(1) AND NOT Mmult_s_resultMul_mult0001_Mxor__index0003));FDCPE_s_operationRight6: FDCPE port map (s_operationRight(6),OP_RIGHT(6),CLK_RIGHT,'0','0','1');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT N_PZ_106 AND Mshift_s_resultRotateRight_Sh(1) AND N_PZ_437 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Mmult_s_resultMul_mult0001_Mxor__index0003));FDCPE_s_operationRight1: FDCPE port map (s_operationRight(1),OP_RIGHT(1),CLK_RIGHT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
-s_operationRight(7).COMB <= ((NOT s_operationLeft(2) AND NOT N_PZ_296)
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_296 AND NOT Madd_s_resultAdd__or0000));FDCPE_s_operationRight7: FDCPE port map (s_operationRight(7),OP_RIGHT(7),CLK_RIGHT,'0','0','1');
+s_operationRight(2).COMB <= ((NOT s_operationLeft(3) AND s_operationRight(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT N_PZ_187 AND N_PZ_437));FDCPE_s_operationRight2: FDCPE port map (s_operationRight(2),OP_RIGHT(2),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(3).COMB <= ((N_PZ_187)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationLeft(3) AND s_operationRight(3)));FDCPE_s_operationRight3: FDCPE port map (s_operationRight(3),OP_RIGHT(3),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(4).COMB <= ((s_operationRight(5) AND s_operationLeft(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(5) AND NOT s_operationLeft(5)));FDCPE_s_operationRight4: FDCPE port map (s_operationRight(4),OP_RIGHT(4),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(5).COMB <= Mmult_s_resultMul_mult0001_Mxor__n0006(3)__xor0000
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	XOR (s_operationLeft(2) AND s_operationRight(5));FDCPE_s_operationRight5: FDCPE port map (s_operationRight(5),OP_RIGHT(5),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(6).COMB <= ((NOT s_operationRight(5) AND s_operationRight(4).COMB)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT s_operationRight(4).COMB AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Madd_s_resultAdd__or0003));FDCPE_s_operationRight6: FDCPE port map (s_operationRight(6),OP_RIGHT(6),CLK_RIGHT,'0','0','1');
+</td></tr><tr><td>
+</td></tr><tr><td>
+s_operationRight(7).COMB <= ((s_operationRight(5) AND N_PZ_378)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (N_PZ_378 AND s_operationRight(4).COMB));FDCPE_s_operationRight7: FDCPE port map (s_operationRight(7),OP_RIGHT(7),CLK_RIGHT,'0','0','1');
 </td></tr><tr><td>
 </td></tr><tr><td>
 Register Legend:
