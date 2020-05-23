@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/guill/Desktop/Creation/electronique/Xilinx/ALUGP8B/testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="7" />
+   <wvobject fp_name="/testbench/result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/numLeft" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numLeft[7:0]</obj_property>
+      <obj_property name="ObjectShortName">numLeft[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clkNumLeft" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkNumLeft</obj_property>
+      <obj_property name="ObjectShortName">clkNumLeft</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/numRight" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">numRight[7:0]</obj_property>
+      <obj_property name="ObjectShortName">numRight[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clkNumRight" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkNumRight</obj_property>
+      <obj_property name="ObjectShortName">clkNumRight</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/opChoose" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">opChoose[7:0]</obj_property>
+      <obj_property name="ObjectShortName">opChoose[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/clkOpChoose" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clkOpChoose</obj_property>
+      <obj_property name="ObjectShortName">clkOpChoose</obj_property>
+   </wvobject>
+</wave_config>

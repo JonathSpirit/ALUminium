@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (TTL|LVTTL|LVCMOS2|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xc9500xl" device="XC95288XL" pkg="TQ144" spg="-6"/><pin dir="input" nm="numRight&lt;1&gt;" no="125"/><pin dir="input" nm="clkNumRight" no="32"/><pin dir="input" nm="numRight&lt;0&gt;" no="124"/><pin dir="input" nm="numRight&lt;2&gt;" no="126"/><pin dir="input" nm="numLeft&lt;4&gt;" no="137"/><pin dir="input" nm="clkNumLeft" no="30"/><pin dir="input" nm="numLeft&lt;6&gt;" no="139"/><pin dir="input" nm="numLeft&lt;1&gt;" no="134"/><pin dir="input" nm="numLeft&lt;2&gt;" no="135"/><pin dir="input" nm="numLeft&lt;3&gt;" no="136"/><pin dir="input" nm="numLeft&lt;0&gt;" no="133"/><pin dir="input" nm="numLeft&lt;5&gt;" no="138"/><pin dir="input" nm="numLeft&lt;7&gt;" no="140"/><pin dir="input" nm="numRight&lt;4&gt;" no="129"/><pin dir="input" nm="numRight&lt;6&gt;" no="131"/><pin dir="input" nm="numRight&lt;3&gt;" no="128"/><pin dir="input" nm="numRight&lt;5&gt;" no="130"/><pin dir="input" nm="numRight&lt;7&gt;" no="132"/><pin dir="input" nm="opChoose&lt;0&gt;" no="113"/><pin dir="input" nm="clkOpChoose" no="38"/><pin dir="input" nm="opChoose&lt;1&gt;" no="115"/><pin dir="input" nm="opChoose&lt;2&gt;" no="116"/><pin dir="input" nm="opChoose&lt;3&gt;" no="117"/><pin dir="input" nm="opChoose&lt;4&gt;" no="118"/><pin dir="input" nm="opChoose&lt;5&gt;" no="119"/><pin dir="input" nm="opChoose&lt;6&gt;" no="120"/><pin dir="input" nm="opChoose&lt;7&gt;" no="121"/><pin dir="output" nm="result&lt;0&gt;" no="20" sr="fast"/><pin dir="output" nm="result&lt;1&gt;" no="9" sr="fast"/><pin dir="output" nm="result&lt;2&gt;" no="93" sr="fast"/><pin dir="output" nm="result&lt;3&gt;" no="98" sr="fast"/><pin dir="output" nm="result&lt;4&gt;" no="81" sr="fast"/><pin dir="output" nm="result&lt;5&gt;" no="14" sr="fast"/><pin dir="output" nm="result&lt;6&gt;" no="87" sr="fast"/><pin dir="output" nm="result&lt;7&gt;" no="4" sr="fast"/></ibis>

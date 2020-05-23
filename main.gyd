@@ -1,0 +1,121 @@
+Pin Freeze File:  version P.20131013
+
+95288XL144 XC95288XL-6-TQ144
+clkNumLeft S:PIN30
+clkNumRight S:PIN32
+clkOpChoose S:PIN38
+numLeft<0> S:PIN133
+numLeft<1> S:PIN134
+numLeft<2> S:PIN135
+numLeft<3> S:PIN136
+numLeft<4> S:PIN137
+numLeft<5> S:PIN138
+numLeft<6> S:PIN139
+numLeft<7> S:PIN140
+numRight<0> S:PIN124
+numRight<1> S:PIN125
+numRight<2> S:PIN126
+numRight<3> S:PIN128
+numRight<4> S:PIN129
+numRight<5> S:PIN130
+numRight<6> S:PIN131
+numRight<7> S:PIN132
+opChoose<0> S:PIN113
+opChoose<1> S:PIN115
+opChoose<2> S:PIN116
+opChoose<3> S:PIN117
+opChoose<4> S:PIN118
+opChoose<5> S:PIN119
+opChoose<6> S:PIN120
+opChoose<7> S:PIN121
+result<0> S:PIN20
+result<1> S:PIN9
+result<2> S:PIN93
+result<3> S:PIN98
+result<4> S:PIN81
+result<5> S:PIN14
+result<6> S:PIN87
+result<7> S:PIN4
+
+
+;The remaining section of the .gyd file is for documentation purposes only.
+;It shows where your internal equations were placed in the last successful fit.
+
+PARTITION FB1_3 EXP18_ EXP19_ result_0_OBUF EXP20_
+		 EXP21_
+
+PARTITION FB2_1 EXP22_ result_1_OBUF EXP23_ EXP24_
+		
+PARTITION FB2_8 EXP25_ EXP26_ result_5_OBUF EXP27_
+		 EXP28_
+PARTITION FB2_18 EXP29_
+PARTITION FB3_1 EXP30_ twoComp/Madd_out__and0005/twoComp/Madd_out__and0005_D2 andNB/out_and0001/andNB/out_and0001_D2 EXP31_
+		 resultShiftL<7>/resultShiftL<7>_D2 EXP32_ $OpTx$sub/Msub_out__or0006/sub/Msub_out__or0006_D2_INV$3761 EXP33_
+		 EXP34_ add/Madd_out__or0005/add/Madd_out__or0005_D2 EXP35_ EXP36_
+		 EXP37_ EXP38_ resultSmaller<0>/resultSmaller<0>_D2 EXP39_
+		 EXP40_ $OpTx$resultBigger<0>/resultBigger<0>_D2_INV$3755
+PARTITION FB4_1 mul/Mmult_out_mult0002__and0042/mul/Mmult_out_mult0002__and0042_D2 mul/Mmult_out_mult0002__and0033/mul/Mmult_out_mult0002__and0033_D2 add/Madd_out__and0000/add/Madd_out__and0000_D2 $OpTx$sub/Msub_out__or0000/sub/Msub_out__or0000_D2_INV$3758
+		 EXP41_ result_7_OBUF EXP42_ mul/Mmult_out_mult0002__and0024/mul/Mmult_out_mult0002__and0024_D2
+		 $OpTx$$OpTx$FX_DC$2998_INV$3754 $OpTx$$OpTx$FX_DC$2964_INV$3750 $OpTx$$OpTx$FX_DC$2936_INV$3745 $OpTx$$OpTx$FX_DC$2911_INV$3734
+		 $OpTx$$OpTx$FX_DC$2910_INV$3733 sub/Msub_out_Mxor_Result<7>__xor0000/sub/Msub_out_Mxor_Result<7>__xor0000_D $OpTx$FX_DC$2987 $OpTx$$OpTx$FX_DC$2902_INV$3729
+		 xorNB/Mxor_out_xor0000__xor0000/xorNB/Mxor_out_xor0000__xor0000_D xorNB/Mxor_out_xor0000__xor0001/xorNB/Mxor_out_xor0000__xor0001_D
+PARTITION FB5_1 EXP43_ EXP44_ EXP45_ $OpTx$sbigger/Mcompar_out_cmp_gt0000_AGB34/sbigger/Mcompar_out_cmp_gt0000_AGB34_D2_INV$3756
+		 EXP46_ EXP47_ $OpTx$$OpTx$FX_DC$2997_INV$3753 EXP48_
+		 EXP49_ $OpTx$ssmaller/Mcompar_out_cmp_lt0000_ALB34/ssmaller/Mcompar_out_cmp_lt0000_ALB34_D2_INV$3757 EXP50_ EXP51_
+		 EXP52_ EXP53_ sub/Msub_out__or0004/sub/Msub_out__or0004_D2 EXP54_
+		 resultShiftR<0>/resultShiftR<0>_D2 EXP55_
+PARTITION FB6_1 EXP56_ EXP57_ EXP58_ mul/Mmult_out_mult0002_Mxor__n0002<5>__xor0000/mul/Mmult_out_mult0002_Mxor__n0002<5>__xor0000_D
+		 EXP59_ mul/Mmult_out_mult0002_Mxor__index0003/mul/Mmult_out_mult0002_Mxor__index0003_D EXP60_ twoComp/Madd_out__and0004/twoComp/Madd_out__and0004_D2
+		 EXP61_ mul/Mmult_out_mult0002_Mxor__n0002<4>__xor0000/mul/Mmult_out_mult0002_Mxor__n0002<4>__xor0000_D EXP62_ EXP63_
+		 EXP64_ EXP65_ add/Madd_out__or0004/add/Madd_out__or0004_D2 EXP66_
+		 EXP67_ add/Madd_out__or0003/add/Madd_out__or0003_D2
+PARTITION FB7_1 EXP68_ EXP69_ twoComp/Madd_out__and0003/twoComp/Madd_out__and0003_D2 mul/Mmult_out_mult0002_Mxor__index0001/mul/Mmult_out_mult0002_Mxor__index0001_D
+		 EXP70_ mul/Mmult_out_mult0002__or0006/mul/Mmult_out_mult0002__or0006_D2 $OpTx$sub/Msub_out__or0003/sub/Msub_out__or0003_D2_INV$3760 EXP71_
+		 mul/Mmult_out_mult0002_Mxor__index0017/mul/Mmult_out_mult0002_Mxor__index0017_D EXP72_ EXP73_ EXP74_
+		 EXP75_ mul/Mmult_out_mult0002__or0013/mul/Mmult_out_mult0002__or0013_D2 EXP76_ EXP77_
+		 EXP78_ mul/Mmult_out_mult0002_Mxor__index0020/mul/Mmult_out_mult0002_Mxor__index0020_D19_
+PARTITION FB8_1 EXP79_ mul/Mmult_out_mult0002__or0024/mul/Mmult_out_mult0002__or0024_D2 EXP80_ EXP81_
+		 mul/Mmult_out_mult0002__or0018/mul/Mmult_out_mult0002__or0018_D2 EXP82_ EXP83_ EXP84_
+		 mul/Mmult_out_mult0002_Mxor__n0006<1>__xor0000/mul/Mmult_out_mult0002_Mxor__n0006<1>__xor0000_D EXP85_ twoComp/Madd_out__and0001/twoComp/Madd_out__and0001_D2 mul/Mmult_out_mult0002_Mxor__index0018/mul/Mmult_out_mult0002_Mxor__index0018_D
+		 twoComp/Madd_out__and0002/twoComp/Madd_out__and0002_D2 EXP86_ mul/Mmult_out_mult0002__or0019/mul/Mmult_out_mult0002__or0019_D2 EXP87_
+		 EXP88_ EXP89_
+PARTITION FB9_1 mul/Mmult_out_mult0002__or0008/mul/Mmult_out_mult0002__or0008_D2 EXP90_ $OpTx$FX_DC$2986
+PARTITION FB9_5 $OpTx$FX_DC$2961 $OpTx$$OpTx$FX_DC$2914_INV$3735 EXP91_ mul/Mmult_out_mult0002_Mxor__index0004/mul/Mmult_out_mult0002_Mxor__index0004_D
+		 EXP92_ mul/Mmult_out_mult0002_Mxor__n0002<2>__xor0000/mul/Mmult_out_mult0002_Mxor__n0002<2>__xor0000_D EXP93_ EXP94_
+		 add/Madd_out__or0002/add/Madd_out__or0002_D2 EXP95_ EXP96_ EXP97_
+		 mul/Mmult_out_mult0002_Mxor__index0005/mul/Mmult_out_mult0002_Mxor__index0005_D EXP98_
+PARTITION FB10_1 EXP99_ mul/Mmult_out_mult0002_Mxor__index0009/mul/Mmult_out_mult0002_Mxor__index0009_D EXP100_ mul/Mmult_out_mult0002_Mxor__n0004<2>__xor0000/mul/Mmult_out_mult0002_Mxor__n0004<2>__xor0000_D
+		 EXP101_ EXP102_ mul/Mmult_out_mult0002_Mxor__index0033/mul/Mmult_out_mult0002_Mxor__index0033_D EXP103_
+		 EXP104_ mul/Mmult_out_mult0002_Mxor__index0025/mul/Mmult_out_mult0002_Mxor__index0025_D EXP105_ $OpTx$sub/Msub_out__or0002/sub/Msub_out__or0002_D2_INV$3759
+		 EXP106_ mul/Mmult_out_mult0002_Mxor__n0008<2>__xor0000/mul/Mmult_out_mult0002_Mxor__n0008<2>__xor0000_D mul/Mmult_out_mult0002_Mxor__n0004<1>__xor0000/mul/Mmult_out_mult0002_Mxor__n0004<1>__xor0000_D mul/Mmult_out_mult0002_Mxor__n0004<3>__xor0000/mul/Mmult_out_mult0002_Mxor__n0004<3>__xor0000_D
+		 $OpTx$$OpTx$FX_DC$2922_INV$3739 mul/Mmult_out_mult0002_Mxor__n0008<1>__xor0000/mul/Mmult_out_mult0002_Mxor__n0008<1>__xor0000_D
+PARTITION FB11_1 mul/Mmult_out_mult0002_Mxor__index0011/mul/Mmult_out_mult0002_Mxor__index0011_D EXP107_ EXP108_ mul/Mmult_out_mult0002_Mxor__n0004<4>__xor0000/mul/Mmult_out_mult0002_Mxor__n0004<4>__xor0000_D
+		 EXP109_ $OpTx$FX_DC$3001 $OpTx$$OpTx$FX_DC$2967_INV$3751 $OpTx$FX_DC$3002
+		 $OpTx$$OpTx$FX_DC$2968_INV$3752 $OpTx$FX_DC$2916 $OpTx$FX_DC$2923 $OpTx$FX_DC$2929
+		 $OpTx$$OpTx$FX_DC$2906_INV$3730 $OpTx$$OpTx$FX_DC$2920_INV$3738 $OpTx$$OpTx$FX_DC$2928_INV$3741 $OpTx$$OpTx$FX_DC$2931_INV$3742
+		 $OpTx$$OpTx$FX_DC$2940_INV$3747 mul/Mmult_out_mult0002__and0022/mul/Mmult_out_mult0002__and0022_D2
+PARTITION FB12_1 twoComp/Madd_out__and0000/twoComp/Madd_out__and0000_D2 mul/Mmult_out_mult0002__and0060/mul/Mmult_out_mult0002__and0060_D2 mul/Mmult_out_mult0002__and0051/mul/Mmult_out_mult0002__and0051_D2 mul/Mmult_out_mult0002__and0014/mul/Mmult_out_mult0002__and0014_D2
+		 $OpTx$$OpTx$FX_DC$2944_INV$3749 $OpTx$$OpTx$FX_DC$2938_INV$3746 $OpTx$$OpTx$FX_DC$2935_INV$3744 $OpTx$$OpTx$FX_DC$2934_INV$3743
+		 $OpTx$$OpTx$FX_DC$2927_INV$3740 $OpTx$$OpTx$FX_DC$2919_INV$3737 $OpTx$$OpTx$FX_DC$2917_INV$3736 $OpTx$$OpTx$FX_DC$2900_INV$3728
+		 $OpTx$$OpTx$FX_DC$2899_INV$3727 sub/Msub_out_Mxor_Result<6>__xor0000/sub/Msub_out_Mxor_Result<6>__xor0000_D sub/Msub_out_Mxor_Result<5>__xor0000/sub/Msub_out_Mxor_Result<5>__xor0000_D mul/Mmult_out_mult0002_Mxor__index0012/mul/Mmult_out_mult0002_Mxor__index0012_D
+		 mul/Mmult_out_mult0002_Mxor__index0010/mul/Mmult_out_mult0002_Mxor__index0010_D mul/Mmult_out_mult0002_Mxor__n0010<1>__xor0000/mul/Mmult_out_mult0002_Mxor__n0010<1>__xor0000_D
+PARTITION FB13_1 numRightReg<2> numRightReg<1> numRightReg<0> numLeftReg<7>
+		 numLeftReg<6> numLeftReg<5> numLeftReg<4> numLeftReg<3>
+		 numLeftReg<2> numLeftReg<1> numLeftReg<0> $OpTx$$OpTx$FX_DC$2941_INV$3748
+		 $OpTx$$OpTx$FX_DC$2909_INV$3732 $OpTx$$OpTx$FX_DC$2908_INV$3731 sub/Msub_out_Mxor_Result<4>__xor0000/sub/Msub_out_Mxor_Result<4>__xor0000_D mul/Mmult_out_mult0002_Mxor__index0019/mul/Mmult_out_mult0002_Mxor__index0019_D20_25_
+		 mul/Mmult_out_mult0002_Mxor__index0019/mul/Mmult_out_mult0002_Mxor__index0019_D20_ mul/Mmult_out_mult0002_Mxor__index0019/mul/Mmult_out_mult0002_Mxor__index0019_D
+PARTITION FB14_6 opChooseReg<7> opChooseReg<6> opChooseReg<5> opChooseReg<4>
+		 opChooseReg<3> opChooseReg<2> opChooseReg<1> opChooseReg<0>
+		 numRightReg<7> numRightReg<6> numRightReg<5> numRightReg<4>
+		 numRightReg<3>
+PARTITION FB15_6 EXP110_ EXP111_ result_4_OBUF EXP112_
+		 EXP113_
+PARTITION FB15_13 EXP114_ EXP115_ result_6_OBUF EXP116_
+		 EXP117_
+
+PARTITION FB16_3 EXP118_ EXP119_ result_2_OBUF EXP120_
+		 EXP121_
+PARTITION FB16_10 EXP122_ EXP123_ result_3_OBUF EXP124_
+		 EXP125_
+
+
