@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!DOCTYPE ibis [
+<!ELEMENT ibis (part, pin+)>
+<!ELEMENT part EMPTY>
+<!ELEMENT pin EMPTY>
+<!ATTLIST part
+  arch   CDATA #REQUIRED
+  device CDATA #REQUIRED
+  spg    CDATA #REQUIRED
+  pkg    CDATA #REQUIRED>
+<!ATTLIST pin
+  nm     CDATA #REQUIRED
+  no     CDATA #REQUIRED
+  iostd  (LVTTL|SSTL3_I|LVCMOS33|LVCMOS25|SSTL2_I|LVCMOS18|LVCMOS15|HSTL_I|NA) "NA"
+  sr     (SLOW|FAST|slow|fast) "SLOW"
+  dir    (BIDIR|bidir|INPUT|input|OUTPUT|output) "BIDIR">
+]>
+<ibis><part arch="xbr" device="XC2C256" pkg="VQ100" spg="-7"/><pin dir="input" iostd="LVCMOS33" nm="CLK_CHOOSE" no="22"/><pin dir="input" iostd="LVCMOS33" nm="CLK_LEFT" no="27"/><pin dir="input" iostd="LVCMOS33" nm="CLK_RIGHT" no="23"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;0&gt;" no="99"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;1&gt;" no="97"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;2&gt;" no="96"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;3&gt;" no="95"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;4&gt;" no="94"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;5&gt;" no="1"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;6&gt;" no="2"/><pin dir="input" iostd="LVCMOS33" nm="OP_CHOOSE&lt;7&gt;" no="3"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;0&gt;" no="4"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;1&gt;" no="6"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;2&gt;" no="7"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;3&gt;" no="93"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;4&gt;" no="92"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;5&gt;" no="91"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;6&gt;" no="90"/><pin dir="input" iostd="LVCMOS33" nm="OP_LEFT&lt;7&gt;" no="8"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;0&gt;" no="9"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;1&gt;" no="10"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;2&gt;" no="11"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;3&gt;" no="12"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;4&gt;" no="13"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;5&gt;" no="24"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;6&gt;" no="28"/><pin dir="input" iostd="LVCMOS33" nm="OP_RIGHT&lt;7&gt;" no="29"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;0&gt;" no="19" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;1&gt;" no="77" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;2&gt;" no="30" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;3&gt;" no="76" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;4&gt;" no="18" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;5&gt;" no="32" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;6&gt;" no="85" sr="fast"/><pin dir="output" iostd="LVCMOS33" nm="OP_RESULT&lt;7&gt;" no="78" sr="fast"/></ibis>
