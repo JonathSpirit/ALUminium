@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8' ?>
-<!DOCTYPE document SYSTEM 'file:///E:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/buildXML.dtd'>
+<!DOCTYPE document SYSTEM 'file:///C:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/buildXML.dtd'>
 
 <document>
 <design name='main'/>
 <rptdir name='main'/>
-<xilinx path='E:/Xilinx/14.7/ISE_DS/ISE;'/>
-<projDir path='C:\Users\guill\Desktop\Creation\Github\ALUminium\ALUminium'/>
+<xilinx path='C:/Xilinx/14.7/ISE_DS/ISE;'/>
+<projDir path='C:\Users\guill\Desktop\creation\Github\ALUminium\ALUminium'/>
 <xslDir path='chipviewer/data/xsl'/>
 <fileDir path='/chipviewer/data/html'/>
 <dataFile file='index.htm'/>
@@ -259,7 +259,7 @@
     <output file='fbs_FB16.htm'/>
   </xslFile>
 </xmlFile>
-<xmlFile file='E:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/pinlegend.xml'>
+<xmlFile file='C:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/pinlegend.xml'>
   <xslFile file='legend.xsl'>
     <param name='device' value='XC2C256-7-VQ100'/>
     <param name='verOn' value='0'/>
@@ -271,7 +271,7 @@
     <output file='pinlegendV.htm'/>
   </xslFile>
 </xmlFile>
-<xmlFile file='E:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/logiclegend.xml'>
+<xmlFile file='C:/Xilinx/14.7/ISE_DS/ISE/chipviewer/data/xsl/logiclegend.xml'>
   <xslFile file='legend.xsl'>
     <param name='device' value='XC2C256-7-VQ100'/>
     <param name='verOn' value='0'/>

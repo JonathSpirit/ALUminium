@@ -4,8 +4,11 @@
 -- Module Name:	main - Behavioral 
 -- Project Name:	ALUminium
 --
+-- Version 1.1:
+--		Adding accumulator
+--
 -- Version 1.0: 
--- 	File Created
+-- 	File created
 ----------------------------------------------------------------------------------
 -- Copyright Guillaume Guillet 2020.
 --
@@ -93,6 +96,10 @@ architecture Behavioral of main is
 	signal s_resultRotate : unsigned(7 downto 0);
 	signal s_resultRotateLeft : STD_LOGIC_VECTOR(7 downto 0);
 	signal s_resultRotateRight : STD_LOGIC_VECTOR(7 downto 0);
+	
+	--
+	
+	signal s_accumulator : unsigned(7 downto 0);
 begin
 
 	process_latchLeft : process(CLK_LEFT)
@@ -106,6 +113,10 @@ begin
 	begin
 		if ( rising_edge(CLK_RIGHT) ) then
 			s_operationRight <= unsigned(OP_RIGHT);
+		
+			if (s_operationChoose = 24) then
+				s_accumulator <= s_operationLeft;
+			end if;
 		end if;
 	end process;
 	
@@ -190,6 +201,7 @@ begin
 					
 					std_logic_vector(s_operationLeft) when (s_operationChoose = 22) else
 					std_logic_vector(s_operationRight) when (s_operationChoose = 23) else
+					std_logic_vector(s_accumulator) when (s_operationChoose = 24) else
 					(others=>'0');
 	
 end Behavioral;
