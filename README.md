@@ -1,6 +1,6 @@
 # ALUminium
 
-Copyright (C) 2020 Guillaume Guillet\
+Copyright (C) 2021 Guillaume Guillet\
 Licensed under CERN-OHL-W v2 or later
 
 <table border="0px">
@@ -21,14 +21,17 @@ for applicable conditions.
 </tr>
 </table>
 
+made with [Xilinx ISE WebPACK](https://www.xilinx.com/products/design-tools/ise-design-suite/ise-webpack.html)
+
 ## Description
-ALUminium is a CPLD/FPGA code for a 8bits arithmetic–logic unit, made for processor like [GP8B](https://github.com/JonathSpirit/GP8B)
+ALUminium is a CPLD/FPGA code for a 8bits arithmetic–logic unit, made for processor like [GP8B](https://github.com/JonathSpirit/GP8B).
 
-The goal is to have a powerful 8bits ALU without the need of a external clock.
+The goal of this project is to have a powerful 8bits ALU without the need of an external clock.
+This design has been made for the XC2C256-VQ100 CPLD.
 
-[Block diagram.pdf](documents/Block%20diagram.pdf)
+[blockDiagram.pdf](documents/blockDiagram.pdf)
 
-<img src="images/Block%20diagram.png" alt="Block diagram image" width="600"/>
+<img src="images/blockDiagram.png" alt="block diagram image" width="600"/>
 
 **Available operation :**
 ```
@@ -61,8 +64,10 @@ The goal is to have a powerful 8bits ALU without the need of a external clock.
 0x14 = Rotate to the left
 0x15 = Rotate to the right
 
-0x16 = Buffer left
-0x17 = Buffer right
+0x16 = Write to the accumulator left/right and return operation left
+0x17 = Write to the accumulator left/right and return operation right
+0x18 = Write to the operation left/right and return accumulator left
+0x19 = Write to the operation left/right and return accumulator right
 
 0xXX = 0x00
 ```

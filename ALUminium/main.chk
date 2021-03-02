@@ -4,245 +4,281 @@
 ----------------------------------------
 0 Group(s)
 
-GCLK0: 4=CLK_CHOOSE.p
-GCLK1: 1=CLK_RIGHT.p
-GCLK2: 10=CLK_LEFT.p
+GCLK0: 19=CLK_CHOOSE.p
+GCLK1: 10=CLK_RIGHT.p
+GCLK2: 1=CLK_LEFT.p
 ----------------- B l o c k 0 ------------------
-PLApt(56/56), Fanin(36/38), Clk(0/3), Bct(0/4), Pin(2/5), Mcell(2/16)
-PLApts[56/56] 204 207 212 222 227 243 247 249 250 251 255 258 259 260 261 262 273 282 284 287 354 403 410 413 423 428 429 576 201 203 209 215 216 217 218 223 224 225 234 238 242 248 257 264 274 276 278 280 281 285 288 293 434 439 445 605
-Fanins[36] Madd_s_resultAdd__or0000.n N_PZ_296.n OP_RESULT<0>124.n OP_RESULT<0>125.n OP_RESULT<0>151.n OP_RESULT<0>154.n OP_RESULT<0>155.n OP_RESULT<0>2.n OP_RESULT<0>3.n OP_RESULT<0>72.n OP_RESULT<2>118.n OP_RESULT<2>88.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(35/38), Clk(0/3), Bct(0/4), Pin(2/5), Mcell(5/16)
+PLApts[56/56] 451 455 462 468 485 496 507 523 533 534 535 540 622 625 632 641 642 662 666 669 670 671 694 695 696 1032 698 699 700 39 40 49 68 90 92 142 151 188 191 222 224 663 851 41 50 67 89 139 140 152 189 190 223 850 660 661
+Fanins[35] N_PZ_3894.n N_PZ_3938.n N_PZ_3962.n N_PZ_4137.n N_PZ_4221.n N_PZ_538.n N_PZ_542.n N_PZ_546.n N_PZ_563.n N_PZ_568.n N_PZ_580.n N_PZ_598.n N_PZ_957.n N_PZ_965.n N_PZ_969.n SF14.n SF23.n SF24.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n OP_RESULT<2>_BUFR.n
 clk[0] 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 2] [OP_RESULT<0>(103),OP_RESULT<0>(99)] [OP_RESULT<2>(106),OP_RESULT<2>(97)] 
-Signal[ 2] [ 0:  ][ 1:  ][ 2: OP_RESULT<0>(103) OP_RESULT<0>(99)  ][ 3:  ][ 4:  ][ 5: OP_RESULT<2>(106)  
-           OP_RESULT<2>(97)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: (96)  ][ 12: (95)  ][ 13: (94)  ] 
-           [ 14:  ][ 15:  ]
+Signal[ 5] [OP_RESULT<0>(103),OP_RESULT<0>(99)] [OP_RESULT<2>(106),OP_RESULT<2>(97)] [N_PZ_2872(116)]  
+           [N_PZ_2112(115)] [N_PZ_815(111)] 
+Signal[ 5] [ 0:  ][ 1:  ][ 2: OP_RESULT<0>(103) OP_RESULT<0>(99)  ][ 3:  ][ 4:  ][ 5: OP_RESULT<2>(106)  
+           OP_RESULT<2>(97)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: N_PZ_815(111)  ][ 11: (96)  ][ 12: (95)  ] 
+           [ 13: (94)  ][ 14: N_PZ_2112(115)  ][ 15: N_PZ_2872(116)  ]
 ----------------- B l o c k 1 ------------------
-PLApt(56/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(3/6), Mcell(6/16)
-PLApts[56/56] 200 205 231 232 265 275 279 283 286 290 292 334 339 342 343 352 450 511 621 45 55 74 92 103 119 135 190 192 198 346 191 193 194 195 199 331 347 375 631 633 108 197 349 363 388 545 580 588 37 91 102 118 623 624 625 626
-Fanins[37] Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000.n Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateRight_Sh<5>.n Msub_s_resultSub_Mxor_Result<5>__xor0000.n N_PZ_114.n N_PZ_134.n N_PZ_187.n N_PZ_231.n N_PZ_251.n N_PZ_296.n N_PZ_501.n OP_RESULT<4>116.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(37/38), Clk(1/3), Bct(0/4), Pin(3/6), Mcell(10/16)
+PLApts[56/56] 440 447 464 542 560 561 569 574 581 584 591 636 648 787 559 562 570 573 577 583 592 634 556 564 568 572 576 578 586 589 637 557 563 566 579 587 588 638 742 51 69 91 225 309 311 313 316 519 575 454 763 510 454 582 783 784
+Fanins[37] N_PZ_2138.n N_PZ_3894.n N_PZ_3924.n N_PZ_3945.n N_PZ_4147.n N_PZ_538.n N_PZ_542.n N_PZ_546.n N_PZ_568.n N_PZ_569.n N_PZ_580.n N_PZ_598.n SF14.n SF23.n SF24.n s_accumulatorLeft<4>.n s_accumulatorRight<4>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
 clk[1] CLK_LEFT 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[10] [OP_RESULT<4>(117),OP_RESULT<4>(1)] [OP_RESULT<0>151(130),s_operationLeft<0>,OP_LEFT<0>(6)]  
-           [OP_RESULT<6>115(131),s_operationLeft<1>,OP_LEFT<1>(7)] [OP_RESULT<5>124(132)]  
-           [OP_RESULT<0>125(129)] [N_PZ_226(127)] 
-Signal[10] [ 0: OP_RESULT<4>(117) OP_RESULT<4>(1)  ][ 1:  ][ 2: (2)  ][ 3:  ][ 4: (3)  ][ 5:  ][ 6:  ][ 7:  ] 
-           [ 8:  ][ 9:  ][ 10: N_PZ_226(127)  ][ 11: (4)  ][ 12: OP_RESULT<0>125(129)  ][ 13:  
-           OP_RESULT<0>151(130) s_operationLeft<0>(130) OP_LEFT<0>(6)  ][ 14: OP_RESULT<6>115(131)  
-           s_operationLeft<1>(131) OP_LEFT<1>(7)  ][ 15: OP_RESULT<5>124(132)  ]
+Signal[12] [OP_RESULT<4>(117),OP_RESULT<4>(1)] [s_accumulatorLeft<0>,OP_LEFT<0>(6)]  
+           [s_accumulatorLeft<1>,OP_LEFT<1>(7)] [N_PZ_1469(132)] [N_PZ_1788(129)] [N_PZ_2548(127)]  
+           [N_PZ_709(126)] [N_PZ_2546(125)] [N_PZ_969(124)] [N_PZ_778(123)] 
+Signal[12] [ 0: OP_RESULT<4>(117) OP_RESULT<4>(1)  ][ 1:  ][ 2: (2)  ][ 3:  ][ 4: (3)  ][ 5:  ][ 6:  
+           N_PZ_778(123)  ][ 7: N_PZ_969(124)  ][ 8: N_PZ_2546(125)  ][ 9: N_PZ_709(126)  ][ 10:  
+           N_PZ_2548(127)  ][ 11: (4)  ][ 12: N_PZ_1788(129)  ][ 13: s_accumulatorLeft<0>(130) OP_LEFT<0>(6)  
+            ][ 14: s_accumulatorLeft<1>(131) OP_LEFT<1>(7)  ][ 15: N_PZ_1469(132)  ]
 ----------------- B l o c k 2 ------------------
-PLApt(56/56), Fanin(37/38), Clk(0/3), Bct(0/4), Pin(1/4), Mcell(3/16)
-PLApts[56/56] 219 220 230 237 241 266 267 268 269 270 362 364 416 418 453 486 487 491 496 501 547 582 590 602 608 619 620 622 36 54 72 73 75 80 155 167 168 170 172 294 296 297 345 446 494 500 542 578 586 600 606 97 107 109 159 448
-Fanins[37] Madd_s_resultAdd__or0003.n Mcompar_s_resultBigger_0_cmp_ge0000_G_B_000_00826.n Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826.n Mmult_s_resultMul_mult0001_Mxor__index0009.n Mmult_s_resultMul_mult0001_Mxor__index0025.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateLeft_Sh<7>.n Mshift_s_resultRotateRight_Sh<1>.n Mshift_s_resultRotateRight_Sh<3>.n Mshift_s_resultRotateRight_Sh<5>.n Mshift_s_resultRotateRight_Sh<7>.n Msub_s_resultSub_Mxor_Result<5>__xor0000.n Msub_s_resultSub__or0003.n N_PZ_114.n N_PZ_187.n N_PZ_231.n OP_RESULT<5>124.n OP_RESULT<5>90.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<5>.n
+PLApt(56/56), Fanin(38/38), Clk(0/3), Bct(0/4), Pin(1/4), Mcell(4/16)
+PLApts[56/56] 441 448 480 511 512 520 521 522 552 553 554 609 610 611 615 616 617 651 658 675 690 691 692 770 777 795 796 808 812 813 814 816 821 822 823 959 960 961 962 963 964 965 966 967 968 969 970 971 500 548 550 593 653 779 97 98
+Fanins[38] N_PZ_1627.n N_PZ_2109.n N_PZ_2110.n N_PZ_2111.n N_PZ_2112.n N_PZ_2113.n N_PZ_2116.n N_PZ_2117.n N_PZ_2315.n N_PZ_2323.n N_PZ_2333.n N_PZ_2443.n N_PZ_2546.n N_PZ_2548.n N_PZ_3894.n N_PZ_4147.n N_PZ_546.n N_PZ_563.n N_PZ_568.n N_PZ_569.n N_PZ_598.n SF14.n SF24.n s_accumulatorLeft<5>.n s_accumulatorRight<5>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n
 clk[0] 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 3] [OP_RESULT<5>(137),OP_RESULT<5>(93)] [OP_RESULT<3>122(147)] [OP_RESULT<5>90(145)] 
-Signal[ 3] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: OP_RESULT<5>(137) OP_RESULT<5>(93)  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ] 
-           [ 9:  ][ 10:  ][ 11: (92)  ][ 12: OP_RESULT<5>90(145)  ][ 13: (91)  ][ 14: OP_RESULT<3>122(147)  ] 
-           [ 15: (90)  ]
+Signal[ 4] [OP_RESULT<5>(137),OP_RESULT<5>(93)] [N_PZ_2138(147)] [N_PZ_1785(145)] [N_PZ_2109(143)] 
+Signal[ 4] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: OP_RESULT<5>(137) OP_RESULT<5>(93)  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ] 
+           [ 9:  ][ 10: N_PZ_2109(143)  ][ 11: (92)  ][ 12: N_PZ_1785(145)  ][ 13: (91)  ][ 14:  
+           N_PZ_2138(147)  ][ 15: (90)  ]
 ----------------- B l o c k 3 ------------------
-PLApt(56/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(7/16)
-PLApts[56/56] 31 35 42 43 52 53 67 70 87 88 160 99 100 163 115 116 132 338 340 415 417 474 475 476 477 478 614 615 617 32 33 44 51 60 68 69 89 98 101 117 133 385 48 71 367 390 499 541 577 585 599 399 400 401 402 173
-Fanins[38] Madd_s_resultAdd__or0001.n Madd_s_resultAdd__or0003.n Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000.n Mmult_s_resultMul_mult0001_Mxor__index0009.n Mmult_s_resultMul_mult0001_Mxor__index0010.n Mmult_s_resultMul_mult0001__and0043.n Mmult_s_resultMul_mult0001__or0012.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateLeft_Sh<7>.n Mshift_s_resultRotateRight_Sh<1>.n Mshift_s_resultRotateRight_Sh<5>.n Msub_s_resultSub_Mxor_Result<5>__xor0000.n Msub_s_resultSub__or0003.n N_PZ_106.n N_PZ_114.n N_PZ_251.n N_PZ_296.n N_PZ_462.n SF23.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(28/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(10/16)
+PLApts[56/56] 438 445 488 594 595 596 737 450 453 461 454 463 469 454 477 478 454 479 481 486 487 489 454 490 491 454 495 497 508 513 514 515 527 539 707 708 709 738 739 740 741 749 752 753 755 756 454 768 771 466 502 524 532 141 153 192
+Fanins[28] N_PZ_1210.n N_PZ_1467.n N_PZ_1469.n N_PZ_1470.n N_PZ_3894.n N_PZ_3897.n N_PZ_3924.n N_PZ_3945.n N_PZ_3974.n N_PZ_4147.n s_accumulatorLeft<2>.n s_accumulatorRight<2>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n
 clk[1] CLK_LEFT 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[19] [Mcompar_s_resultBigger_0_cmp_ge0000_G_B_000_00826(149),s_operationLeft<2>,OP_LEFT<2>(8)]  
-           [Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826(150),s_operationLeft<3>,OP_LEFT<3>(9)]  
-           [OP_RESULT<4>116(151),s_operationLeft<4>,OP_LEFT<4>(10)]  
-           [OP_RESULT<2>118(153),s_operationLeft<5>,OP_LEFT<5>(11)]  
-           [OP_RESULT<1>130(154),s_operationLeft<6>,OP_LEFT<6>(12)]  
-           [OP_RESULT<0>124(161),s_operationLeft<7>,OP_LEFT<7>(13)] [N_PZ_187(164)] 
-Signal[19] [ 0: Mcompar_s_resultBigger_0_cmp_ge0000_G_B_000_00826(149) s_operationLeft<2>(149) OP_LEFT<2>(8)  
-            ][ 1: Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826(150) s_operationLeft<3>(150)  
-           OP_LEFT<3>(9)  ][ 2: OP_RESULT<4>116(151) s_operationLeft<4>(151) OP_LEFT<4>(10)  ][ 3:  ][ 4:  
-           OP_RESULT<2>118(153) s_operationLeft<5>(153) OP_LEFT<5>(11)  ][ 5: OP_RESULT<1>130(154)  
-           s_operationLeft<6>(154) OP_LEFT<6>(12)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11:  ][ 12:  
-           OP_RESULT<0>124(161) s_operationLeft<7>(161) OP_LEFT<7>(13)  ][ 13:  ][ 14:  ][ 15: N_PZ_187(164)  
-            ]
+Signal[16] [s_accumulatorLeft<2>,OP_LEFT<2>(8)] [s_accumulatorLeft<3>,OP_LEFT<3>(9)]  
+           [s_accumulatorLeft<4>,OP_LEFT<4>(10)] [s_accumulatorLeft<5>,OP_LEFT<5>(11)]  
+           [s_accumulatorLeft<6>,OP_LEFT<6>(12)] [s_accumulatorLeft<7>,OP_LEFT<7>(13)] [N_PZ_1467(164)]  
+           [OP_RESULT<2>_BUFR(163)] [N_PZ_1470(162)] [N_PZ_708(160)] 
+Signal[16] [ 0: s_accumulatorLeft<2>(149) OP_LEFT<2>(8)  ][ 1: s_accumulatorLeft<3>(150) OP_LEFT<3>(9)  ] 
+           [ 2: s_accumulatorLeft<4>(151) OP_LEFT<4>(10)  ][ 3:  ][ 4: s_accumulatorLeft<5>(153)  
+           OP_LEFT<5>(11)  ][ 5: s_accumulatorLeft<6>(154) OP_LEFT<6>(12)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ] 
+           [ 10:  ][ 11: N_PZ_708(160)  ][ 12: s_accumulatorLeft<7>(161) OP_LEFT<7>(13)  ][ 13:  
+           N_PZ_1470(162)  ][ 14: OP_RESULT<2>_BUFR(163)  ][ 15: N_PZ_1467(164)  ]
 ----------------- B l o c k 4 ------------------
-PLApt(56/56), Fanin(36/38), Clk(0/3), Bct(0/4), Pin(2/2), Mcell(10/16)
-PLApts[56/56] 176 330 414 187 627 628 629 630 632 188 373 374 419 420 421 422 182 356 357 379 380 424 425 426 427 183 381 382 406 407 408 409 124 184 189 196 348 392 544 579 601 41 86 105 164 355 372 383 447 451 454 411 412 134 136 336
-Fanins[36] Mcompar_s_resultBigger_0_cmp_ge0000_G_B_000_00826.n Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateLeft_Sh<7>.n Msub_s_resultSub_Mxor_Result<5>__xor0000.n Msub_s_resultSub__or0003.n N_PZ_114.n N_PZ_187.n N_PZ_226.n N_PZ_231.n N_PZ_251.n N_PZ_296.n N_PZ_314.n N_PZ_377.n N_PZ_378.n N_PZ_501.n OP_RESULT<5>90.n SF23.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
-clk[0] 
+PLApt(16/56), Fanin(16/38), Clk(2/3), Bct(0/4), Pin(2/2), Mcell(16/16)
+PLApts[16/56] () () () () () () () () () () 15 () () 14 () () 13 () () 17 () () 12 () () 16 () () 11 () () 9 () () 8 () () 7 () () 6 () () 5 () () 4 () () 3 () () 2 () () 0
+Fanins[16] OP_LEFT<0>.p OP_LEFT<1>.p OP_LEFT<2>.p OP_LEFT<3>.p OP_LEFT<4>.p OP_LEFT<5>.p OP_LEFT<6>.p OP_LEFT<7>.p OP_RIGHT<0>.p OP_RIGHT<1>.p OP_RIGHT<2>.p OP_RIGHT<3>.p OP_RIGHT<4>.p OP_RIGHT<5>.p OP_RIGHT<6>.p OP_RIGHT<7>.p
+clk[2] CLK_LEFT CLK_RIGHT 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[12] [CLK_CHOOSE(22)] [CLK_RIGHT(23)] [Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000(180)]  
-           [N_PZ_378(179)] [N_PZ_377(178)] [OP_RESULT<0>2(177)] [OP_RESULT<0>3(176)] [OP_RESULT<0>154(175)]  
-           [OP_RESULT<7>111(174)] [OP_RESULT<6>94(173)] [OP_RESULT<0>155(172)] [OP_RESULT<0>72(171)] 
-Signal[12] [ 0:  ][ 1:  ][ 2:  ][ 3: CLK_RIGHT(23)  ][ 4:  ][ 5: CLK_CHOOSE(22)  ][ 6: OP_RESULT<0>72(171)  ] 
-           [ 7: OP_RESULT<0>155(172)  ][ 8: OP_RESULT<6>94(173)  ][ 9: OP_RESULT<7>111(174)  ][ 10:  
-           OP_RESULT<0>154(175)  ][ 11: OP_RESULT<0>3(176)  ][ 12: OP_RESULT<0>2(177)  ][ 13: N_PZ_377(178)  
-            ][ 14: N_PZ_378(179)  ][ 15: Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000(180)  ]
+Signal[18] [CLK_CHOOSE(22)] [CLK_RIGHT(23)] [s_operationLeft<0>(180)] [s_operationLeft<1>(179)]  
+           [s_operationLeft<2>(178)] [s_operationLeft<3>(177)] [s_operationLeft<4>(176)]  
+           [s_operationLeft<5>(175)] [s_operationLeft<6>(174)] [s_operationLeft<7>(173)]  
+           [s_operationRight<0>(172)] [s_operationRight<1>(171)] [s_operationRight<2>(169)]  
+           [s_operationRight<3>(167)] [s_operationRight<4>(166)] [s_operationRight<5>(165)]  
+           [s_operationRight<6>(170)] [s_operationRight<7>(168)] 
+Signal[18] [ 0: s_operationRight<5>(165)  ][ 1: s_operationRight<4>(166)  ][ 2: s_operationRight<3>(167)  ] 
+           [ 3: s_operationRight<7>(168) CLK_RIGHT(23)  ][ 4: s_operationRight<2>(169)  ][ 5:  
+           s_operationRight<6>(170) CLK_CHOOSE(22)  ][ 6: s_operationRight<1>(171)  ][ 7:  
+           s_operationRight<0>(172)  ][ 8: s_operationLeft<7>(173)  ][ 9: s_operationLeft<6>(174)  ][ 10:  
+           s_operationLeft<5>(175)  ][ 11: s_operationLeft<4>(176)  ][ 12: s_operationLeft<3>(177)  ][ 13:  
+           s_operationLeft<2>(178)  ][ 14: s_operationLeft<1>(179)  ][ 15: s_operationLeft<0>(180)  ]
 ----------------- B l o c k 5 ------------------
-PLApt(56/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(4/5), Mcell(5/16)
-PLApts[56/56] 206 208 211 213 221 226 228 236 239 240 244 245 252 253 310 312 376 634 635 636 640 641 642 684 685 688 689 28 83 519 583 593 594 595 596 597 90 509 584 587 84 112 120 129 506 510 514 520 598 63 138 459 94 525 533 543
-Fanins[38] Madd_s_resultAdd__or0004.n Mmult_s_resultMul_mult0001_Mxor__index0003.n Mmult_s_resultMul_mult0001_Mxor__index0010.n Mmult_s_resultMul_mult0001_Mxor__index0033.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateLeft_Sh<7>.n Mshift_s_resultRotateRight_Sh<3>.n Mshift_s_resultRotateRight_Sh<5>.n Msub_s_resultSub__or0005.n N_PZ_106.n N_PZ_114.n N_PZ_134.n N_PZ_203.n N_PZ_251.n N_PZ_501.n OP_RESULT<6>115.n OP_RESULT<6>94.n SF23.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<6>.n
+PLApt(56/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(4/5), Mcell(6/16)
+PLApts[56/56] 449 503 509 543 544 602 603 604 612 613 614 668 735 798 810 811 817 820 825 827 828 829 830 831 835 836 837 838 839 841 842 846 847 848 849 855 436 443 526 558 824 580 633 29 48 136 396 294 629 289 290 399 731 788 799 800
+Fanins[38] N_PZ_2315.n N_PZ_2323.n N_PZ_2333.n N_PZ_2714.n N_PZ_2747.n N_PZ_2872.n N_PZ_3830.n N_PZ_3835.n N_PZ_3853.n N_PZ_3894.n N_PZ_3897.n N_PZ_3938.n N_PZ_4172.n N_PZ_542.n N_PZ_580.n SF23.n s_accumulatorLeft<0>.n s_accumulatorLeft<6>.n s_accumulatorRight<0>.n s_accumulatorRight<6>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<4>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
 clk[1] CLK_CHOOSE 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[10] [OP_RESULT<6>(182),OP_RESULT<6>(24)] [CLK_LEFT(27)]  
-           [N_PZ_318(194),s_operationChoose<0>,OP_CHOOSE<0>(29)]  
-           [N_PZ_497(196),s_operationChoose<1>,OP_CHOOSE<1>(30)]  
-           [Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000(195)] [N_PZ_317(193)] 
-Signal[10] [ 0:  ][ 1: OP_RESULT<6>(182) OP_RESULT<6>(24)  ][ 2:  ][ 3: CLK_LEFT(27)  ][ 4:  ][ 5:  ][ 6:  ] 
-           [ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: (28)  ][ 12: N_PZ_317(193)  ][ 13: N_PZ_318(194)  
-           s_operationChoose<0>(194) OP_CHOOSE<0>(29)  ][ 14:  
-           Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000(195)  ][ 15: N_PZ_497(196)  
-           s_operationChoose<1>(196) OP_CHOOSE<1>(30)  ]
+Signal[11] [OP_RESULT<6>(182),OP_RESULT<6>(24)] [CLK_LEFT(27)]  
+           [N_PZ_965(194),s_operationChoose<0>,OP_CHOOSE<0>(29)]  
+           [N_PZ_3835(196),s_operationChoose<1>,OP_CHOOSE<1>(30)] [N_PZ_2110(195)] [N_PZ_2735(193)]  
+           [N_PZ_2978(191)] 
+Signal[11] [ 0:  ][ 1: OP_RESULT<6>(182) OP_RESULT<6>(24)  ][ 2:  ][ 3: CLK_LEFT(27)  ][ 4:  ][ 5:  ][ 6:  ] 
+           [ 7:  ][ 8:  ][ 9:  ][ 10: N_PZ_2978(191)  ][ 11: (28)  ][ 12: N_PZ_2735(193)  ][ 13:  
+           N_PZ_965(194) s_operationChoose<0>(194) OP_CHOOSE<0>(29)  ][ 14: N_PZ_2110(195)  ][ 15:  
+           N_PZ_3835(196) s_operationChoose<1>(196) OP_CHOOSE<1>(30)  ]
 ----------------- B l o c k 6 ------------------
-PLApt(56/56), Fanin(36/38), Clk(0/3), Bct(0/4), Pin(1/6), Mcell(8/16)
-PLApts[56/56] 229 246 271 272 358 359 377 378 393 497 502 546 581 589 603 609 637 675 676 360 682 683 686 687 690 691 692 693 694 387 430 431 432 435 436 443 444 40 50 57 61 137 139 140 147 148 150 62 152 27 76 142 64 56 391 438
-Fanins[36] Madd_s_resultAdd__or0000.n Madd_s_resultAdd__or0005.n Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000.n Mshift_s_resultRotateLeft_Sh<5>.n Mshift_s_resultRotateLeft_Sh<7>.n Mshift_s_resultRotateRight_Sh<1>.n Mshift_s_resultRotateRight_Sh<3>.n Mshift_s_resultRotateRight_Sh<5>.n Mshift_s_resultRotateRight_Sh<7>.n Msub_s_resultSub__or0001.n Msub_s_resultSub__or0005.n N_PZ_114.n N_PZ_251.n N_PZ_296.n N_PZ_361.n OP_RESULT<7>111.n OP_RESULT<7>90.n SF23.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(38/38), Clk(0/3), Bct(0/4), Pin(1/6), Mcell(3/16)
+PLApts[56/56] 442 530 605 606 607 608 623 639 722 723 736 809 832 833 834 840 843 844 845 856 860 861 862 866 867 868 869 870 871 872 873 874 875 876 28 308 310 312 314 315 626 854 35 38 64 66 94 96 137 138 170 193 194 219 220 853
+Fanins[38] N_PZ_2315.n N_PZ_2714.n N_PZ_2735.n N_PZ_3311.n N_PZ_3513.n N_PZ_3852.n N_PZ_3853.n N_PZ_3858.n N_PZ_3860.n N_PZ_3863.n N_PZ_3894.n N_PZ_3897.n N_PZ_3938.n N_PZ_538.n N_PZ_542.n s_accumulatorLeft<7>.n s_accumulatorRight<7>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
 clk[0] 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 8] [OP_RESULT<7>(201),OP_RESULT<7>(19)] [OP_RESULT<2>88(212)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0009(211)] [N_PZ_231(206)] [N_PZ_203(205)] [N_PZ_134(204)]  
-           [Madd_s_resultAdd__or0001(203)] [N_PZ_501(200)] 
-Signal[ 8] [ 0:  ][ 1:  ][ 2:  ][ 3: N_PZ_501(200)  ][ 4: OP_RESULT<7>(201) OP_RESULT<7>(19)  ][ 5: (18)  ] 
-           [ 6: Madd_s_resultAdd__or0001(203)  ][ 7: N_PZ_134(204)  ][ 8: N_PZ_203(205)  ][ 9: N_PZ_231(206)  
-            ][ 10: (17)  ][ 11: (16)  ][ 12: (15)  ][ 13: (14)  ][ 14:  
-           Mmult_s_resultMul_mult0001_Mxor__index0009(211)  ][ 15: OP_RESULT<2>88(212)  ]
+Signal[ 3] [OP_RESULT<7>(201),OP_RESULT<7>(19)] [N_PZ_3863(212)] [N_PZ_2443(211)] 
+Signal[ 3] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: OP_RESULT<7>(201) OP_RESULT<7>(19)  ][ 5: (18)  ][ 6:  ][ 7:  ] 
+           [ 8:  ][ 9:  ][ 10: (17)  ][ 11: (16)  ][ 12: (15)  ][ 13: (14)  ][ 14: N_PZ_2443(211)  ][ 15:  
+           N_PZ_3863(212)  ]
 ----------------- B l o c k 7 ------------------
-PLApt(56/56), Fanin(30/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(12/16)
-PLApts[56/56] 93 123 106 111 114 125 127 131 179 180 181 449 452 455 146 308 664 665 666 667 668 669 670 671 672 166 673 674 177 485 490 524 526 529 299 530 531 532 535 536 165 537 538 539 540 552 553 556 557 558 559 365 551 368 555 185
-Fanins[30] Madd_s_resultAdd__or0000.n Mmult_s_resultMul_mult0001_Mxor__index0003.n Mmult_s_resultMul_mult0001_Mxor__index0025.n Mmult_s_resultMul_mult0001_Mxor__index0026.n Mmult_s_resultMul_mult0001_Mxor__index0033.n Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000.n Mshift_s_resultRotateRight_Sh<1>.n Msub_s_resultSub__or0001.n N_PZ_106.n N_PZ_114.n N_PZ_134.n N_PZ_231.n N_PZ_296.n OP_RESULT<5>90.n s_operationChoose<0>.n s_operationChoose<2>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(30/38), Clk(1/3), Bct(0/4), Pin(6/6), Mcell(7/16)
+PLApts[56/56] 1024 1025 1026 1027 1028 1029 1030 1031 36 37 52 65 95 154 195 218 221 702 704 852 34 70 93 759 765 306 27 143 144 145 161 162 163 169 171 173 182 710 724 504 541 721 733 734 743 744 745 746 747 185 750 751 754 757 105 121
+Fanins[30] N_PZ_2977.n N_PZ_2978.n N_PZ_2979.n N_PZ_3500.n N_PZ_3501.n N_PZ_3502.n N_PZ_3894.n N_PZ_3897.n N_PZ_3938.n N_PZ_3945.n N_PZ_3974.n N_PZ_4147.n N_PZ_4172.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<7>.n
 clk[1] CLK_CHOOSE 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[24] [N_PZ_251(218),s_operationChoose<2>,OP_CHOOSE<2>(32)]  
-           [SF23(223),s_operationChoose<3>,OP_CHOOSE<3>(33)]  
-           [Mshift_s_resultRotateLeft_Sh<7>(224),s_operationChoose<4>,OP_CHOOSE<4>(34)]  
-           [Mshift_s_resultRotateRight_Sh<5>(225),s_operationChoose<5>,OP_CHOOSE<5>(35)]  
-           [OP_RESULT<7>90(226),s_operationChoose<6>,OP_CHOOSE<6>(36)]  
-           [Mshift_s_resultRotateRight_Sh<7>(227),s_operationChoose<7>,OP_CHOOSE<7>(37)] [N_PZ_361(228)]  
-           [Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000(222)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0033(221)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0010(220)] [Madd_s_resultAdd__or0000(219)]  
-           [Msub_s_resultSub__or0001(217)] 
-Signal[24] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4: Msub_s_resultSub__or0001(217)  ][ 5: N_PZ_251(218)  
-           s_operationChoose<2>(218) OP_CHOOSE<2>(32)  ][ 6: Madd_s_resultAdd__or0000(219)  ][ 7:  
-           Mmult_s_resultMul_mult0001_Mxor__index0010(220)  ][ 8:  
-           Mmult_s_resultMul_mult0001_Mxor__index0033(221)  ][ 9:  
-           Mmult_s_resultMul_mult0001_Mxor__n0010<1>__xor0000(222)  ][ 10: SF23(223)  
-           s_operationChoose<3>(223) OP_CHOOSE<3>(33)  ][ 11: Mshift_s_resultRotateLeft_Sh<7>(224)  
-           s_operationChoose<4>(224) OP_CHOOSE<4>(34)  ][ 12: Mshift_s_resultRotateRight_Sh<5>(225)  
-           s_operationChoose<5>(225) OP_CHOOSE<5>(35)  ][ 13: OP_RESULT<7>90(226) s_operationChoose<6>(226)  
-           OP_CHOOSE<6>(36)  ][ 14: Mshift_s_resultRotateRight_Sh<7>(227) s_operationChoose<7>(227)  
-           OP_CHOOSE<7>(37)  ][ 15: N_PZ_361(228)  ]
+Signal[19] [N_PZ_3852(218),s_operationChoose<2>,OP_CHOOSE<2>(32)]  
+           [N_PZ_3513(223),s_operationChoose<3>,OP_CHOOSE<3>(33)]  
+           [N_PZ_3500(224),s_operationChoose<4>,OP_CHOOSE<4>(34)]  
+           [N_PZ_2111(225),s_operationChoose<5>,OP_CHOOSE<5>(35)]  
+           [N_PZ_3055(226),s_operationChoose<6>,OP_CHOOSE<6>(36)]  
+           [N_PZ_1183(227),s_operationChoose<7>,OP_CHOOSE<7>(37)] [N_PZ_1929(228)] 
+Signal[19] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5: N_PZ_3852(218) s_operationChoose<2>(218) OP_CHOOSE<2>(32)  
+            ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10: N_PZ_3513(223) s_operationChoose<3>(223) OP_CHOOSE<3>(33)  ] 
+           [ 11: N_PZ_3500(224) s_operationChoose<4>(224) OP_CHOOSE<4>(34)  ][ 12: N_PZ_2111(225)  
+           s_operationChoose<5>(225) OP_CHOOSE<5>(35)  ][ 13: N_PZ_3055(226) s_operationChoose<6>(226)  
+           OP_CHOOSE<6>(36)  ][ 14: N_PZ_1183(227) s_operationChoose<7>(227) OP_CHOOSE<7>(37)  ][ 15:  
+           N_PZ_1929(228)  ]
 ----------------- B l o c k 8 ------------------
-PLApt(51/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(5/5), Mcell(10/16)
-PLApts[51/51] 202 210 214 235 254 256 263 289 332 350 366 369 370 371 433 437 441 495 503 549 550 554 591 604 607 330 335 389 395 396 397 394 460 527 528 534 679 680 171 677 344 47 59 39 130 386 442 38 46 49 58
-Fanins[38] Madd_s_resultAdd__or0000.n Mcompar_s_resultBigger_0_cmp_ge0000_G_B_000_00826.n Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826.n Mmult_s_resultMul_mult0001_Mxor__index0003.n Mmult_s_resultMul_mult0001_Mxor__index0010.n Mshift_s_resultRotateRight_Sh<1>.n Mshift_s_resultRotateRight_Sh<3>.n Mshift_s_resultRotateRight_Sh<5>.n Mshift_s_resultRotateRight_Sh<7>.n Msub_s_resultSub__or0001.n N_PZ_106.n N_PZ_114.n N_PZ_187.n N_PZ_296.n N_PZ_437.n OP_RESULT<1>130.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(28/38), Clk(1/3), Bct(0/4), Pin(5/5), Mcell(11/16)
+PLApts[56/56] 437 444 452 456 459 465 467 472 473 474 475 476 483 454 492 498 517 525 529 454 531 538 555 565 567 454 571 585 590 635 701 703 705 706 149 156 159 172 174 286 327 32 107 454 119 127 239 117 277 72 103 125 147 328 329 133
+Fanins[28] N_PZ_1183.n N_PZ_1974.n N_PZ_3894.n N_PZ_4172.n N_PZ_542.n s_accumulatorLeft<1>.n s_accumulatorRight<1>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
 clk[1] CLK_RIGHT 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[18] [OP_RESULT<1>(229),OP_RESULT<1>(78)] [N_PZ_314(230),s_operationRight<0>,OP_RIGHT<0>(79)]  
-           [N_PZ_374(232),s_operationRight<1>,OP_RIGHT<1>(80)]  
-           [Msub_s_resultSub__or0003(234),s_operationRight<2>,OP_RIGHT<2>(81)]  
-           [N_PZ_462(240),s_operationRight<3>,OP_RIGHT<3>(82)] [Mshift_s_resultRotateRight_Sh<1>(244)]  
-           [N_PZ_114(243)] [N_PZ_437(242)] [N_PZ_106(241)] [N_PZ_296(239)] 
-Signal[18] [ 0: OP_RESULT<1>(229) OP_RESULT<1>(78)  ][ 1: N_PZ_314(230) s_operationRight<0>(230)  
-           OP_RIGHT<0>(79)  ][ 2:  ][ 3: N_PZ_374(232) s_operationRight<1>(232) OP_RIGHT<1>(80)  ][ 4:  ] 
-           [ 5: Msub_s_resultSub__or0003(234) s_operationRight<2>(234) OP_RIGHT<2>(81)  ][ 6:  ][ 7:  ][ 8:  
-            ][ 9:  ][ 10: N_PZ_296(239)  ][ 11: N_PZ_462(240) s_operationRight<3>(240) OP_RIGHT<3>(82)  ] 
-           [ 12: N_PZ_106(241)  ][ 13: N_PZ_437(242)  ][ 14: N_PZ_114(243)  ][ 15:  
-           Mshift_s_resultRotateRight_Sh<1>(244)  ]
+Signal[15] [OP_RESULT<1>(229),OP_RESULT<1>(78)] [s_accumulatorRight<0>,OP_RIGHT<0>(79)]  
+           [s_accumulatorRight<1>,OP_RIGHT<1>(80)] [s_accumulatorRight<2>,OP_RIGHT<2>(81)]  
+           [s_accumulatorRight<3>,OP_RIGHT<3>(82)] [N_PZ_2582(244)] [N_PZ_2225(243)] [N_PZ_1932(242)]  
+           [N_PZ_1931(241)] [N_PZ_2117(239)] [N_PZ_2116(238)] 
+Signal[15] [ 0: OP_RESULT<1>(229) OP_RESULT<1>(78)  ][ 1: s_accumulatorRight<0>(230) OP_RIGHT<0>(79)  ][ 2:  
+            ][ 3: s_accumulatorRight<1>(232) OP_RIGHT<1>(80)  ][ 4:  ][ 5: s_accumulatorRight<2>(234)  
+           OP_RIGHT<2>(81)  ][ 6:  ][ 7:  ][ 8:  ][ 9: N_PZ_2116(238)  ][ 10: N_PZ_2117(239)  ][ 11:  
+           s_accumulatorRight<3>(240) OP_RIGHT<3>(82)  ][ 12: N_PZ_1931(241)  ][ 13: N_PZ_1932(242)  ][ 14:  
+           N_PZ_2225(243)  ][ 15: N_PZ_2582(244)  ]
 ----------------- B l o c k 9 ------------------
-PLApt(49/56), Fanin(38/38), Clk(0/3), Bct(0/4), Pin(1/7), Mcell(8/16)
-PLApts[49/53] 233 277 291 333 351 353 398 548 592 610 613 616 678 681 161 317 321 467 650 653 657 659 661 644 648 662 663 298 315 318 462 463 464 465 466 337 341 611 612 169 313 457 468 469 470 295 456 458 () () () () 649
-Fanins[38] Madd_s_resultAdd__or0001.n Mcompar_s_resultEqual_0_cmp_eq0000_or0002_xor0000.n Mcompar_s_resultSmaller_0_cmp_le0000_G_B_000_00826.n Mmult_s_resultMul_mult0001_Mxor__index0009.n Mmult_s_resultMul_mult0001_Mxor__index0010.n Mmult_s_resultMul_mult0001_Mxor__index0012.n Mmult_s_resultMul_mult0001__or0012.n Mmult_s_resultMul_mult0001__or0014.n Mshift_s_resultRotateRight_Sh<5>.n N_PZ_114.n N_PZ_117.n N_PZ_187.n N_PZ_231.n N_PZ_437.n N_PZ_442.n N_PZ_462.n OP_RESULT<3>122.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+PLApt(56/56), Fanin(30/38), Clk(0/3), Bct(0/4), Pin(1/7), Mcell(3/16)
+PLApts[56/56] 439 446 457 458 460 470 471 482 484 493 494 499 501 505 506 516 518 528 536 537 545 546 547 549 551 597 598 599 600 601 654 762 769 773 785 786 71 88 100 101 112 114 120 228 272 274 276 42 676 677 679 693 778 780 781 30
+Fanins[30] N_PZ_1574.n N_PZ_1627.n N_PZ_1785.n N_PZ_1788.n N_PZ_3894.n N_PZ_4147.n N_PZ_563.n N_PZ_568.n N_PZ_569.n N_PZ_598.n s_accumulatorLeft<3>.n s_accumulatorRight<3>.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n s_operationRight<4>.n
 clk[0] 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 8] [OP_RESULT<3>(245),OP_RESULT<3>(77)] [N_PZ_311(260)] [N_PZ_457(259)]  
-           [Mmult_s_resultMul_mult0001__or0014(258)] [Madd_s_resultAdd__or0003(257)] [N_PZ_442(255)]  
-           [Mmult_s_resultMul_mult0001__and0043(254)] [Mmult_s_resultMul_mult0001__or0012(253)] 
-Signal[ 8] [ 0: OP_RESULT<3>(245) OP_RESULT<3>(77)  ][ 1: (76)  ][ 2: (74)  ][ 3: (73)  ][ 4: (72)  ][ 5:  
-           (71)  ][ 6:  ][ 7:  ][ 8: Mmult_s_resultMul_mult0001__or0012(253)  ][ 9:  
-           Mmult_s_resultMul_mult0001__and0043(254)  ][ 10: N_PZ_442(255)  ][ 11: (70)  ][ 12:  
-           Madd_s_resultAdd__or0003(257)  ][ 13: Mmult_s_resultMul_mult0001__or0014(258)  ][ 14:  
-           N_PZ_457(259)  ][ 15: N_PZ_311(260)  ]
+Signal[ 3] [OP_RESULT<3>(245),OP_RESULT<3>(77)] [N_PZ_1949(260)] [N_PZ_2113(259)] 
+Signal[ 3] [ 0: OP_RESULT<3>(245) OP_RESULT<3>(77)  ][ 1: (76)  ][ 2: (74)  ][ 3: (73)  ][ 4: (72)  ][ 5:  
+           (71)  ][ 6:  ][ 7:  ][ 8:  ][ 9:  ][ 10:  ][ 11: (70)  ][ 12:  ][ 13:  ][ 14: N_PZ_2113(259)  ] 
+           [ 15: N_PZ_1949(260)  ]
 ----------------- B l o c k 10 ------------------
-PLApt(48/56), Fanin(36/38), Clk(1/3), Bct(0/4), Pin(4/4), Mcell(16/16)
-PLApts[48/48] 175 178 174 361 618 404 405 34 106 30 303 95 505 560 516 517 518 29 66 479 440 498 504 512 523 79 162 323 643 324 325 326 320 471 472 473 481 483 484 572 322 482 571 304 574 567 565 569
-Fanins[36] Madd_s_resultAdd__or0000.n Madd_s_resultAdd__or0003.n Mmult_s_resultMul_mult0001_Mxor__index0026.n Mmult_s_resultMul_mult0001_Mxor__n0002<5>__xor0000.n Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000.n Mmult_s_resultMul_mult0001__and0043.n Mmult_s_resultMul_mult0001__or0014.n Mmult_s_resultMul_mult0001__or0018.n Mshift_s_resultRotateRight_Sh<1>.n Mshift_s_resultRotateRight_Sh<3>.n Msub_s_resultSub_Mxor_Result<5>__xor0000.n Msub_s_resultSub__or0001.n N_PZ_106.n N_PZ_134.n N_PZ_203.n N_PZ_231.n N_PZ_311.n N_PZ_318.n N_PZ_378.n N_PZ_429.n N_PZ_435.n N_PZ_442.n N_PZ_457.n N_PZ_459.n N_PZ_460.n N_PZ_497.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n
+PLApt(56/56), Fanin(38/38), Clk(1/3), Bct(0/4), Pin(4/4), Mcell(16/16)
+PLApts[56/56] 619 620 621 628 630 631 643 644 645 204 59 618 627 826 646 664 667 815 818 819 624 659 665 697 187 205 877 878 879 880 881 882 883 884 655 656 748 776 435 647 454 678 782 454 657 689 454 775 58 454 132 53 79 252 258 640
+Fanins[38] N_PZ_2323.n N_PZ_2333.n N_PZ_2747.n N_PZ_3894.n N_PZ_3945.n N_PZ_3962.n N_PZ_538.n N_PZ_542.n N_PZ_546.n N_PZ_563.n N_PZ_568.n N_PZ_569.n N_PZ_580.n N_PZ_598.n N_PZ_708.n N_PZ_709.n N_PZ_778.n N_PZ_813.n N_PZ_814.n N_PZ_815.n SF14.n SF23.n SF24.n s_operationChoose<0>.n s_operationChoose<1>.n s_operationChoose<2>.n s_operationChoose<3>.n s_operationChoose<4>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<4>.n s_operationRight<6>.n
 clk[1] CLK_RIGHT 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[24] [Msub_s_resultSub_Mxor_Result<5>__xor0000(271),s_operationRight<4>,OP_RIGHT<4>(85)]  
-           [N_PZ_435(272),s_operationRight<5>,OP_RIGHT<5>(86)]  
-           [Madd_s_resultAdd__or0004(273),s_operationRight<6>,OP_RIGHT<6>(87)]  
-           [Msub_s_resultSub__or0005(274),s_operationRight<7>,OP_RIGHT<7>(89)]  
-           [Mshift_s_resultRotateLeft_Sh<5>(276)] [Mmult_s_resultMul_mult0001_Mxor__index0004(275)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0003(270)] [Mshift_s_resultRotateRight_Sh<3>(269)]  
-           [Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000(268)] [N_PZ_460(267)]  
-           [Mmult_s_resultMul_mult0001__or0018(266)] [Mmult_s_resultMul_mult0001_Mxor__index0025(265)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0026(264)]  
-           [Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000(263)]  
-           [Mmult_s_resultMul_mult0001_Mxor__index0012(262)] [N_PZ_459(261)] 
-Signal[24] [ 0: N_PZ_459(261)  ][ 1: Mmult_s_resultMul_mult0001_Mxor__index0012(262)  ][ 2:  
-           Mmult_s_resultMul_mult0001_Mxor__n0008<2>__xor0000(263)  ][ 3:  
-           Mmult_s_resultMul_mult0001_Mxor__index0026(264)  ][ 4:  
-           Mmult_s_resultMul_mult0001_Mxor__index0025(265)  ][ 5: Mmult_s_resultMul_mult0001__or0018(266)  ] 
-           [ 6: N_PZ_460(267)  ][ 7: Mmult_s_resultMul_mult0001_Mxor__n0006<3>__xor0000(268)  ][ 8:  
-           Mshift_s_resultRotateRight_Sh<3>(269)  ][ 9: Mmult_s_resultMul_mult0001_Mxor__index0003(270)  ] 
-           [ 10: Msub_s_resultSub_Mxor_Result<5>__xor0000(271) s_operationRight<4>(271) OP_RIGHT<4>(85)  ] 
-           [ 11: N_PZ_435(272) s_operationRight<5>(272) OP_RIGHT<5>(86)  ][ 12:  
-           Madd_s_resultAdd__or0004(273) s_operationRight<6>(273) OP_RIGHT<6>(87)  ][ 13:  
-           Msub_s_resultSub__or0005(274) s_operationRight<7>(274) OP_RIGHT<7>(89)  ][ 14:  
-           Mmult_s_resultMul_mult0001_Mxor__index0004(275)  ][ 15: Mshift_s_resultRotateLeft_Sh<5>(276)  ]
+Signal[20] [s_accumulatorRight<4>,OP_RIGHT<4>(85)] [s_accumulatorRight<5>,OP_RIGHT<5>(86)]  
+           [s_accumulatorRight<6>,OP_RIGHT<6>(87)] [s_accumulatorRight<7>,OP_RIGHT<7>(89)] [N_PZ_813(276)]  
+           [N_PZ_3502(275)] [N_PZ_3501(270)] [N_PZ_814(269)] [N_PZ_2977(268)] [N_PZ_957(267)]  
+           [N_PZ_4137(266)] [N_PZ_2333(265)] [N_PZ_4221(264)] [N_PZ_4172(263)] [N_PZ_2979(262)]  
+           [N_PZ_563(261)] 
+Signal[20] [ 0: N_PZ_563(261)  ][ 1: N_PZ_2979(262)  ][ 2: N_PZ_4172(263)  ][ 3: N_PZ_4221(264)  ][ 4:  
+           N_PZ_2333(265)  ][ 5: N_PZ_4137(266)  ][ 6: N_PZ_957(267)  ][ 7: N_PZ_2977(268)  ][ 8:  
+           N_PZ_814(269)  ][ 9: N_PZ_3501(270)  ][ 10: s_accumulatorRight<4>(271) OP_RIGHT<4>(85)  ][ 11:  
+           s_accumulatorRight<5>(272) OP_RIGHT<5>(86)  ][ 12: s_accumulatorRight<6>(273) OP_RIGHT<6>(87)  ] 
+           [ 13: s_accumulatorRight<7>(274) OP_RIGHT<7>(89)  ][ 14: N_PZ_3502(275)  ][ 15: N_PZ_813(276)  ]
 ----------------- B l o c k 11 ------------------
-PLApt(9/56), Fanin(8/38), Clk(0/3), Bct(0/4), Pin(0/4), Mcell(3/16)
-PLApts[9/56] 696 700 704 695 699 384 638 639 () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () () 461
-Fanins[ 8] Madd_s_resultAdd__or0004.n Mmult_s_resultMul_mult0001_Mxor__index0004.n Mmult_s_resultMul_mult0001__or0012.n N_PZ_251.n N_PZ_317.n N_PZ_374.n SF23.n s_operationRight<6>.n
+PLApt(56/56), Fanin(17/38), Clk(0/3), Bct(0/4), Pin(0/4), Mcell(4/16)
+PLApts[56/56] 894 895 896 897 898 899 972 973 974 975 976 977 978 979 980 981 982 983 984 985 986 987 988 989 990 991 992 993 994 995 996 997 998 999 892 1000 292 347 326 352 353 354 392 383 715 718 727 758 761 764 901 936 941 942 955 953
+Fanins[17] N_PZ_1953.n N_PZ_1974.n N_PZ_2243.n N_PZ_2266.n N_PZ_2286.n N_PZ_2288.n N_PZ_2294.n N_PZ_2655.n N_PZ_3869.n N_PZ_3897.n N_PZ_3929.n N_PZ_4147.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationRight<3>.n s_operationRight<4>.n
 clk[0] 
 CTC: 
 CTR: 
 CTS: 
 CTE: 
 vref: [0]
-Signal[ 3] [N_PZ_117(292)] [N_PZ_429(288)] [Madd_s_resultAdd__or0005(286)] 
-Signal[ 3] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8:  ][ 9: Madd_s_resultAdd__or0005(286)  
-            ][ 10: (68)  ][ 11: N_PZ_429(288)  ][ 12: (67)  ][ 13: (66)  ][ 14: (65)  ][ 15: N_PZ_117(292)  ]
+Signal[ 4] [N_PZ_2315(292)] [N_PZ_2714(288)] [N_PZ_2294(286)] [N_PZ_1974(285)] 
+Signal[ 4] [ 0:  ][ 1:  ][ 2:  ][ 3:  ][ 4:  ][ 5:  ][ 6:  ][ 7:  ][ 8: N_PZ_1974(285)  ][ 9: N_PZ_2294(286)  
+            ][ 10: (68)  ][ 11: N_PZ_2714(288)  ][ 12: (67)  ][ 13: (66)  ][ 14: (65)  ][ 15: N_PZ_2315(292)  
+            ]
 ----------------- B l o c k 12 ------------------
+PLApt(56/56), Fanin(20/38), Clk(0/3), Bct(0/4), Pin(0/4), Mcell(11/16)
+PLApts[56/56] 1001 1012 1013 1014 1015 1016 1017 402 403 404 408 409 410 330 357 400 236 411 412 401 405 406 57 407 324 336 359 363 108 364 323 322 325 331 333 334 340 356 343 332 358 361 338 339 62 111 113 124 126 242 247 262 279 281 282 1002
+Fanins[20] N_PZ_1878.n N_PZ_2225.n N_PZ_2243.n N_PZ_2582.n N_PZ_3055.n N_PZ_3144.n N_PZ_3146.n N_PZ_3147.n N_PZ_3148.n N_PZ_3205.n N_PZ_4171.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n s_operationRight<3>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[11] [N_PZ_3208(308)] [N_PZ_3148(307)] [N_PZ_3147(306)] [N_PZ_3146(304)] [N_PZ_3144(303)]  
+           [N_PZ_2637(302)] [N_PZ_4171(301)] [N_PZ_2243(300)] [N_PZ_1930(299)] [N_PZ_1878(297)]  
+           [N_PZ_1933(295)] 
+Signal[11] [ 0:  ][ 1: (53)  ][ 2: N_PZ_1933(295)  ][ 3: (54)  ][ 4: N_PZ_1878(297)  ][ 5: (55)  ][ 6:  
+           N_PZ_1930(299)  ][ 7: N_PZ_2243(300)  ][ 8: N_PZ_4171(301)  ][ 9: N_PZ_2637(302)  ][ 10:  
+           N_PZ_3144(303)  ][ 11: N_PZ_3146(304)  ][ 12: (56)  ][ 13: N_PZ_3147(306)  ][ 14: N_PZ_3148(307)  
+            ][ 15: N_PZ_3208(308)  ]
 ----------------- B l o c k 13 ------------------
+PLApt(53/56), Fanin(22/38), Clk(0/3), Bct(0/4), Pin(0/5), Mcell(16/16)
+PLApts[53/53] 885 886 887 888 889 890 891 47 63 75 714 81 230 234 235 255 760 260 266 226 73 99 227 232 240 268 243 244 270 54 80 238 250 256 318 46 254 60 252 258 57 33 86 217 59 79 85 44 53 43 321 45 146
+Fanins[22] N_PZ_1210.n N_PZ_1574.n N_PZ_1828.n N_PZ_1878.n N_PZ_1929.n N_PZ_1930.n N_PZ_1931.n N_PZ_1932.n N_PZ_1933.n N_PZ_1943.n N_PZ_1949.n N_PZ_3897.n N_PZ_4147.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationRight<0>.n s_operationRight<1>.n s_operationRight<2>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[16] [N_PZ_1953(324)] [N_PZ_1574(321)] [N_PZ_1828(320)] [N_PZ_1627(319)] [N_PZ_1210(318)]  
+           [N_PZ_3974(317)] [N_PZ_1943(316)] [N_PZ_3830(315)] [N_PZ_4147(314)] [N_PZ_3897(312)]  
+           [N_PZ_3924(310)] [N_PZ_3945(323)] [N_PZ_3869(322)] [N_PZ_3938(313)] [N_PZ_2747(311)]  
+           [N_PZ_3929(309)] 
+Signal[16] [ 0: N_PZ_3929(309) (52)  ][ 1: N_PZ_3924(310)  ][ 2: N_PZ_2747(311) (50)  ][ 3: N_PZ_3897(312)  ] 
+           [ 4: N_PZ_3938(313) (49)  ][ 5: N_PZ_4147(314)  ][ 6: N_PZ_3830(315)  ][ 7: N_PZ_1943(316)  ][ 8:  
+           N_PZ_3974(317)  ][ 9: N_PZ_1210(318)  ][ 10: N_PZ_1627(319)  ][ 11: N_PZ_1828(320)  ][ 12:  
+           N_PZ_1574(321)  ][ 13: N_PZ_3869(322) (46)  ][ 14: N_PZ_3945(323) (44)  ][ 15: N_PZ_1953(324)  ]
 ----------------- B l o c k 14 ------------------
+PLApt(56/56), Fanin(26/38), Clk(0/3), Bct(0/4), Pin(0/6), Mcell(9/16)
+PLApts[56/56] 302 355 386 391 416 418 431 433 434 719 728 732 789 298 801 805 925 806 807 857 863 864 858 859 865 304 296 713 300 672 680 683 685 350 378 380 652 413 772 903 908 913 914 917 919 923 927 932 933 948 950 348 900 905 935 938
+Fanins[26] N_PZ_1627.n N_PZ_1953.n N_PZ_1974.n N_PZ_2243.n N_PZ_2294.n N_PZ_2315.n N_PZ_2637.n N_PZ_2655.n N_PZ_3208.n N_PZ_3852.n N_PZ_3869.n N_PZ_3897.n N_PZ_3929.n N_PZ_568.n N_PZ_569.n N_PZ_598.n s_operationChoose<1>.n s_operationLeft<0>.n s_operationLeft<1>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<5>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[ 9] [N_PZ_3311(334)] [N_PZ_3860(333)] [N_PZ_3858(332)] [N_PZ_3853(331)] [N_PZ_2323(330)]  
+           [N_PZ_3205(329)] [N_PZ_2266(328)] [N_PZ_2288(327)] [N_PZ_568(326)] 
+Signal[ 9] [ 0:  ][ 1: N_PZ_568(326)  ][ 2: N_PZ_2288(327)  ][ 3: N_PZ_2266(328)  ][ 4: N_PZ_3205(329)  ] 
+           [ 5: N_PZ_2323(330)  ][ 6: N_PZ_3853(331)  ][ 7: N_PZ_3858(332)  ][ 8: N_PZ_3860(333)  ][ 9:  
+           N_PZ_3311(334)  ][ 10: (58)  ][ 11: (59)  ][ 12: (60)  ][ 13: (61)  ][ 14: (63)  ][ 15: (64)  ]
 ----------------- B l o c k 15 ------------------
+PLApt(30/56), Fanin(21/38), Clk(0/3), Bct(0/4), Pin(0/5), Mcell(13/16)
+PLApts[30/56] 345 349 902 907 920 921 930 931 937 940 303 943 945 295 956 957 297 351 926 649 650 293 774 () () () () () () () () 291 () () 307 () () 305 () () () () () 317 () () 301 () () 299 () () () () () 375
+Fanins[21] N_PZ_1953.n N_PZ_2243.n N_PZ_2637.n N_PZ_3869.n N_PZ_3929.n N_PZ_546.n N_PZ_569.n s_operationChoose<5>.n s_operationChoose<6>.n s_operationChoose<7>.n s_operationLeft<2>.n s_operationLeft<3>.n s_operationLeft<4>.n s_operationLeft<5>.n s_operationLeft<6>.n s_operationLeft<7>.n s_operationRight<3>.n s_operationRight<4>.n s_operationRight<5>.n s_operationRight<6>.n s_operationRight<7>.n
+clk[0] 
+CTC: 
+CTR: 
+CTS: 
+CTE: 
+vref: [0]
+Signal[13] [N_PZ_2655(356)] [N_PZ_2286(355)] [N_PZ_569(354)] [N_PZ_538(350)] [N_PZ_542(349)] [N_PZ_546(348)]  
+           [N_PZ_598(347)] [N_PZ_3962(344)] [N_PZ_580(343)] [SF23(342)] [SF14(341)] [SF24(353)]  
+           [N_PZ_3894(352)] 
+Signal[13] [ 0: SF14(341)  ][ 1: SF23(342)  ][ 2: N_PZ_580(343)  ][ 3: N_PZ_3962(344)  ][ 4: (43)  ][ 5:  
+           (42)  ][ 6: N_PZ_598(347)  ][ 7: N_PZ_546(348)  ][ 8: N_PZ_542(349)  ][ 9: N_PZ_538(350)  ][ 10:  
+           (41)  ][ 11: N_PZ_3894(352) (40)  ][ 12: SF24(353) (39)  ][ 13: N_PZ_569(354)  ][ 14:  
+           N_PZ_2286(355)  ][ 15: N_PZ_2655(356)  ]
