@@ -1,5 +1,7 @@
 ALUminium V1.1 :
+    - Optimize fitter for speed
     - Adding accumulator
+    - Cleaning block diagram
 
 ALUminium V1.0 :
     - Initial release
