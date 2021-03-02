@@ -22,9 +22,10 @@ for applicable conditions.
 </table>
 
 ## Description
-ALUminium is a CPLD/FPGA code for a 8bits arithmetic–logic unit, made for processor like [GP8B](https://github.com/JonathSpirit/GP8B)
+ALUminium is a CPLD/FPGA code for a 8bits arithmetic–logic unit, made for processor like [GP8B](https://github.com/JonathSpirit/GP8B).
 
-The goal is to have a powerful 8bits ALU without the need of a external clock.
+The goal of this project is to have a powerful 8bits ALU without the need of an external clock.
+This design has been made for the XC2C256-VQ100 CPLD.
 
 [blockDiagram.pdf](documents/blockDiagram.pdf)
 
