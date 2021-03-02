@@ -99,13 +99,17 @@ architecture Behavioral of main is
 	
 	--
 	
-	signal s_accumulator : unsigned(7 downto 0);
+	signal s_accumulatorLeft : unsigned(7 downto 0);
+	signal s_accumulatorRight : unsigned(7 downto 0);
 begin
 
 	process_latchLeft : process(CLK_LEFT)
 	begin
 		if ( rising_edge(CLK_LEFT) ) then
 			s_operationLeft <= unsigned(OP_LEFT);
+			if ((s_operationChoose = 22) or (s_operationChoose = 23)) then
+				s_accumulatorLeft <= unsigned(OP_LEFT);
+			end if;
 		end if;
 	end process;
 	
@@ -114,8 +118,8 @@ begin
 		if ( rising_edge(CLK_RIGHT) ) then
 			s_operationRight <= unsigned(OP_RIGHT);
 		
-			if (s_operationChoose = 24) then
-				s_accumulator <= s_operationLeft;
+			if ((s_operationChoose = 22) or (s_operationChoose = 23)) then
+				s_accumulatorRight <= unsigned(OP_RIGHT);
 			end if;
 		end if;
 	end process;
@@ -199,9 +203,10 @@ begin
 					std_logic_vector(s_resultRotateLeft) when (s_operationChoose = 20) else
 					std_logic_vector(s_resultRotateRight) when (s_operationChoose = 21) else
 					
-					std_logic_vector(s_operationLeft) when (s_operationChoose = 22) else
-					std_logic_vector(s_operationRight) when (s_operationChoose = 23) else
-					std_logic_vector(s_accumulator) when (s_operationChoose = 24) else
+					std_logic_vector(s_operationLeft) when (s_operationChoose = 22) else -- Write to the accumulator left/right with CLK_LEFT/CLK_RIGHT but return opLeft
+					std_logic_vector(s_operationRight) when (s_operationChoose = 23) else -- Write to the accumulator left/right with CLK_LEFT/CLK_RIGHT but return opRight
+					std_logic_vector(s_accumulatorLeft) when (s_operationChoose = 24) else -- Write to the operation left/right with CLK_LEFT/CLK_RIGHT but return accLeft
+					std_logic_vector(s_accumulatorRight) when (s_operationChoose = 25) else -- Write to the operation left/right with CLK_LEFT/CLK_RIGHT but return accRight
 					(others=>'0');
 	
 end Behavioral;
