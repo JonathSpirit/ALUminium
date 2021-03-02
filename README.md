@@ -21,6 +21,8 @@ for applicable conditions.
 </tr>
 </table>
 
+made with [Xilinx ISE WebPACK](https://www.xilinx.com/products/design-tools/ise-design-suite/ise-webpack.html)
+
 ## Description
 ALUminium is a CPLD/FPGA code for a 8bits arithmetic–logic unit, made for processor like [GP8B](https://github.com/JonathSpirit/GP8B).
 
